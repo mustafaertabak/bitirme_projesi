@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<!-- Yazdığımız kelimelerin HTML dilinde birer kod satırı oluşturduğunu belirtmek için "HTML" tagi kullanıyoruz. -->
+<!-- lang="en" komutu yazım dilinin ingilizce olduğu anlamına gelmektedir. -->
 <html lang="en">
+    <!-- Head tagi içerisinde tanımlamalarımızı ve kullanıcağımız diğer dosyaların bağlantılarını yapmaktayız. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,31 +12,104 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+<!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
+<!-- somut olarak görüntülenebilir. -->
 <body>
+    <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
+    <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="logo_wrap w-75">
-                <a class="navbar-brand offset-lg-1" href="#">
-                    <img width="200px" src="img/LOGO.png" alt="DeuStaj">
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                
-            <div class="collapse navbar-collapse offset-lg-4" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-5">
-                    <li class="nav-item active mb-2">
-                        <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <button type="button" class="btn nav-btn btn-primary mr-3 btn-md"><i class="far fa-building"></i> Firma Girişi</button>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <button type="button" class="btn nav-btn btn-secondary mr-3 btn-md"><i class="far fa-user"></i> Öğrenci Girişi</button>
-                    </li>
-                </ul>
-            </div>      
+        <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
+        <div class="logo_wrap w-75">
+            <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
+            <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
+            <a class="navbar-brand offset-lg-1" href="#">
+                <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
+                <img width="200px" src="img/LOGO.png" alt="DeuStaj">
+            </a>
+        </div>
+        <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
+        <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
+        <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
+        <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
+        <!-- sağa kaymasnı sağlamaktadır. -->    
+        <div class="collapse navbar-collapse offset-lg-4" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-5">
+                <li class="nav-item active mb-2">
+                    <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
+                </li>
+                <li class="nav-item mb-2">
+                    <button type="button" class="btn nav-btn btn-primary mr-3 btn-md"><i class="far fa-building"></i> Firma Girişi</button>
+                </li>
+                <li class="nav-item mb-2">
+                    <button type="button" class="btn nav-btn btn-secondary mr-3 btn-md"><i class="far fa-user"></i> Öğrenci Girişi</button>
+                </li>
+            </ul>
+        </div>      
     </nav>
+    <div class="jumbotron jumbotron-fluid pt-3 pb-5">
+        <div class="container mb-3 m-0">
+            <h4 class="display-6 mb-4">Senin için bu alanda <span class="text-primary">17.786</span> ilan var!</h4>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control col col-sm-6 col-md-6 col-lg-4 ml-2" placeholder="İlan Ara" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button">Ara</button>
+                </div>
+            </div>
+            <h4 class="display-6 text-grey-dark pl-4">EN ÇOK İLAN VEREN FİRMALAR</h4>
+        </div>
+        <div class="container mx-auto pl-5">
+            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
+                <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="text-align: center;">VESTEL</p>
+                    <hr>
+                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                </div>
+            </div>
+            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
+                <img class="card-img-top" src="img/probel.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="text-align: center;">PROBEL</p>
+                    <hr>
+                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                </div>
+            </div>
+            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
+                <img class="card-img-top" src="img/egeseramik.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="text-align: center;">EGE SERAMİK</p>
+                    <hr>
+                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                </div>
+            </div>
+            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
+                <img class="card-img-top" src="img/mitsubishi.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="text-align: center;">MITSUBISHI</p>
+                    <hr>
+                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                </div>
+            </div>
+            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
+                <img class="card-img-top" src="img/inovera.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="text-align: center;">INOVERA</p>
+                    <hr>
+                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
    <script src="js/bootstrap-native-v4.min.js"></script> 
 </body>
 </html>

@@ -1,1 +1,19 @@
-
+@media (min-width: 992px){
+    .jumbotron {
+        height: 250px;
+        padding-left: 60px!important;
+    }
+    
+}
+@media (min-width: 769px) and (max-width: 991px) {
+    .jumbotron {
+        height: 230px;
+        padding-left: 40px!important;
+    }
+}
+@media (max-width: 768px) {
+    .jumbotron {
+        height: 175px;
+        padding-left: 20px!important;
+    }
+}
