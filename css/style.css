@@ -1,5 +1,26 @@
 .firmalar {
-    margin-top: -100px;
+    margin-top: -150px;
+    text-align: center;
+}
+
+.firma-card-list {
+    -webkit-padding-start: 0px;
+    -moz-padding-start: 0px;
+}
+
+.firma-card-list li {
+    display: inline-block;
+}
+
+.firma-baslik {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 855px){
+    .card {
+        width: 9rem !important;
+    }
 }
 
 @media (min-width: 1200px){
@@ -10,7 +31,6 @@
     .card {
         width: 12rem;
     }
-    
 }
 
 @media (max-width: 991px){
@@ -20,6 +40,10 @@
 
     .firma-card-ilk {
         margin-left: 18px;
+    }
+
+    .firmalar {
+        margin-top: -120px;
     }
 }
 
