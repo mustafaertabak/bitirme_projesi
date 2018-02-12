@@ -38,7 +38,7 @@
         <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
         <!-- sağa kaymasnı sağlamaktadır. -->    
         <div class="collapse navbar-collapse offset-lg-4" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-5">
+            <ul class="navbar-nav">
                 <li class="nav-item active mb-2">
                     <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
                 </li>
@@ -46,7 +46,7 @@
                     <button type="button" class="btn nav-btn btn-primary mr-3 btn-md"><i class="far fa-building"></i> Firma Girişi</button>
                 </li>
                 <li class="nav-item mb-2">
-                    <button type="button" class="btn nav-btn btn-secondary mr-3 btn-md"><i class="far fa-user"></i> Öğrenci Girişi</button>
+                    <button type="button" class="btn nav-btn btn-secondary c-mr-3 btn-md"><i class="far fa-user"></i> Öğrenci Girişi</button>
                 </li>
             </ul>
         </div>      
@@ -60,56 +60,62 @@
                     <button class="btn btn-secondary" type="button">Ara</button>
                 </div>
             </div>
-            <h4 class="display-6 text-grey-dark pl-4">EN ÇOK İLAN VEREN FİRMALAR</h4>
+            <!-- Burada "d-md-block" özelliğini kullanarak mobile cihazlarda,ilan veren firmaların bulunduğu divi gizlemiş olduk..!-->
+            <h4 class="display-6 text-grey-dark pr-5 d-none d-md-block ml-3 text-left text-md-center">EN ÇOK İLAN VEREN FİRMALAR</h4>
         </div>
-        <div class="container mx-auto pl-5">
-            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
-                <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">VESTEL</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>
-            </div>
-            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
-                <img class="card-img-top" src="img/probel.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">PROBEL</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>
-            </div>
-            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
-                <img class="card-img-top" src="img/egeseramik.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">EGE SERAMİK</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>
-            </div>
-            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
-                <img class="card-img-top" src="img/mitsubishi.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">MITSUBISHI</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>
-            </div>
-            <div  class="card pt-3 pl-3 pr-3 d-inline-block" style="width: 12rem;">
-                <img class="card-img-top" src="img/inovera.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">INOVERA</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>
-            </div>
-        </div>
+        <!-- Burada "d-md-block" özelliğini kullanarak mobile cihazlarda,ilan veren firmaların bulunduğu divi gizlemiş olduk..!-->
     </div>
+    <div class="container firmalar mx-auto d-none d-md-block">
+          
+        <div  class="card pt-3 pl-3 pr-3 d-md-inline-block" >
+             <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
+             <div class="card-body">
+                 <p class="card-text" style="text-align: center;">VESTEL</p>
+                 <hr>
+                 <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                 <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+             </div>           
+         </div> 
+         <div  class="card pt-3 pl-3 pr-3 d-md-inline-block">
+             <img class="card-img-top" src="img/probel.png" alt="Card image cap">
+             <div class="card-body">
+                 <p class="card-text" style="text-align: center;">PROBEL</p>
+                 <hr>
+                 <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                 <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+             </div>
+         </div>
+         <!-- "d-md-inline-block" özelliği çözünürlük middle boyun altına düşmediği sürece kartları yan yana tutmamızı sağlıyor !-->
+         <div  class="card pt-3 pl-3 pr-3 d-md-inline-block ">
+             <img class="card-img-top" src="img/egeseramik.png" alt="Card image cap">
+             <div class="card-body">
+                 <p class="card-text" style="text-align: center;">EGE SERAMİK</p>
+                 <hr>
+                 <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                 <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+             </div>
+         </div>
+          <!-- "d-md-inline-block" özelliği çözünürlük middle boyun altına düşmediği sürece kartları yan yana tutmamızı sağlıyor !-->
+         <div  class="card pt-3 pl-3 pr-3 d-md-inline-block  ">
+             <img class="card-img-top" src="img/mitsubishi.png" alt="Card image cap">
+             <div class="card-body ">
+                 <p class="card-text" style="text-align: center;">MITSUBISHI</p>
+                 <hr>
+                 <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                 <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+             </div>
+         </div>
+          <!-- "d-md-inline-block" özelliği çözünürlük middle boyun altına düşmediği sürece kartları yan yana tutmamızı sağlıyor !-->
+         <div  class="card kart pt-3 pl-3 pr-3 d-sm-  d-md-inline-block ">
+             <img class="card-img-top" src="img/inovera.png" alt="Card image cap">
+             <div class="card-body">
+                 <p class="card-text" style="text-align: center;">INOVERA</p>
+                 <hr>
+                 <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                 <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+             </div>
+         </div>
+     </div>
    <script src="js/bootstrap-native-v4.min.js"></script> 
 </body>
 </html>
