@@ -51,6 +51,10 @@
             </ul>
         </div>      
     </nav>
+    <!-- aşağıdaki jumbotron divi içerisinde sayfanın headers kısmını oluşturduk. Bu alanda sitede-->
+    <!-- bulunan toplam ilan sayısı ve arama işlemleri gerçekleştirilebilecek. -->
+    <!-- jumbotron-fluid sınıfı ile divin 100% genişlikte olmasını sağlıyoruz. pt-3 ile padding-top -->
+    <!-- pb-5 ile padding-bottom vererek div içerisinde yerleştirme yapıyoruz. -->
     <div class="jumbotron jumbotron-fluid pt-3 pb-5">
         <div class="container mb-3 m-0">
             <h4 class="display-6 mb-4">Senin için bu alanda <span class="text-primary">17.786</span> ilan var!</h4>
@@ -64,8 +68,12 @@
         </div>
         <!-- Burada "d-md-block" özelliğini kullanarak mobile cihazlarda,ilan veren firmaların bulunduğu divi gizlemiş olduk..!-->
     </div>
+    <!-- Aşağıdaki container divi içerisinde en çok ilan veren firmalar logoları verdiği ilan sayısı -->
+    <!-- bulunmaktadır.  -->
     <div class="container-fluid firmalar mx-auto d-none d-md-block">
         <h4 class="display-6 firma-baslik text-grey-dark pr-5 d-none d-md-block ml-3 text-left text-md-center">EN ÇOK İLAN VEREN FİRMALAR</h4>
+        <!-- en çok ilan veren firmaları kartlar halinde listelemek için listeleme komutları kullanıyoruz. ul içindeki li lerin içerisine -->
+        <!-- firma logosu, adı, firmanın vermiş oludğu ilan sayısı, ve firmanın alanda vermiş olduğu ilanaların tümünü görmek için link bulunmakta -->
         <ul class="firma-card-list">
             <li class="card pt-3 pl-3 pr-3">
                 <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
@@ -76,7 +84,6 @@
                     <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
                 </div>           
             </li> 
-
             <li class="card pt-3 pl-3 pr-3">
                 <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -86,8 +93,6 @@
                     <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
                 </div>           
             </li> 
-
-
             <li class="card pt-3 pl-3 pr-3">
                 <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -97,7 +102,6 @@
                     <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
                 </div>           
             </li>
-
             <li class="card pt-3 pl-3 pr-3">
                 <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -107,7 +111,6 @@
                     <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
                 </div>           
             </li>
-
             <li class="card pt-3 pl-3 pr-3">
                 <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
                 <div class="card-body">
@@ -117,10 +120,9 @@
                     <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
                 </div>           
             </li>
-
         </ul>
-
      </div>
+     <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
    <script src="js/bootstrap-native-v4.min.js"></script> 
 </body>
 </html>
