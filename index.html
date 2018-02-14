@@ -37,7 +37,7 @@
         <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
         <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
         <!-- sağa kaymasnı sağlamaktadır. -->    
-        <div class="collapse navbar-collapse offset-lg-4" id="navbarTogglerDemo02">
+        <div class="collapse  navbar-collapse offset-lg-4 buton-konum" id="navbarTogglerDemo02">
             <ul class="navbar-nav">
                 <li class="nav-item active mb-2">
                     <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
@@ -129,14 +129,14 @@
         </ul>
 
      </div>
-<div class="container en-son-cards text-left d">
-        <h4 class="display-6 firma-baslik text-grey-dark pr-5 d-none  d-md-block ml-3 text-center">EN SON VERİLEN İLANLAR</h4>
-        <div class="card d-inline-block son-ilan-card">           
-            <div class="card-body">
+<div class="container en-son-cards text-center">
+        <h4 class="display-6 firma-baslik text-grey-dark text-center">EN SON VERİLEN İLANLAR</h4>
+        <div class="card d-inline-block son-ilan-card mb-3 ">           
+            <div class="card-body text-left">
                 <div class="c-card-head">
                     <div class="ch-col-1">
-                        <h5 class="card-title">Vestel</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <h5 class="card-title text-left">Vestel</h5>
+                        <h6 class="card-subtitle mb-2 text-muted text-left">Card subtitle</h6>
                     </div>
 
                     <div class="ch-col-2">
@@ -145,14 +145,14 @@
                         </div>
                     </div>
                 </div>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link kard-pad">Card link</a>
+                <a href="#" class="card-link kard-pad ">Another link</a>
             </div>
         </div>    
 
-        <div class="card d-inline-block son-ilan-card">           
-            <div class="card-body">
+        <div class="card d-inline-block son-ilan-card ">           
+            <div class="card-body text-left ">
                 <div class="c-card-head">
                     <div class="ch-col-1">
                         <h5 class="card-title">Vestel</h5>
@@ -171,7 +171,7 @@
         </div>
 
     <div class="card d-inline-block son-ilan-card">           
-        <div class="card-body">
+        <div class="card-body text-left">
             <div class="c-card-head">
                 <div class="ch-col-1">
                     <h5 class="card-title">Vestel</h5>
@@ -190,8 +190,8 @@
         </div>
     </div>
 
-    <div class="card d-inline-block son-ilan-card">           
-        <div class="card-body">
+    <div class="card d-inline-block son-ilan-card hidden-cards son-visible">           
+        <div class="card-body text-left">
             <div class="c-card-head">
                 <div class="ch-col-1">
                     <h5 class="card-title">Vestel</h5>
@@ -210,8 +210,8 @@
         </div>
     </div>
 
-    <div class="card d-inline-block son-ilan-card">           
-        <div class="card-body">
+    <div class="card d-inline-block son-ilan-card hidden-cards">           
+        <div class="card-body text-left">
             <div class="c-card-head">
                 <div class="ch-col-1">
                     <h5 class="card-title">Vestel</h5>
@@ -230,8 +230,8 @@
         </div>
     </div>
 
-    <div class="card d-inline-block son-ilan-card">           
-        <div class="card-body">
+    <div class="card d-inline-block son-ilan-card hidden-cards ">           
+        <div class="card-body text-left">
             <div class="c-card-head">
                 <div class="ch-col-1">
                     <h5 class="card-title">Vestel</h5>
@@ -251,7 +251,6 @@
     </div>
         
 </div>
-    <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
-   <script src="js/bootstrap-native-v4.min.js"></script> 
-</body>
-</html> 
+<div class="kapsayici mx-auto text-center">
+    <button type="button" class="btn btn-light mb-5 text-truncate k-button">Tümünü Gör</button>
+</div>
