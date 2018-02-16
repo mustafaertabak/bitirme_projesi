@@ -11,68 +11,70 @@
     </head>
 <body>
         <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
-    <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-width">
-            <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
-            <div class="logo_wrap w-75">
-                <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
-                <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
-                <a class="navbar-brand offset-lg-1" href="index.html">
-                    <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
-                    <img width="300px" src="img/LOGO.png" alt="DeuStaj" class="logo-w">
-                </a>
-            </div>
-            <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
-            <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
-            <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
-            <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
-            <!-- sağa kaymasnı sağlamaktadır. -->    
-            <div class="collapse  navbar-collapse offset-lg-4 buton-konum" id="navbarTogglerDemo02">
-                <ul class="navbar-nav">
-                    <li class="nav-item active mb-2">
-                        <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a href="firma-giris.html"><button type="button" class="btn nav-btn btn-primary mr-3 btn-md"><i class="far fa-building"></i>  Firma Girişi</button></a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a href="ogrenci-giris.html"><button type="button" class="btn nav-btn btn-secondary c-mr-3 btn-md"><i class="far fa-user"></i> Öğrenci Girişi</button></a>
-                    </li>
-                </ul>
-            </div>      
-        </nav>
-    <div class="form-wrap mx-auto p-4 rounded  bg-light">
-        <div class="baslik w-100 p-2 "><h4 class="text-center fr-baslik">Öğrenci Giriş Paneli</h4>
-            <div class="baslik-wrap p-2">
-                <p class="text-center">Staj sistemine Hoşgeldiniz</p>
-            </div>
-                <div class="alert alert-danger" role="alert">
-                    Kullanıcı adı veya şifre yanlış
+        
+    <div class="all-content">  <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-width">
+                <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
+                <div class="logo_wrap w-75">
+                    <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
+                    <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
+                    <a class="navbar-brand offset-lg-1" href="index.html">
+                        <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
+                        <img width="300px" src="img/LOGO.png" alt="DeuStaj" class="logo-w">
+                    </a>
                 </div>
-        </div>
-        <div class="wrap w-100 h-100 p-3">
-            <form>
-                <div class="form-group">   
-                    <input type="text" class="form-control input-h" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Kullanıcı Adı">
-                     
+                <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
+                <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
+                <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
+                <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
+                <!-- sağa kaymasnı sağlamaktadır. -->    
+                <div class="collapse  navbar-collapse offset-lg-4 buton-konum" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active mb-2">
+                            <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="firma-giris.html"><button type="button" class="btn nav-btn btn-primary mr-3 btn-md"><i class="far fa-building"></i>  Firma Girişi</button></a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="ogrenci-giris.html"><button type="button" class="btn nav-btn btn-secondary c-mr-3 btn-md"><i class="far fa-user"></i> Öğrenci Girişi</button></a>
+                        </li>
+                    </ul>
+                </div>      
+            </nav>
+        <div class="form-wrap mx-auto p-4 rounded  bg-light">
+            <div class="baslik w-100 p-2 "><h4 class="text-center fr-baslik">Öğrenci Giriş Paneli</h4>
+                <div class="baslik-wrap p-2">
+                    <p class="text-center">Staj sistemine Hoşgeldiniz</p>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control input-h" id="exampleInputPassword1" placeholder="Şifre">
+                    <div class="alert alert-danger" role="alert">
+                        Kullanıcı adı veya şifre yanlış
+                    </div>
+                <div class="wrap w-100 h-100 p-3">
+                    <form>
+                        <div class="form-group">   
+                            <input type="text" class="form-control input-h" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Kullanıcı Adı">                         
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control input-h" id="exampleInputPassword1" placeholder="Şifre">
+                        </div>
+                        <a href="ogrenci-aktif.html"><button type="button" class="btn btn-primary w-100 giris-btn">Giriş Yap</button></a>
+                    </form>
                 </div>
-                <a href="ogrenci-aktif.html"><button type="button" class="btn btn-primary w-100 giris-btn">Giriş Yap</button></a>
-            </form>
-        </div>
+            </div>        
+        </div> 
     </div> 
     <footer>
             <div class="footer-div text-center mx-auto ">
-               <img src="img/LOGO.png" class="logo-ft" >
+            <img src="img/LOGO.png" class="logo-ft" >
             </div>    
         </footer>
+
     <script src="js/bootstrap-native-v4.min.js"></script> 
 </body>
 </html>

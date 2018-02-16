@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/ogrenci.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -17,149 +17,170 @@
 <body>
     <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
     <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
-        <div class="logo_wrap w-75">
-            <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
-            <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
-            <a class="navbar-brand offset-lg-1" href="index.html">
-                <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
-                <img width="200px" src="img/LOGO.png" alt="DeuStaj">
-            </a>
-        </div>
-        <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
-        <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
-        <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
-        <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
-        <!-- sağa kaymasnı sağlamaktadır. -->    
-    <div class="collapse  navbar-collapse pr-5 offset-lg-4 buton-konum" id="navbarTogglerDemo02">
-        <div class="ilan">
-            <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
-        </div>
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Öğrenci Adı
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Profil</a>
-                <a class="dropdown-item" href="#">Başvurularım</a>     
-                <a class="dropdown-item" href="#">Çıkış Yap</a>              
+    <div class="all-content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
+            <div class="logo_wrap w-75">
+                <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
+                <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
+                <a class="navbar-brand offset-lg-1" href="index.html">
+                    <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
+                    <img width="200px" src="img/LOGO.png" alt="DeuStaj">
+                </a>
             </div>
-        </div>    
-    </div>      
-    </nav>
-    <!-- aşağıdaki jumbotron divi içerisinde sayfanın headers kısmını oluşturduk. Bu alanda sitede-->
-    <!-- bulunan toplam ilan sayısı ve arama işlemleri gerçekleştirilebilecek. -->
-    <!-- jumbotron-fluid sınıfı ile divin 100% genişlikte olmasını sağlıyoruz. pt-3 ile padding-top -->
-    <!-- pb-5 ile padding-bottom vererek div içerisinde yerleştirme yapıyoruz. -->
-    <div class="jumbotron jumbotron-fluid pt-3 pb-5">
-        <div class="container mb-3 m-0">
-            <h4 class="display-6 mb-4">Senin için bu alanda <span class="text-primary">17.786</span> ilan var!</h4>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control col col-sm-6 col-md-6 col-lg-4 ml-2" placeholder="İlan Ara" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-secondary" type="button">Ara</button>
+            <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
+            <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
+            <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
+            <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
+            <!-- sağa kaymasnı sağlamaktadır. -->    
+        <div class="collapse  navbar-collapse pr-5 offset-lg-4 buton-konum" id="navbarTogglerDemo02">
+            <div class="ilan">
+                <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Öğrenci Adı
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Profil</a>
+                    <a class="dropdown-item" href="#">Başvurularım</a>     
+                    <a class="dropdown-item" href="#">Çıkış Yap</a>              
                 </div>
+            </div>    
+        </div>      
+        </nav>
+        <!-- aşağıdaki jumbotron divi içerisinde sayfanın headers kısmını oluşturduk. Bu alanda sitede-->
+        <!-- bulunan toplam ilan sayısı ve arama işlemleri gerçekleştirilebilecek. -->
+        <!-- jumbotron-fluid sınıfı ile divin 100% genişlikte olmasını sağlıyoruz. pt-3 ile padding-top -->
+        <!-- pb-5 ile padding-bottom vererek div içerisinde yerleştirme yapıyoruz. -->
+        <div class="jumbotron jumbotron-fluid pt-3 pb-5">
+            <div class="container mb-3 m-0">
+                <h4 class="display-6 mb-4">Senin için bu alanda <span class="text-primary">17.786</span> ilan var!</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control col col-sm-6 col-md-6 col-lg-4 ml-2" placeholder="İlan Ara" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button">Ara</button>
+                    </div>
+                </div>
+                <!-- Burada "d-md-block" özelliğini kullanarak mobile cihazlarda,ilan veren firmaların bulunduğu divi gizlemiş olduk..!-->
             </div>
             <!-- Burada "d-md-block" özelliğini kullanarak mobile cihazlarda,ilan veren firmaların bulunduğu divi gizlemiş olduk..!-->
         </div>
-        <!-- Burada "d-md-block" özelliğini kullanarak mobile cihazlarda,ilan veren firmaların bulunduğu divi gizlemiş olduk..!-->
-    </div>
-    <!-- Aşağıdaki container divi içerisinde en çok ilan veren firmalar logoları verdiği ilan sayısı -->
-    <!-- bulunmaktadır.  -->
-    <div class="container-fluid firmalar mx-auto d-none d-md-block">
-        <h4 class="display-6 firma-baslik text-grey-dark pr-5 d-none d-md-block ml-3 text-left text-md-center">EN ÇOK İLAN VEREN FİRMALAR</h4>
-        <!-- en çok ilan veren firmaları kartlar halinde listelemek için listeleme komutları kullanıyoruz. ul içindeki li lerin içerisine -->
-        <!-- firma logosu, adı, firmanın vermiş oludğu ilan sayısı, ve firmanın alanda vermiş olduğu ilanaların tümünü görmek için link bulunmakta -->
-        <ul class="firma-card-list">
-            <li class="card pt-3 pl-3 pr-3">
-                <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">VESTEL</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>           
-            </li> 
+        <!-- Aşağıdaki container divi içerisinde en çok ilan veren firmalar logoları verdiği ilan sayısı -->
+        <!-- bulunmaktadır.  -->
+        <div class="container-fluid firmalar mx-auto d-none d-md-block">
+            <h4 class="display-6 firma-baslik text-grey-dark pr-5 d-none d-md-block ml-3 text-left text-md-center">EN ÇOK İLAN VEREN FİRMALAR</h4>
+            <!-- en çok ilan veren firmaları kartlar halinde listelemek için listeleme komutları kullanıyoruz. ul içindeki li lerin içerisine -->
+            <!-- firma logosu, adı, firmanın vermiş oludğu ilan sayısı, ve firmanın alanda vermiş olduğu ilanaların tümünü görmek için link bulunmakta -->
+            <ul class="firma-card-list">
+                <li class="card pt-3 pl-3 pr-3">
+                    <img class="card-img-top" src="img/vestel-1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">VESTEL</p>
+                        <hr>
+                        <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                        <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                    </div>           
+                </li> 
 
-            <li class="card pt-3 pl-3 pr-3">
-                <img class="card-img-top" src="img/inovera.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">İnovera</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>           
-            </li> 
+                <li class="card pt-3 pl-3 pr-3">
+                    <img class="card-img-top" src="img/inovera.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">İnovera</p>
+                        <hr>
+                        <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                        <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                    </div>           
+                </li> 
 
 
-            <li class="card pt-3 pl-3 pr-3">
-                <img class="card-img-top" src="img/egeseramik.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">Ege Seramik</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>           
-            </li>
+                <li class="card pt-3 pl-3 pr-3">
+                    <img class="card-img-top" src="img/egeseramik.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">Ege Seramik</p>
+                        <hr>
+                        <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                        <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                    </div>           
+                </li>
 
-            <li class="card pt-3 pl-3 pr-3">
-                <img class="card-img-top" src="img/probel.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">Probel</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>           
-            </li>
+                <li class="card pt-3 pl-3 pr-3">
+                    <img class="card-img-top" src="img/probel.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">Probel</p>
+                        <hr>
+                        <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                        <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                    </div>           
+                </li>
 
-            <li class="card pt-3 pl-3 pr-3">
-                <img class="card-img-top" src="img/mitsubishi.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text" style="text-align: center;">VESTEL</p>
-                    <hr>
-                    <p class="card-text" style="text-align: center;">ilan sayısı</p>
-                    <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
-                </div>           
-            </li>
+                <li class="card pt-3 pl-3 pr-3">
+                    <img class="card-img-top" src="img/mitsubishi.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">VESTEL</p>
+                        <hr>
+                        <p class="card-text" style="text-align: center;">ilan sayısı</p>
+                        <p class="card-text" style="text-align: center;"><a href="#">İlanı incele</a></p>
+                    </div>           
+                </li>
 
-        </ul>
+            </ul>
 
-     </div>
-<div class="container en-son-cards text-center">
-        <h4 class="display-6 firma-baslik text-grey-dark text-center">EN SON VERİLEN İLANLAR</h4>
-        <div class="card d-inline-block son-ilan-card mb-3 ">           
-            <div class="card-body text-left">
-                <div class="c-card-head">
-                    <div class="ch-col-1">
-                        <h5 class="card-title text-left">Vestel</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-left">Card subtitle</h6>
-                    </div>
+        </div>
+        <div class="container en-son-cards text-center">
+            <h4 class="display-6 firma-baslik text-grey-dark text-center">EN SON VERİLEN İLANLAR</h4>
+            <div class="card d-inline-block son-ilan-card mb-3 ">           
+                <div class="card-body text-left">
+                    <div class="c-card-head">
+                        <div class="ch-col-1">
+                            <h5 class="card-title text-left">Vestel</h5>
+                            <h6 class="card-subtitle mb-2 text-muted text-left">Card subtitle</h6>
+                        </div>
 
-                    <div class="ch-col-2">
-                        <div class="enson-ilan-firma-logo">
-                            <img class="firma-logo" src="img/vestel-1.jpg">
+                        <div class="ch-col-2">
+                            <div class="enson-ilan-firma-logo">
+                                <img class="firma-logo" src="img/vestel-1.jpg">
+                            </div>
                         </div>
                     </div>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link kard-pad">Card link</a>
+                    <a href="#" class="card-link kard-pad ">Another link</a>
                 </div>
-                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link kard-pad">Card link</a>
-                <a href="#" class="card-link kard-pad ">Another link</a>
-            </div>
-        </div>    
+            </div>    
 
-        <div class="card d-inline-block son-ilan-card ">           
-            <div class="card-body text-left ">
+            <div class="card d-inline-block son-ilan-card ">           
+                <div class="card-body text-left ">
+                    <div class="c-card-head">
+                        <div class="ch-col-1">
+                            <h5 class="card-title">Vestel</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        </div>
+                        <div class="ch-col-2">
+                            <div class="enson-ilan-firma-logo">
+                                <img class="firma-logo" src="img/vestel-1.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+        <div class="card d-inline-block son-ilan-card">           
+            <div class="card-body text-left">
                 <div class="c-card-head">
                     <div class="ch-col-1">
                         <h5 class="card-title">Vestel</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                     </div>
+
                     <div class="ch-col-2">
                         <div class="enson-ilan-firma-logo">
                             <img class="firma-logo" src="img/vestel-1.jpg">
@@ -172,96 +193,77 @@
             </div>
         </div>
 
-    <div class="card d-inline-block son-ilan-card">           
-        <div class="card-body text-left">
-            <div class="c-card-head">
-                <div class="ch-col-1">
-                    <h5 class="card-title">Vestel</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                </div>
+        <div class="card d-inline-block son-ilan-card hidden-cards son-visible">           
+            <div class="card-body text-left">
+                <div class="c-card-head">
+                    <div class="ch-col-1">
+                        <h5 class="card-title">Vestel</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    </div>
 
-                <div class="ch-col-2">
-                    <div class="enson-ilan-firma-logo">
-                        <img class="firma-logo" src="img/vestel-1.jpg">
+                    <div class="ch-col-2">
+                        <div class="enson-ilan-firma-logo">
+                            <img class="firma-logo" src="img/vestel-1.jpg">
+                        </div>
                     </div>
                 </div>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
             </div>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+        </div>
+
+        <div class="card d-inline-block son-ilan-card hidden-cards">           
+            <div class="card-body text-left">
+                <div class="c-card-head">
+                    <div class="ch-col-1">
+                        <h5 class="card-title">Vestel</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    </div>
+
+                    <div class="ch-col-2">
+                        <div class="enson-ilan-firma-logo">
+                            <img class="firma-logo" src="img/vestel-1.jpg">
+                        </div>
+                    </div>
+                </div>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+
+        <div class="card d-inline-block son-ilan-card hidden-cards ">           
+            <div class="card-body text-left">
+                <div class="c-card-head">
+                    <div class="ch-col-1">
+                        <h5 class="card-title">Vestel</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    </div>
+
+                    <div class="ch-col-2">
+                        <div class="enson-ilan-firma-logo">
+                            <img class="firma-logo" src="img/vestel-1.jpg">
+                        </div>
+                    </div>
+                </div>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>       
+        </div>
+        <div class="kapsayici mx-auto text-center">
+            <button type="button" class="btn btn-light mb-5 text-truncate k-button">Tümünü Gör</button>
         </div>
     </div>
 
-    <div class="card d-inline-block son-ilan-card hidden-cards son-visible">           
-        <div class="card-body text-left">
-            <div class="c-card-head">
-                <div class="ch-col-1">
-                    <h5 class="card-title">Vestel</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                </div>
-
-                <div class="ch-col-2">
-                    <div class="enson-ilan-firma-logo">
-                        <img class="firma-logo" src="img/vestel-1.jpg">
-                    </div>
-                </div>
-            </div>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>
-
-    <div class="card d-inline-block son-ilan-card hidden-cards">           
-        <div class="card-body text-left">
-            <div class="c-card-head">
-                <div class="ch-col-1">
-                    <h5 class="card-title">Vestel</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                </div>
-
-                <div class="ch-col-2">
-                    <div class="enson-ilan-firma-logo">
-                        <img class="firma-logo" src="img/vestel-1.jpg">
-                    </div>
-                </div>
-            </div>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>
-
-    <div class="card d-inline-block son-ilan-card hidden-cards ">           
-        <div class="card-body text-left">
-            <div class="c-card-head">
-                <div class="ch-col-1">
-                    <h5 class="card-title">Vestel</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                </div>
-
-                <div class="ch-col-2">
-                    <div class="enson-ilan-firma-logo">
-                        <img class="firma-logo" src="img/vestel-1.jpg">
-                    </div>
-                </div>
-            </div>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>
-        
-</div>
-<div class="kapsayici mx-auto text-center">
-    <button type="button" class="btn btn-light mb-5 text-truncate k-button">Tümünü Gör</button>
-</div>
-
-<footer>
-    <div class="footer-div text-center mx-auto">
-       <img src="img/LOGO.png" class="logo-ft" >
-    </div>    
-</footer>
+    <footer>
+        <div class="footer-div text-center mx-auto">
+            <img src="img/LOGO.png" class="logo-ft" >
+        </div>    
+    </footer>
+   
     <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
    <script src="js/bootstrap-native-v4.min.js"></script> 
    

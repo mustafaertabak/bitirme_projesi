@@ -1,3 +1,13 @@
+html{
+    height: 100%;
+}
+
+body{
+min-height: 100%;
+display: grid;
+grid-template-rows: 1fr auto;
+}
+
 @media (min-width:992px){
     .buton-konum{
         position: absolute;
@@ -9,11 +19,7 @@
     width: 250px;
 }
 }
-@media (min-width:500px){
-    .footer-div{
-        position: fixed;
-    }  
-}
+
  
 @media(max-width:375px){
     .form-wrap{
@@ -26,7 +32,9 @@
         width: 360px!important;
     }
 }
-
+.form-wrap{
+        margin-bottom: 50px;
+}
 .nav-width{
     height: 100px;
 }
@@ -39,16 +47,25 @@
 
 .form-wrap{
     width: 400px;
-    height: 400px;
-    margin-top: 150px;
-  
-
+    height: 410 px;
+    margin-top: 160px;
 }
+@media (max-width:450px){
+    .form-wrap{
+        margin-top: 64px;
+    }
+}
+@media(min-width:769px) and (max-width:1024px){
+    .form-wrap{
+        margin-top: 300px;
+    }
+}
+
 .giris-btn{
-    height: 60px;
+    height: 40px;
 }
 .input-h{
-    height: 50px;
+    height: 60px;
 }
 
 .fr-baslik{
@@ -56,8 +73,7 @@
 }
 .footer-div{
     background-color: #d3d3d3;
-    margin-top: 150px;
-    bottom: 0;
-    width: 100%;
+    height: 100px;
+    grid-row-start: 2;
+    grid-row-end: 3; 
 }
-
