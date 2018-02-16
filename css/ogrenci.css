@@ -1,0 +1,225 @@
+.firmalar {
+    margin-top: -150px;
+    text-align: center;
+}
+
+.kapsayici {
+    width: 70%;
+    height: 80px;
+    
+
+}
+.k-button{
+    margin-top: 20px;
+}
+
+.firma-card-list {
+    -webkit-padding-start: 0px;
+    -moz-padding-start: 0px;
+    margin-bottom:-25px;
+}
+
+.firma-card-list li {
+    display: inline-block;
+}
+
+.firma-baslik {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.c-card-head {
+    float: left;
+    width: 100%;
+}
+
+.ch-col-1 {
+    float: left;
+    width: 60%;
+}
+
+.ch-col-2 {
+    float: left;
+    width: 40%;
+}
+
+ @media (max-width: 855px){
+    .card {
+        width: 140px!important;
+    }
+}
+
+
+@media (min-width: 1200px){
+    .jumbotron {
+        height: 250px;
+        padding-left: 60px!important;
+    }
+    .card {
+        width: 12rem;
+    }
+}
+
+@media (max-width: 991px){
+    .card-text {
+        font-size: 12px;
+    } 
+
+    .firma-card-ilk {
+        margin-left: 18px;
+    }
+
+    .firmalar {
+        margin-top: -120px;
+    }
+}
+
+@media (min-width: 1015px){
+    .c-mr-3 {
+        margin-right: 1rem !important;
+    }    
+}
+
+/* large ve xlarge için geçerli */
+@media (min-width: 992px) and (max-width: 1199px){
+    .jumbotron {
+        height: 250px;
+        padding-left: 60px!important;
+    }
+    .card {
+        width: 11rem;
+    }
+    
+}
+/* medium ekran için geçerli */
+@media (min-width: 769px) and (max-width: 991px) {
+    .jumbotron {
+        height: 230px;
+        padding-left: 40px!important;
+    }
+    .kart {
+        visibility: hidden!important;
+    }
+    .card {
+        width: 150px;
+    }
+}
+/* small ekran için geçerli */
+@media (min-width: 576px) and (max-width: 768px) {
+    .jumbotron {
+        height: 175px;
+        padding-left: 20px!important;
+    }
+    .kart {
+        visibility: hidden!important;
+    }
+    .card {
+        width: 9rem;
+    }
+    
+    .firmalar {
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 575px) {
+    .jumbotron {
+        height: 175px;
+        padding-left: 20px!important;
+    }
+    
+}
+
+.en-son-cards {
+    margin-top: 100px;
+}
+
+.firma-logo {
+    width: 100%;
+}
+
+.son-ilan-card {
+    width: 365px;
+}
+
+@media (max-width:1199px){
+    .son-ilan-card{
+        width: 300px;
+    }
+}
+
+
+@media  (max-width:991px) {
+    .son-ilan-card {
+        width: 200px;
+    }
+}
+
+
+@media (max-width:855px){
+    .hidden-cards{
+        visibility:  hidden;
+    }
+    .son-ilan-card{
+        width: 200px!important;
+        text-align: center; 
+    }
+    .k-button{
+        margin-top: -10px;
+    }
+}
+
+
+@media (min-width:992px){
+    .buton-konum{
+        position: absolute;
+        right: 80px;
+    }
+}
+
+@media (max-width:767px){
+    .son-ilan-card{
+        width: 160px!important;
+        
+    }
+    .kapsayici{
+        margin-top: -260px!important;
+    }
+    .footer-div{
+        margin-top: 30px;
+    }
+    .k-button{
+      margin-top: 20px;  
+    }
+}
+
+@media (max-width:518px){
+    .son-visible{
+        visibility: visible;
+    }
+}
+.footer-div{
+    background-color: #d3d3d3;
+    
+    bottom: 0;
+    height:100px; 
+    width: 100%;
+
+}
+.logo-ft{
+    height: 60px;
+    margin-top: 10px;
+}
+
+@media (max-width:855px){
+    .kapsayici {
+        margin-top: -200px;
+    }
+    .logo-ft{
+        height: 70px;
+        margin-top: 40px;
+    }
+    .footer-div{
+        height: 150px;
+    }
+}
