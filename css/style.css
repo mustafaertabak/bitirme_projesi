@@ -1,3 +1,4 @@
+
 html{
     height: 100%;
 }
@@ -5,6 +6,10 @@ body{
 min-height: 100%;
 display: grid;
 grid-template-rows: 1fr auto;
+}
+
+.buton-konum{
+    display: inline;
 }
 
 .firmalar {
@@ -231,4 +236,74 @@ grid-template-rows: 1fr auto;
         height: 150px;
       
     }
+}
+.logo-ft{
+    height: 60px!important;
+    margin-top: 20px!important;
+}
+@media (max-width:412px){
+.logo-w{
+    width: 250px;
+}
+}
+
+@media(max-width:412px){
+    .footer-div{
+        height: 100px;
+    }
+}
+ 
+@media(max-width:375px){
+    .form-wrap{
+        width: 375px!important;
+    }
+}
+
+@media(max-width:360px){
+    .form-wrap{
+        width: 360px!important;
+    }
+}
+.form-wrap{
+        margin-bottom: 50px;
+}
+.nav-width{
+    height: 100px;
+}
+
+
+.logo-ft{
+    height: 90px;
+    margin-top: 10px;
+}
+
+.form-wrap{
+    width: 410px;
+    height: 410px;
+    margin-top: 160px;
+}
+@media (max-width:450px){
+    .form-wrap{
+        margin-top: 64px;
+    }
+}
+@media(min-width:769px) and (max-width:1024px){
+    .form-wrap{
+        margin-top: 300px;
+    }
+}
+
+.giris-btn{
+    height: 40px;
+}
+.input-h{
+    height: 40px;
+}
+
+.fr-baslik{
+   font-size: 18pt;
+}
+
+.paragraf{
+    display: inline;
 }
