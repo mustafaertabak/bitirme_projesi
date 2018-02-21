@@ -1,18 +1,23 @@
 <!DOCTYPE html>
+<!-- Yazdığımız kelimelerin HTML dilinde birer kod satırı oluşturduğunu belirtmek için "HTML" tagi kullanıyoruz. -->
+<!-- lang="en" komutu yazım dilinin ingilizce olduğu anlamına gelmektedir. -->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
+    <!-- Head tagi içerisinde tanımlamalarımızı ve kullanıcağımız diğer dosyaların bağlantılarını yapmaktayız. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
+<!-- somut olarak görüntülenebilir. -->
 <body>
+    <div class="all-content">
         <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
-        
-    <div class="all-content">  <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
+        <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->     
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
             <div class="logo_wrap w-75">
@@ -20,7 +25,7 @@
                 <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
                 <a class="navbar-brand offset-lg-1" href="index.html">
                     <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
-                    <img width="200px" src="img/LOGO.png" alt="DeuStaj" class="logo-w ">
+                    <img  src="img/LOGO.png" alt="DeuStaj" class="logo-w">
                 </a>
             </div>
             <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
@@ -46,34 +51,18 @@
                     </li>
                 </ul>
             </div>  
-        </nav>     
-        <div class="form-wrap mx-auto p-4 rounded  bg-light">
-            <div class="baslik w-100 p-2 "><h4 class="text-center fr-baslik">Firma Giriş Paneli</h4>
-                <div class="baslik-wrap p-2">
-                    <p class="text-center">Staj sistemine Hoşgeldiniz</p>
-                </div>
-                    <div class="alert alert-danger" role="alert">
-                        Kullanıcı adı veya şifre yanlış
-                    </div>
-                <div class="wrap w-100 h-100 p-3">
-                    <form>
-                        <div class="form-group">   
-                            <input type="text" class="form-control input-h" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Kullanıcı Adı">                         
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control input-h" id="exampleInputPassword1" placeholder="Şifre">
-                        </div>
-                        <a href="firma-aktif.html"><button type="button" class="btn btn-primary w-100 giris-btn">Giriş Yap</button></a>
-                    </form>
-                </div>
-            </div>        
-        </div> 
+        </nav>            
+        <div class="container-ilanlar">
+            <div class="sol">
+                
+            </div>
+
+            <div class="sag">
+
+            </div>
+        </div>
     </div>
-    <footer>
-            <div class="footer-div text-center mx-auto ">
-            <img src="img/LOGO.png" class="logo-ft" >
-            </div>    
-        </footer>
+    <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
     <script src="js/bootstrap-native-v4.min.js"></script> 
 </body>
 </html>
