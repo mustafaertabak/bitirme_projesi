@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Yazdığımız kelimelerin HTML dilinde birer kod satırı oluşturduğunu belirtmek için "HTML" tagi kullanıyoruz. -->
+<!-- lang="en" komutu yazım dilinin ingilizce olduğu anlamına gelmektedir. -->
+<html lang="en">
+    <!-- Head tagi içerisinde tanımlamalarımızı ve kullanıcağımız diğer dosyaların bağlantılarını yapmaktayız. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
+<!-- somut olarak görüntülenebilir. -->
+<body>
+    <div class="all-content">
+        <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
+        <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
+            <div class="logo_wrap w-75">
+                <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
+                <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
+                <a class="navbar-brand offset-lg-1" href="index.html">
+                    <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
+                    <img width="200px" src="img/LOGO.png" alt="DeuStaj" class="logo-w">
+                </a>
+            </div>
+            <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
+            <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
+            <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
+            <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
+            <!-- sağa kaymasnı sağlamaktadır. -->    
+            <div class="collapse  navbar-collapse pr-5 offset-lg-4 buton-konum" id="navbarTogglerDemo02">
+                <div class="ilan">
+                    <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanları Yönet &nbsp;<i class="fas fa-cog fa-lg"></i></button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn  btn-light dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <h6 class="profil-baslik">Hoşgeldiniz Firma Adı</h6>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-user"></i>&nbsp;Profil</a>
+                        <a class="dropdown-item pb-2" href="#"><i class="fas fa-file-alt"></i> &nbsp;İlanlarım</a>     
+                        <a class="dropdown-item border border-bottom-0 border-left-0 border-right-0" href="#"><i class="fas fa-sign-out-alt"></i> &nbsp;Çıkış Yap</a>              
+                    </div>
+                </div>    
+            </div>         
+        </nav>
+        <div class="container-fluid prf-kapsar"> 
+            <div class="card-group profil-card">
+                <div class="card p-2">
+                    <div class="img-body border-bottom">
+                        <img class="card-img-top img-boy" src="img/vestel-1.jpg" alt="Card image cap">                       
+                    </div>
+                    <div class="card-body">     
+                        <a href="#"><h5 class="card-title">Fotoğrafı Güncelle</h5></a>                 
+                        <button type="button" class="btn btn-light prf-btn mb-3">Bilgileri Düzenle</button>
+                        <button type="button" class="btn btn-light prf-btn">İlanları Yönet</button>    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="footer-div text-center mx-auto">
+            <img src="img/LOGO.png" class="logo-ft" >
+        </div>    
+    </footer>
+        <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
+        <script src="js/bootstrap-native-v4.min.js"></script> 
+
+</body>
+</html>

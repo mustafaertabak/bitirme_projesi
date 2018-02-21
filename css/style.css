@@ -307,3 +307,26 @@ grid-template-rows: 1fr auto;
 .logo-w{
     width: 200px;
 }
+
+.logo-w:hover{
+    filter: brightness(10%);
+}
+.profil-card{
+    width: 300px;
+
+}
+.prf-kapsar{
+    padding-top: 50px;
+    padding-left:130px!important;
+}
+.img-body{
+    line-height: 150px;
+    width: 100%;
+    height: 150px;
+}
+.card-body a{
+    text-decoration: none!important;
+}
+.prf-btn{
+    display:inline!important;
+}
