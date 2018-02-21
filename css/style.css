@@ -331,31 +331,14 @@ grid-template-rows: 1fr auto;
     display:inline!important;
 }
 /* ---------ilanlar.html---------- */
-.header-img {
-    width: 100%;
-}
-.sol-contain {
-    width: 28%;
-    padding-top: 40px;
-    padding-left: 60px;
-}
-/*.ilan-src {
-    width: 
-}
-.bolumler {
-    widt
-}
-.sag-contain {
-    width: 68%;
-}*/
-
 .container-ilanlar {
     width: 1100px;
     background-color: red;
-    height: 400px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 .container-ilanlar .sol {
@@ -364,15 +347,18 @@ grid-template-rows: 1fr auto;
     height: 400px;
     background-color: aqua;
     float: left;
+    padding: 30px;
 }
 
 .container-ilanlar .sag {
     box-sizing: border-box;
+    overflow: hidden;
     width: calc(70% - 30px);
-    height: 400px;
+    height: 600px;
     background-color: aqua;
     float: left;
     margin-left: 30px;
+    padding-top: 30px;
 }
 
 @media (max-width: 1200px) {
@@ -394,3 +380,26 @@ grid-template-rows: 1fr auto;
     }
 }
 /* ---------ilanlar.html---------- */
+/*--------------- FİRMA PROFİL ------------------ */
+.profil-card{
+    width: 100%;
+
+}
+.img-body{
+    line-height: 150px;
+    height: 150px;
+}
+.card-body a{
+    text-decoration: none!important;
+}
+.form-kart{
+    width: 90%;
+    height: 550px;
+}
+.prf-btn{
+    display:inline!important;
+}
+.area{
+    resize: none;
+}
+/*--------------- FİRMA PROFİL ------------------ */

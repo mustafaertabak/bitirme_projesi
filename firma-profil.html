@@ -54,29 +54,48 @@
                 </div>    
             </div>         
         </nav>
-        <div class="container-fluid prf-kapsar"> 
-            <div class="card-group profil-card">
-                <div class="card p-2">
-                    <div class="img-body border-bottom">
-                        <img class="card-img-top img-boy" src="img/vestel-1.jpg" alt="Card image cap">                       
-                    </div>
-                    <div class="card-body">     
-                        <a href="#"><h5 class="card-title">Fotoğrafı Güncelle</h5></a>                 
-                        <button type="button" class="btn btn-light prf-btn mb-3">Bilgileri Düzenle</button>
-                        <button type="button" class="btn btn-light prf-btn">İlanları Yönet</button>    
+        <div class="container-ilanlar">
+            <div class="sol">
+                <div class="card-group profil-card">
+                    <div class="card w-100 p-2 pt-3">
+                            <img class="card-img-top img-boy" src="img/vestel-1.jpg" alt="Card image cap">  
+                            <hr>                                           
+                        <div class="card-body text-center">     
+                            <a href="#"><h5 class="card-title">Fotoğrafı Güncelle</h5></a>                 
+                            <button type="button" class="btn btn-light prf-btn mb-3 w-75">Bilgileri Düzenle</button>
+                            <button type="button" class="btn btn-light prf-btn w-75">İlanları Yönet</button>    
+                        </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </div>
-    <footer>
-        <div class="footer-div text-center mx-auto">
-            <img src="img/LOGO.png" class="logo-ft" >
+            <div class="sag">
+                <div class="ortala w-100">
+                    <div class="card bg-light text-dark p-4 mx-auto form-kart">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email...">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Telefon</label>
+                            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefon numarası...">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Bilgiler</label>
+                            <textarea class="form-control area" id="exampleFormControlTextarea1" rows="4" placeholder="Açıklama yazın..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </div>
+                </div>
+            </div>
         </div>    
-    </footer>
-        <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
-        <script src="js/bootstrap-native-v4.min.js"></script> 
+    </div>
+        <footer>
+            <div class="footer-div text-center mx-auto">
+                <img src="img/LOGO.png" class="logo-ft" >
+            </div>    
+        </footer>
+            <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
+            <script src="js/bootstrap-native-v4.min.js"></script> 
 
 </body>
 </html>
