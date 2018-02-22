@@ -6,7 +6,6 @@ min-height: 100%;
 display: grid;
 grid-template-rows: 1fr auto;
 }
-
 .firmalar {
     margin-top: -150px;
     text-align: center;
@@ -330,26 +329,104 @@ grid-template-rows: 1fr auto;
 .prf-btn{
     display:inline!important;
 }
-/* ---------ilanlar.html---------- */
+/* ----------------- ilanlar.html ----------------- */
+.all-content {
+    background-color: #f2f2f2;
+}
 .container-ilanlar {
     width: 1100px;
-    background-color: red;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
     margin-bottom: 20px;
 }
-
+/* ----------------- İLANLAR SOL BAŞLANGIÇ ------------------ */
 .container-ilanlar .sol {
     box-sizing: border-box;
     width: 30%;
-    height: 400px;
-    background-color: aqua;
+    height: 500px;
     float: left;
+}
+/* ----------------- Search kısmı ------------------ */
+.arama {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 15px;
     padding: 30px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+
+}
+.ara input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgba(182, 182, 182, 0.867);
+    border-radius: 6px 0px 0px 6px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
 }
 
+.ara button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 0px 6px 6px 0px;
+    border-left: none;
+    cursor: pointer;
+}
+
+.ara button:hover {
+    background: #0b7dda;
+}
+
+.ara::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ----------------- Search kısmı ------------------ */
+
+/* ----------------- BOLUM ARAMA KISMI BAŞLANGIÇ ------------------ */
+.bolum-content {
+    width: 100%;
+    height: 270px;
+    padding: 25px 30px 25px 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+}
+.bolum-sec {
+    width: 100%;
+    height: 220px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+/* ----------------- BOLUM ARAMA KISMI BİTİŞ ------------------ */
+.arama-buton {
+    width: 100%;
+    height: 100px;
+    padding: 20px 10px 20px 10px;
+    background-color: white;  
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
+}
+.arama-buton .search-btn {
+    width: 100%;
+    height: 60px;
+    font-size: 16pt;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+
+}
+/* ----------------- İLANLAR SOL BİTİŞ ------------------ */
 .container-ilanlar .sag {
     box-sizing: border-box;
     overflow: hidden;
@@ -358,7 +435,32 @@ grid-template-rows: 1fr auto;
     background-color: aqua;
     float: left;
     margin-left: 30px;
-    padding-top: 30px;
+}
+
+.ilan-baslik {
+    width: 100%;
+    height: 50px;
+    font-size: 16pt;
+    padding: 10px;
+    margin-bottom: 2px;
+    background-color: white;
+    text-align: center;
+}
+
+.ilan-content {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 2px;
+    padding: 25px;
+}
+.ilan-content p {
+    font-size: 10pt;
+    margin: 0px!important;
+}
+.ilan-content p1 {
+    font-size: 10pt;
+    color: #8c8c8c;
 }
 
 @media (max-width: 1200px) {
@@ -379,7 +481,78 @@ grid-template-rows: 1fr auto;
         margin-top: 20px;
     }
 }
-/* ---------ilanlar.html---------- */
+/* ------------- custom checkbox ------------- */
+/* Öncelikle Etiketi özelleştirdik. */
+.container-check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 25px;
+  }
+  
+  /* Tarayıcınn varsayılan checkbox'ını gizledik. */
+  .container-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Yeni özel checkbox oluşturduk. */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid #cccccc;
+  }
+  
+  /* Fareyi checkbox üzerine getirdiğimizde arka planını gri yaptık. */
+  .container-check:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* checkbox işaretlendiğinde arkaplan mavi yaptık. */
+  .container-check input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Check işaretini oluşturduk ancak seçili değilkeen gizledik. */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* İşaretlendiğinde görünür yaptık. */
+  .container-check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Onay işaretinin özelliklerini konum ve boyut ayarlarını yaptık. */
+  .container-check .checkmark:after {
+    left: 8px;
+    top: 2.5px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  /* ------------- custom checkbox ------------- */
+
+/* ----------------- ilanlar.html ----------------- */
+
 /*--------------- FİRMA PROFİL ------------------ */
 .profil-card{
     width: 100%;
