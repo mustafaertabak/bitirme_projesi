@@ -454,6 +454,7 @@ grid-template-rows: 1fr auto;
     background-color: white;
     margin-bottom: 2px;
     padding: 25px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
 }
 .ilan-content p {
     font-size: 10pt;
