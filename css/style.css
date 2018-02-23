@@ -332,6 +332,7 @@ grid-template-rows: 1fr auto;
 /* ----------------- ilanlar.html ----------------- */
 .all-content {
     background-color: #f2f2f2;
+
 }
 .container-ilanlar {
     width: 1100px;
@@ -427,12 +428,12 @@ grid-template-rows: 1fr auto;
 
 }
 /* ----------------- İLANLAR SOL BİTİŞ ------------------ */
+/* ----------------- İLANLAR SAĞ BAŞLANGIÇ ------------------ */
 .container-ilanlar .sag {
     box-sizing: border-box;
     overflow: hidden;
     width: calc(70% - 30px);
     height: 600px;
-    background-color: aqua;
     float: left;
     margin-left: 30px;
 }
@@ -461,6 +462,14 @@ grid-template-rows: 1fr auto;
 .ilan-content p1 {
     font-size: 10pt;
     color: #8c8c8c;
+}
+/* ----------------- İLANLAR SAĞ BİTİŞ ------------------ */
+/* -- Footer-Div -- */
+.footer-div-ilanlar {
+    margin: 0;
+}
+.footer-div-ilanlar img {
+    margin-top: 10px;
 }
 
 @media (max-width: 1200px) {
