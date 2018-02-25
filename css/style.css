@@ -456,13 +456,34 @@ grid-template-rows: 1fr auto;
     padding: 25px;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
 }
+.ilan-content a h6 {
+    width: 400px;
+}
+.ilan-content a {
+    text-decoration: none!important;
+    color: #1a1a1a;
+}
+a:hover{
+    text-decoration: none!important;
+    color: #1a1a1a!important;
+}
 .ilan-content p {
     font-size: 10pt;
     margin: 0px!important;
+    width: 400px;
 }
-.ilan-content p1 {
+.ilan-content .p1 {
     font-size: 10pt;
     color: #8c8c8c;
+    width: 400px;
+}
+.ilan-logosu {
+    float: right;
+    margin-top: -60px;
+}
+.ilan-logosu img {
+    width: 200px;
+
 }
 /* ----------------- İLANLAR SAĞ BİTİŞ ------------------ */
 /* -- Footer-Div -- */
@@ -472,6 +493,11 @@ grid-template-rows: 1fr auto;
 .footer-div-ilanlar img {
     margin-top: 10px;
 }
+.logo-fti{
+    width: 200px;
+    margin-top: 20px;
+}
+
 
 @media (max-width: 1200px) {
     .container-ilanlar {
@@ -490,6 +516,13 @@ grid-template-rows: 1fr auto;
         margin-left: 0px;
         margin-top: 20px;
     }
+
+}
+@media (max-width: 855px) {
+    .footer-div-ilanlar .logo-fti{
+        height: 58px;
+    }
+
 }
 /* ------------- custom checkbox ------------- */
 /* Öncelikle Etiketi özelleştirdik. */
