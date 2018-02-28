@@ -6,7 +6,6 @@ min-height: 100%;
 display: grid;
 grid-template-rows: 1fr auto;
 }
-
 .firmalar {
     margin-top: -150px;
     text-align: center;
@@ -198,9 +197,6 @@ grid-template-rows: 1fr auto;
     .footer-div{
         margin-top: 30px;
     }
-    .footer-div-ilan-yonet{
-        margin-top: 0;
-    }
     .k-button{
       margin-top: 20px;  
     }
@@ -290,291 +286,6 @@ grid-template-rows: 1fr auto;
     }
 }
 
-/* ----------------- ilanlar.html BAŞLANGIÇ----------------- */
-.all-content {
-    background-color: #f2f2f2;
-
-}
-.container-ilanlar {
-    width: 1100px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 20px;
-}
-/* ----------------- İLANLAR SOL BAŞLANGIÇ ------------------ */
-.container-ilanlar .sol {
-    box-sizing: border-box;
-    width: 30%;
-    height: 500px;
-    float: left;
-    padding: 30px;
-}
-/* ----------------- Search kısmı BAŞLANGıÇ------------------ */
-.arama {
-    width: 100%;
-    height: 100px;
-    background-color: white;
-    margin-bottom: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-
-}
-
-.ara input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid rgba(182, 182, 182, 0.867);
-    border-radius: 6px 0px 0px 6px;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-}
-
-.ara button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #3d3d3d;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-radius: 0px 6px 6px 0px;
-    border-left: none;
-    cursor: pointer;
-}
-
-.ara button:hover {
-    background: #262626;
-}
-
-.ara::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* ----------------- Search kısmı BİTİŞ ------------------ */
-
-/* ----------------- BOLUM ARAMA KISMI BAŞLANGIÇ ------------------ */
-.bolum-content {
-    width: 100%;
-    height: 270px;
-    padding: 25px 30px 25px 30px;
-    margin-bottom: 10px;
-    background-color: white;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-}
-.bolum-sec {
-    width: 100%;
-    height: 220px;
-    overflow-y: scroll;
-    padding: 20px;
-}
-.arama-buton {
-    width: 100%;
-    height: 100px;
-    padding: 20px 20px 20px 20px;
-    background-color: white;  
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
-}
-.arama-buton .search-btn {
-    width: 100%;
-    height: 60px;
-    font-size: 16pt;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 60px;
-
-}
-/* ----------------- BOLUM ARAMA KISMI BİTİŞ ------------------ */
-/* ----------------- İLANLAR SOL BİTİŞ ------------------ */
-/* ----------------- İLANLAR SAĞ BAŞLANGIÇ ------------------ */
-.all-content {
-    background-color: #f2f2f2;
-
-}
-.container-ilanlar .sag {
-    box-sizing: border-box;
-    overflow: hidden;
-    width: calc(70% - 30px);
-    float: left;
-    margin-left: 30px;
-    padding-top: 30px;
-}
-
-.ilan-baslik {
-    width: 100%;
-    height: 50px;
-    font-size: 16pt;
-    padding: 10px;
-    margin-bottom: 2px;
-    background-color: white;
-    text-align: center;
-}
-
-.ilan-content {
-    width: 100%;
-    height: 100px;
-    background-color: white;
-    margin-bottom: 2px;
-    padding: 25px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
-}
-.ilan-content p {
-    font-size: 10pt;
-    margin: 0px!important;
-}
-.ilan-content p1 {
-    font-size: 10pt;
-    color: #8c8c8c;
-    width: 400px;
-}
-.ilan-content a h6 {
-    width: 400px;
-}
-.ilan-content a {
-    text-decoration: none!important;
-    color: #1a1a1a;
-}
-a:hover{
-    text-decoration: none!important;
-    color: #1a1a1a!important;
-}
-.ilan-logosu {
-    float: right;
-    margin-top: -60px;
-}
-.ilan-logosu img {
-    width: 200px;   
-}
-/* ----------------- İLANLAR SAĞ BİTİŞ ------------------ */
-/* ---------------- FOOTER-DİV-BAŞLANGIÇ ---------------- */
-.footer-div-ilanlar {
-    margin: 0;
-    background-color: #d3d3d3;
-    height: 100px;
-    text-align: center;
-}
-/* ilan-yonet footer */
-.footer-div-ilan-yonet {
-    background-color: #d3d3d3;
-    height: 100px;
-}
-/* ilan-yonet footer */
-/* -- Footer-Div -- */
-@media (max-width: 1200px) {
-    .container-ilanlar {
-        max-width: 700px;
-        width: auto;
-        box-sizing: border-box;
-       
-    }
-    .container-ilanlar .sol {
-        width: 100%;
-    }
-    .container-ilanlar .sag {
-        width: 100%;
-        margin-left: 0px;
-        margin-top: 20px;
-    }
-}
-@media (max-width: 855px) {
-    .footer-div-ilanlar .logo-fti{
-        height: 58px;
-    }
-    
-}
-/* ---------------- FOOTER-DİV-BİTİŞ ----------------- */
-/* ------------ CUSTOM-CHECKBOX-BAŞLANGIÇ ------------ */
-/* Öncelikle Etiketi özelleştirdik. */
-.container-check {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 17px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    line-height: 25px;
-}
-  
-/* Tarayıcınn varsayılan checkbox'ını gizledik. */
-.container-check input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-  
-/* Yeni özel checkbox oluşturduk. */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border: 1px solid #cccccc;
-}
-  
-/* Fareyi checkbox üzerine getirdiğimizde arka planını gri yaptık. */
-.container-check:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-  
-/* checkbox işaretlendiğinde arkaplan mavi yaptık. */
-.container-check input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
-  
-/* Check işaretini oluşturduk ancak seçili değilkeen gizledik. */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-  
-/* İşaretlendiğinde görünür yaptık. */
-.container-check input:checked ~ .checkmark:after {
-    display: block;
-}
-  
-/* Onay işaretinin özelliklerini konum ve boyut ayarlarını yaptık. */
-.container-check .checkmark:after {
-    left: 8px;
-    top: 2.5px;
-    width: 8px;
-    height: 15px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-/* ----------------- CUSTOM-CHECKBOX-BİTİŞ ------------------ */
-    
-
-/* ------------------ ilanlar.htm \BİTİŞ/ ------------------- */
-
-/* ------------------- SİFRE-DEGİS-BASLA -------------------- */
-
-.btn-sifre{
-    margin-top: 30px;
-}
-
-/* ------------------- SİFRE-DEGİS-BİTİŞ -------------------- */
-
-/* ilan-yonet */
-.sol-yonet{
-    margin-top: -52px;
-}
-/* ilan-yonet */
-
-/*--------------- FİRMA-PROFİL-BAŞLA ------------------ */
 .giris-btn{
     height: 40px;
 }
@@ -618,27 +329,289 @@ a:hover{
 .prf-btn{
     display:inline!important;
 }
+/* ----------------- ilanlar.html ----------------- */
+.all-content {
+    background-color: #f2f2f2;
+
+}
+.container-ilanlar {
+    width: 1100px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+/* ----------------- İLANLAR SOL BAŞLANGIÇ ------------------ */
+.container-ilanlar .sol {
+    box-sizing: border-box;
+    width: 30%;
+    height: 500px;
+    float: left;
+    padding: 30px;
+}
+/* ----------------- Search kısmı ------------------ */
+.arama {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+
+}
+.ara input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgba(182, 182, 182, 0.867);
+    border-radius: 6px 0px 0px 6px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+.ara button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #3d3d3d;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 0px 6px 6px 0px;
+    border-left: none;
+    cursor: pointer;
+}
+
+.ara button:hover {
+    background: #262626;
+}
+
+.ara::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ----------------- Search kısmı ------------------ */
+
+/* ----------------- BOLUM ARAMA KISMI BAŞLANGIÇ ------------------ */
+.bolum-content {
+    width: 100%;
+    height: 270px;
+    padding: 25px 30px 25px 30px;
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+}
+.bolum-sec {
+    width: 100%;
+    height: 220px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+/* ----------------- BOLUM ARAMA KISMI BİTİŞ ------------------ */
+.arama-buton {
+    width: 100%;
+    height: 100px;
+    padding: 20px 20px 20px 20px;
+    background-color: white;  
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
+}
+.arama-buton .search-btn {
+    width: 100%;
+    height: 60px;
+    font-size: 16pt;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+
+}
+/* ----------------- İLANLAR SOL BİTİŞ ------------------ */
+/* ----------------- İLANLAR SAĞ BAŞLANGIÇ ------------------ */
+.container-ilanlar .sag {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: calc(70% - 30px);
+    height: 600px;
+    float: left;
+    margin-left: 30px;
+}
+
+.ilan-baslik {
+    width: 100%;
+    height: 50px;
+    font-size: 16pt;
+    padding: 10px;
+    margin-bottom: 2px;
+    background-color: white;
+    text-align: center;
+}
+
+.ilan-content {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 2px;
+    padding: 25px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
+}
+.ilan-content a h6 {
+    width: 400px;
+}
+.ilan-content a {
+    text-decoration: none!important;
+    color: #1a1a1a;
+}
+a:hover{
+    text-decoration: none!important;
+    color: #1a1a1a!important;
+}
+.ilan-content p {
+    font-size: 10pt;
+    margin: 0px!important;
+    width: 400px;
+}
+.ilan-content .p1 {
+    font-size: 10pt;
+    color: #8c8c8c;
+    width: 400px;
+}
+.ilan-logosu {
+    float: right;
+    margin-top: -60px;
+}
+.ilan-logosu img {
+    width: 200px;
+
+}
+/* ----------------- İLANLAR SAĞ BİTİŞ ------------------ */
+/* -- Footer-Div -- */
+.footer-div-ilanlar {
+    margin: 0;
+}
+.footer-div-ilanlar img {
+    margin-top: 10px;
+}
+.logo-fti{
+    width: 200px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 1200px) {
+    .container-ilanlar {
+        max-width: 700px;
+        width: auto;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .container-ilanlar .sol {
+        width: 100%;
+    }
+
+    .container-ilanlar .sag {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+}
+@media (max-width: 855px) {
+    .footer-div-ilanlar .logo-fti{
+        height: 58px;
+    }
+
+}
+/* ------------- custom checkbox ------------- */
+/* Öncelikle Etiketi özelleştirdik. */
+.container-check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 25px;
+  }
+  
+  /* Tarayıcınn varsayılan checkbox'ını gizledik. */
+  .container-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Yeni özel checkbox oluşturduk. */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid #cccccc;
+  }
+  
+  /* Fareyi checkbox üzerine getirdiğimizde arka planını gri yaptık. */
+  .container-check:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* checkbox işaretlendiğinde arkaplan mavi yaptık. */
+  .container-check input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Check işaretini oluşturduk ancak seçili değilkeen gizledik. */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* İşaretlendiğinde görünür yaptık. */
+  .container-check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Onay işaretinin özelliklerini konum ve boyut ayarlarını yaptık. */
+  .container-check .checkmark:after {
+    left: 8px;
+    top: 2.5px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  /* ------------- custom checkbox ------------- */
+
+/* ----------------- ilanlar.html ----------------- */
+
+/*--------------- FİRMA PROFİL ------------------ */
 .profil-card{
     width: 100%;
-    margin-top: 50px;
-    height: 350px;
 
 }
 .img-body{
     line-height: 150px;
     height: 150px;
-  
-}
-.img-boy{
-    margin:auto;
 }
 .card-body a{
     text-decoration: none!important;
 }
 .form-kart{
-    width: 100%!important;
-    height: 420px;
-    margin-top: 50px; 
+    width: 90%;
+    height: 550px;
 }
 .prf-btn{
     display:inline!important;
@@ -646,46 +619,4 @@ a:hover{
 .area{
     resize: none;
 }
-.btns-kapsar{
-    text-align: right;
-    margin-top: -30px!important;
-   
-}
-
-@media (max-width:1200px){
-  .img-boy{
-      width: 300px!important;
-     
-    }
-    .butons{
-        width: 200px;
-        font-size: 14px!important;
-        text-align: center; 
-        height: 30px!important;
-    }
-}
-@media (max-width:505px){
-    .btns{
-       width: 70px;    
-    }
-    .p-yonet{
-        font-size: 9px!important;
-           text-align: center; 
-       }
-   .ilan-alt{
-       font-size:10px!important;
-   }
-}
-@media (max-width:414px){
-   .container-ilanlar .sol{
-        padding: 0;
-     
-    }
-    .alt-card{
-        margin-top: -19px;
-    }
-    .form-kart{
-        margin-top: -30px;
-    }
-}
-/*--------------- FİRMA-PROFİL-BİTİŞ ------------------ */
+/*--------------- FİRMA PROFİL ------------------ */
