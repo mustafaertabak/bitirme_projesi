@@ -15,7 +15,7 @@
 <!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
 <!-- somut olarak görüntülenebilir. -->
 <body>
-    <div class="all-content">
+    <div class="ilan-all-content">
         <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
         <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->     
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -52,99 +52,49 @@
                 </ul>
             </div>  
         </nav>    
-        <!-- Aşağıdaki alan sayfanın içeriğini barındırmaktadır. Container-ilanlar adında genel bir kapsayıcı açarak
-             konumlandırmayı daha kolay bir hale getiriyoruz. -->        
-        <div class="container-ilanlar">
-            <!-- içeriği filtreleme kısmını bu alanda yapıyoruz istersek arama kısmından direk arama yapabiliriz
-                ya da alt kısımda istediğimiz bölüm seçimi yapabiliyoruz. -->
-            <div class="sol">
-                <div class="arama">
-                    <form class="ara" action="/action_page.php" style="margin:auto;max-width:300px">
-                        <input type="text" placeholder="Arama.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <div class="bolum-content">
-                    <div class="bolum-sec">
-                        <label class="container-check">BİR
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">İKİ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">ÜÇ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">DÖRT
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">BEŞ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">ALTI
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">YEDİ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">SEKİZ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-check">DOKUZ
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
+        <div class="container-content">
+            <div class="ilan-content-wrap">
+                <div class="ilan-sol">
+                    <div class="ilan-content-header">
+                        <h3 class="m-0 mb-2">İlan başlığı</h3>
+                        <span>İlan Tarihi: 00/00/000</span>
+                        <span> - </span>
+                        <span>Geçerlilik Tarihi: 00/00/0000</span>
+                        <p class="m-0">İlan Sektör..</p>
+                        <p>ilan no: 000000</p>
+                    </div>
+                    <div class="ilan-content">
+                        <div class="ilan-cntnt">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Repellat harum corrupti quod, tempora consequatur laboriosam animi 
+                            accusantium aliquid excepturi asperiores. Natus ipsam, quo aspernatur 
+                            officia voluptate sapiente pariatur molestias rerum! 
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Optio blanditiis dolor, molestiae ducimus similique perspiciatis 
+                            beatae odio debitis, ipsum rem enim consectetur. Eos blanditiis iste 
+                            animi? Unde provident aperiam atque!
+                        </div>
+                        <hr>
+                        <div class="bsvr-btn">
+                            Başvuru Yap
+                        </div>
                     </div>
                 </div>
-                <div class="arama-buton">
-                    <div class="search-btn btn-primary">
-                        Ara    
-                        <i class="fa fa-search"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="sag">
-                <div class="ilan-baslik">İlanlar</div>
-                <div class="ilanlar-content">
-                    <a href="#"><h6 class="m-0">İlan başlığı</h6></a>
-                    <p>Şirket adı - Bulunduğu il</p>
-                    <p class="p1">İlan açıklama satırı..</p>
-                    <a href="#" >
-                        <div class="ilan-logosu">
-                            <img src="img/inovera.jpeg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="ilanlar-content">
-                    <a href="#"><h6 class="m-0">İlan başlığı</h6></a>
-                    <p>Şirket adı - Bulunduğu il</p>
-                    <p class="p1">İlan açıklama satırı..</p>
-                    <a href="#" >
-                        <div class="ilan-logosu">
-                            <img src="img/inovera.jpeg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="ilanlar-content">
-                    <a href="#"><h6 class="m-0">İlan başlığı</h6></a>
-                    <p>Şirket adı - Bulunduğu il</p>
-                    <p class="p1">İlan açıklama satırı..</p>
-                    <a href="#" >
-                        <div class="ilan-logosu">
-                            <img src="img/inovera.jpeg" alt="">
-                        </div>
-                    </a>
+                <div class="ilan-sag">
+
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
     </div>
     <!-- aşağıdaki alanımız sayfanın footer kısmıdır. footer tag'i içerisinde bir adet footer-div class'na sahip -->
     <!-- div içerinde img nesnesine sahiptir ve bu img nesnesi içerisinde sitemizin logosu bulanmaktadır. -->
