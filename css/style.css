@@ -409,7 +409,12 @@ grid-template-rows: 1fr auto;
     margin-bottom: 2px;
     padding: 25px;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,.1); 
+    transition: 500ms;
 }
+.ilan-content:hover {
+    height: 150px;
+}
+
 .ilan-content p {
     font-size: 10pt;
     margin: 0px!important;
