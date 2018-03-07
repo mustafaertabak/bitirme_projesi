@@ -62,14 +62,14 @@
                         <hr>                                           
                         <div class="card-body text-center card-profil">     
                             <a href="#"><h5 class="card-title card-baslik text-dark pb-3">Fotoğrafı Güncelle  <i class="far fa-image"></i></h5></a>                 
-                            <button type="button" class="btn  prf-btn mb-3 w-75 ">Bilgileri Düzenle</button>
-                            <button type="button"  class="btn  prf-btn w-75 mb-3 prf-btn-fcs">İlanları Yönet</button>    
-                            <button type="button"  class="btn prf-btn w-75 butons">Şifre Değiştir</button>      
+                            <button type="button"  onclick="gizle2()" class="btn  prf-btn mb-3 w-75 ">Bilgileri Düzenle</button>
+                            <button type="button"  onclick="gizle3()" class="btn  prf-btn w-75 mb-3 prf-btn-fcs">İlanları Yönet</button>    
+                            <button type="button"  onclick="gizle()" class="btn prf-btn w-75 butons">Şifre Değiştir</button>      
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="sag  mx-auto">
+            <div class="visible mx-auto" id="visible-1">
                     <div class="card bg-light text-dark p-4 mx-auto form-kart">
                         <div class="form-group">
                             <label for="exampleInputEmail1">E-posta Adresi</label>
@@ -86,6 +86,44 @@
                         <button type="submit" class="btn btn-primary">Gönder</button>
                     </div>               
             </div>
+            <div class="visible mx-auto" id="visible-2">
+                <div class="card bg-light text-dark p-4 mx-auto form-kart">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Eski Şifreniz</label>
+                        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Yeni Şifre</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Yeni Şifre Tekrar</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sifre">Gönder</button>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin" id="visible-3">               
+                    <div class="ilan-baslik">İlanlar</div>
+                    <div class="ilanlar-content">
+                        <h6 class="m-0">İlan başlığı</h6>
+                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                        <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                        <div class="btns-kapsar w-100">
+                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                        </div> 
+                    </div>
+                    <div class="ilanlar-content">                   
+                        <h6 class="m-0 ">İlan başlığı</h6>
+                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>                 
+                        <p1 class="ilan-alt">İlan açıklama satırı..</p1> 
+                        <div class="btns-kapsar w-100">
+                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                        </div>                           
+                    </div>               
+                </div>
         </div>    
     </div>
         <footer>
@@ -94,7 +132,34 @@
             </div>    
         </footer> 
             <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
-            <script src="js/bootstrap-native-v4.min.js"></script> 
+            <script src="js/bootstrap-native-v4.min.js"></script>
+            <script>
+                function gizle() {
+            var x = document.getElementById("visible-2");
+            var y=document.getElementById("visible-1");
+            var z=document.getElementById("visible-3");
+            z.style.display="none";
+            y.style.display= "none";
+            x.style.display = "block";
+        }
+        function gizle2() {
+            var x = document.getElementById("visible-2");
+            var y=document.getElementById("visible-1");
+            var z=document.getElementById("visible-3");
+            y.style.display= "block";
+            z.style.display="none";
+            x.style.display = "none";
+        }
+        function gizle3() {
+            var x = document.getElementById("visible-2");
+            var y=document.getElementById("visible-1");
+            var z=document.getElementById("visible-3");
+            y.style.display= "none";
+            z.style.display="block";
+            x.style.display = "none";
+        }
+
+            </script> 
 
 </body>
 </html>

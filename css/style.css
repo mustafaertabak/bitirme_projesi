@@ -396,12 +396,11 @@ grid-template-rows: 1fr auto;
 /* ----------------- BOLUM ARAMA KISMI BİTİŞ ------------------ */
 /* ----------------- İLANLAR SOL BİTİŞ ------------------ */
 /* ----------------- İLANLAR SAĞ BAŞLANGIÇ ------------------ */
-.container-ilanlar .sag {
+.container-ilanlar .visible {
     box-sizing: border-box;
     overflow: hidden;
     width: calc(70% - 30px);
     float: left;
-    margin-left: 30px;
     padding-top: 30px;
 }
 
@@ -479,7 +478,7 @@ a:hover{
     .container-ilanlar .sol {
         width: 100%;
     }
-    .container-ilanlar .sag {
+    .container-ilanlar .visible {
         width: 100%;
         margin-left: 0px;
         margin-top: 20px;
@@ -705,6 +704,15 @@ a:hover{
     .form-kart{
         margin-top: -30px;
     }
+}
+#visible-2 {
+    display: none;
+}
+#visible-3{
+    display: none;
+}
+.visible-margin{
+    margin-top: 51px!important;
 }
 /*--------------- FİRMA-ÖĞRENCİ-PROFİL-BİTİŞ ------------------ */
 
