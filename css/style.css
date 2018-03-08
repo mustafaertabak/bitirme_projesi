@@ -299,7 +299,7 @@ grid-template-rows: 1fr auto;
     .sirket-ad{
         font-size: 12px!important;
     }
-    .ilan-sol-img{
+    .ilan-sag-img{
         margin-right:-25px;
     }
 }
@@ -416,7 +416,7 @@ grid-template-rows: 1fr auto;
 
 .ilanlar-content {
     width: 100%;
-    height: 100px;
+    height: 125px;
     background-color: white;
     margin-bottom: 2px;
     padding: 25px;
@@ -593,6 +593,7 @@ a:hover{
 }
 .prf-btn{
     background-color: #f2f2f2;
+    display:inline!important;
 }
 .prf-btn:hover{
     background:#007bff!important;
@@ -620,10 +621,6 @@ a:hover{
 .logo-w:hover{
     filter: brightness(10%);
 }
-.profil-card{
-    width: 300px;
-
-}
 .prf-kapsar{
     padding-top: 50px;
     padding-left:130px!important;
@@ -636,14 +633,9 @@ a:hover{
 .card-body a{
     text-decoration: none!important;
 }
-.prf-btn{
-    display:inline!important;
-}
 .profil-card{
     width: 100%;
     margin-top: 50px;
-   
-
 }
 .img-body{
     line-height: 150px;
@@ -653,15 +645,9 @@ a:hover{
 .img-boy{
     margin:auto;
 }
-.card-body a{
-    text-decoration: none!important;
-}
 .form-kart{
     width: 100%!important;
     margin-top: 50px; 
-}
-.prf-btn{
-    display:inline!important;
 }
 .area{
     resize: none;
@@ -723,18 +709,32 @@ a:hover{
 .ilan-all-content {
     background-color: #f2f2f2;
 }
-.container-content {
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 30px;
-}
 .ilan-content-wrap {
     width: 1100px;
     min-height: 600px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
     padding: 10px;
 
+}
+
+@media (max-width: 1200px){
+    .ilan-content-wrap {
+        max-width: 700px;
+        width: auto;
+        box-sizing: border-box;
+    }
+    .ilan-sol {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+        padding-bottom: 100px;
+    }
+    .ilan-sag {
+        width: 100%;
+    }
 }
 /* ---------------İLAN SOL BAŞLANGIÇ ------------------ */
 .ilan-sol {
@@ -778,6 +778,7 @@ a:hover{
     min-width: 100px;
     width: 50%;
 }
+
 /* ---------------İLAN SOL BİTİŞ ------------------ */
 
 /* ---------------İLAN SAĞ BAŞLANGIÇ ------------------ */
@@ -785,9 +786,21 @@ a:hover{
     box-sizing: border-box;
     overflow: hidden;
     width: calc(30% - 30px);
-    height: 300px;
     float: left;
     margin-left: 30px;
+}
+
+.ilan-prf-card{
+    width: 100%;
+}
+
+.card-profil {
+    padding-top: 0px!important;
+}
+
+.ilan-sirket-ad {
+    box-sizing: border-box;
+    font-size: 15px!important;
 }
 /* ---------------İLAN SAĞ BİTİŞ ------------------ */
 
