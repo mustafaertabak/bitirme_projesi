@@ -581,6 +581,9 @@ a:hover{
 /* ilan-yonet */
 
 /*--------------- FİRMA-ÖĞRENCİ-PROFİL-BAŞLA ------------------ */
+.card-baslik{
+    cursor: pointer;
+}
 .card-baslik:hover{
     color:#007bff!important;
     
