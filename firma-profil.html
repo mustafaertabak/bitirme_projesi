@@ -63,14 +63,14 @@
                         <div class="card-body text-center card-profil">                                
                             <label for="dosya-sec"><h5 class="card-title card-baslik text-dark pb-2">Fotoğrafı Güncelle  <i class="far fa-image"></i></h5></label>
                             <input id="dosya-sec"  type="file" style="position:fixed;top: -100px;">         
-                            <button type="button"  onclick="gizle2()" class="btn  prf-btn mb-3 w-75 ">Bilgileri Düzenle</button>
-                            <button type="button"  onclick="gizle3()" class="btn  prf-btn w-75 mb-3 prf-btn-fcs">İlanları Yönet</button>    
-                            <button type="button"  onclick="gizle()" class="btn prf-btn w-75 butons">Şifre Değiştir</button>      
+                            <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button">Bilgileri Düzenle</button>
+                            <button type="button" data-content="ilanlar" class="btn prf-btn w-75 mb-3 prf-btn-fcs c_button">İlanları Yönet</button>    
+                            <button type="button" data-content="sifre" class="btn prf-btn w-75 butons c_button">Şifre Değiştir</button>      
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="visible mx-auto" id="visible-1">
+            <div class="visible mx-auto content_c" id="bilgiler" style="display: block">
                     <div class="card bg-light text-dark p-4 mx-auto form-kart">
                         <div class="form-group">
                             <label for="exampleInputEmail1">E-posta Adresi</label>
@@ -87,7 +87,7 @@
                         <button type="submit" class="btn btn-primary">Gönder</button>
                     </div>               
             </div>
-            <div class="visible mx-auto" id="visible-2">
+            <div class="visible mx-auto content_c" id="sifre">
                 <div class="card bg-light text-dark p-4 mx-auto form-kart">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Eski Şifreniz</label>
@@ -104,7 +104,7 @@
                     <button type="submit" class="btn btn-primary btn-sifre">Gönder</button>
                 </div>               
             </div>
-            <div class="visible mx-auto visible-margin" id="visible-3">               
+            <div class="visible mx-auto visible-margin content_c" id="ilanlar">               
                     <div class="ilan-baslik">İlanlar</div>
                     <div class="ilanlar-content">
                         <h6 class="m-0">İlan başlığı</h6>
@@ -135,30 +135,21 @@
             <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
             <script src="js/bootstrap-native-v4.min.js"></script>
             <script>
-                function gizle() {
-            var x = document.getElementById("visible-2");
-            var y=document.getElementById("visible-1");
-            var z=document.getElementById("visible-3");
-            z.style.display="none";
-            y.style.display= "none";
-            x.style.display = "block";
-        }
-        function gizle2() {
-            var x = document.getElementById("visible-2");
-            var y=document.getElementById("visible-1");
-            var z=document.getElementById("visible-3");
-            y.style.display= "block";
-            z.style.display="none";
-            x.style.display = "none";
-        }
-        function gizle3() {
-            var x = document.getElementById("visible-2");
-            var y=document.getElementById("visible-1");
-            var z=document.getElementById("visible-3");
-            y.style.display= "none";
-            z.style.display="block";
-            x.style.display = "none";
-        }
+
+                var buttons = Array.from(document.getElementsByClassName("c_button"));
+                var contents = Array.from(document.getElementsByClassName("content_c"));
+
+                for (var i in buttons) {
+                    buttons[i].addEventListener("click", function() {
+                        var content_id = this.getAttribute("data-content");
+
+                        for (var j in contents) {
+                            contents[j].style.display = "none";
+                        }
+                        
+                        document.getElementById(content_id).style.display = "block";
+                    });
+                }
 
             </script> 
 

@@ -74,6 +74,16 @@ grid-template-rows: 1fr auto;
     width: 200px;
     margin-top: 20px;
 }
+.card-img-top{
+    width: 160px;
+    height: 44px;
+}
+.card-1 {
+    background-color: white;
+}
+.text-p1 {
+    font-weight: bold;
+}
 
 @media(max-width:414px) {
     .form-wrap {
@@ -82,6 +92,9 @@ grid-template-rows: 1fr auto;
 }
 
  @media (max-width: 855px) {
+    .card-1{
+        width: 145px!important;
+    }
     .card {
         width: 140px!important;
     }
@@ -94,7 +107,11 @@ grid-template-rows: 1fr auto;
         padding-left: 60px!important;
     }
     .card {
-        width: 12rem;
+        width: 430px;
+    }
+    .card-1 {
+        width: 190px;
+        background-color: white;
     }
 }
 
@@ -124,8 +141,13 @@ grid-template-rows: 1fr auto;
         height: 250px;
         padding-left: 60px!important;
     }
-    .card {
-        width: 11rem;
+    .card-1 {
+        width: 160px; 
+
+    }
+    .text-p1 {
+        font-size: 10pt;
+        font-weight: bold;
     }
     
 }
@@ -141,9 +163,12 @@ grid-template-rows: 1fr auto;
     .card {
         width: 150px;
     }
+    .card-1 {
+        width: 150px;
+    }
 }
 /* small ekran için geçerli */
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 773px) {
     .jumbotron {
         height: 175px;
         padding-left: 20px!important;
@@ -151,9 +176,17 @@ grid-template-rows: 1fr auto;
     .kart {
         visibility: hidden!important;
     }
-    .card {
-        width: 9rem;
+    .son-ilan-card {
+        width: 225px!important;
     }
+    .card-1 {
+        width: 140px!important;
+    }
+    .text-p1 {
+        font-size: 8pt!important;
+        font-weight: bold;
+    }
+
     
     .firmalar {
         margin-top: -80px;
@@ -168,16 +201,9 @@ grid-template-rows: 1fr auto;
     
 }
 
-@media (max-width:1199px){
-    .son-ilan-card{
-        width: 300px;
-    }
-}
-
-
 @media  (max-width:991px) {
     .son-ilan-card {
-        width: 200px;
+        width: 330px;
     }
 }
 
@@ -187,56 +213,58 @@ grid-template-rows: 1fr auto;
         visibility:  hidden;
     }
     .son-ilan-card{
-        width: 200px!important;
         text-align: center; 
     }
     .k-button{
         margin-top: -10px;
     }
+    .text-p1 {
+        font-size: 9pt;
+        font-weight: bold;
+    }
 }
 
 @media (max-width:767px){
-    .son-ilan-card{
+    .son-ilan-card {
         width: 160px!important;
-        
     }
-    .footer-div-ilan-yonet{
+    .footer-div-ilan-yonet {
         margin-top: 0;
     }
-    .k-button{
+    .k-button {
       margin-top: 20px;  
     }
 }
 
-@media (max-width:518px){
+@media (max-width:518px) {
     .son-visible{
         visibility: visible;
     }
 }
 
-@media (max-width:855px){
+@media (max-width:855px)  {
     .kapsayici {
         margin-top: -200px;
     }
-    .all-content{
+    .all-content {
         padding-bottom: 100px;
     }
 }
 
-@media (min-width:992px){
-    .buton-konum{
+@media (min-width:992px) {
+    .buton-konum {
         position: absolute;
         right: 80px;
     }
 }
-@media (max-width:412px){
-    .logo-w{
+@media (max-width:412px) {
+    .logo-w {
         width: 250px;
     }
 }
 
-@media(min-width:360px) and (max-width:414px){
-    .logo-ft{       
+@media(min-width:360px) and (max-width:414px) {
+    .logo-ft {       
             width: 190px;
             height: 57px;    
     }
