@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
 </head>
 <!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
 <!-- somut olarak görüntülenebilir. -->
@@ -60,10 +61,19 @@
                     <div class="card w-100 p-2 p-3 alt-card">
                         <img class="card-img-top img-boy" src="img/vestel-1.jpg" alt="Card image cap">  
                         <hr>                                           
-                        <div class="card-body text-center card-profil">                                
-                            <label for="dosya-sec"><h5 class="card-title card-baslik text-dark pb-2">Fotoğrafı Güncelle  <i class="far fa-image"></i></h5></label>
-                            <input id="dosya-sec"  type="file" style="position:fixed;top: -100px;">         
-                            <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button">Bilgileri Düzenle</button>
+                        <div class="card-body text-center card-profil">        
+                            <input id="img-input" type="file" style="display: none;">
+                                <label for="img-input" class="btn btn-info w-75" style="font-weight: bold;" id="img-btn">Yeni Logo Seç
+                                    <i class="far fa-image"></i>
+                                </label>
+                                <div class="alert alert-info" id="img-w" style="display: none;">
+                                    Sadece <strong>JPG, JPEG ve PNG</strong> dosya türlerini seçebilirsiniz.
+                                </div>                        
+                                <h6 id="img-name"></h6>       
+                                <div style="margin-bottom: 10px;">
+                                    <button id="up-btn" type="button" class="btn btn-success w-75" style="display: none;">Logoyu Güncelle</button>
+                                </div>
+                            <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button f-pro-sag-active">Bilgileri Düzenle</button>
                             <button type="button" data-content="ilanlar" class="btn prf-btn w-75 mb-3 prf-btn-fcs c_button">İlanları Yönet</button>    
                             <button type="button" data-content="sifre" class="btn prf-btn w-75 butons c_button">Şifre Değiştir</button>      
                         </div>
@@ -134,24 +144,7 @@
         </footer> 
             <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
             <script src="js/bootstrap-native-v4.min.js"></script>
-            <script>
-
-                var buttons = Array.from(document.getElementsByClassName("c_button"));
-                var contents = Array.from(document.getElementsByClassName("content_c"));
-
-                for (var i in buttons) {
-                    buttons[i].addEventListener("click", function() {
-                        var content_id = this.getAttribute("data-content");
-
-                        for (var j in contents) {
-                            contents[j].style.display = "none";
-                        }
-                        
-                        document.getElementById(content_id).style.display = "block";
-                    });
-                }
-
-            </script> 
+            <script src="js/firmaprofil_scripts.js"></script>
 
 </body>
 </html>
