@@ -16,6 +16,28 @@
 <!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
 <!-- somut olarak görüntülenebilir. -->
 <body>
+    <div class="uyari">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Uyarı!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Değikilikler gönderilsin mi?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Çıkış</button>
+                    <button type="button" class="btn btn-primary">Gönder</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="all-content">
         <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
         <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
@@ -94,7 +116,7 @@
                             <label for="exampleFormControlTextarea1">Bilgiler</label>
                             <textarea class="form-control area" id="exampleFormControlTextarea1" rows="4" placeholder="Açıklama yazın..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Gönder</button>
+                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Gönder</button>
                     </div>               
             </div>
             <div class="visible mx-auto content_c" id="sifre">
@@ -117,21 +139,21 @@
             <div class="visible mx-auto visible-margin content_c" id="ilanlar">               
                     <div class="ilan-baslik">İlanlar</div>
                     <div class="ilanlar-content">
-                        <h6 class="m-0">İlan başlığı</h6>
+                        <h6 class="m-0 text-primary">İlan başlığı</h6>
                         <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
                         <p1 class="ilan-alt">İlan açıklama satırı..</p1>
                         <div class="btns-kapsar w-100">
-                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
-                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                            <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                            <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
                         </div> 
                     </div>
                     <div class="ilanlar-content">                   
-                        <h6 class="m-0 ">İlan başlığı</h6>
+                        <h6 class="m-0 text-primary">İlan başlığı</h6>
                         <p class="ilan-alt">Şirket adı - Bulunduğu il</p>                 
                         <p1 class="ilan-alt">İlan açıklama satırı..</p1> 
                         <div class="btns-kapsar w-100">
-                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
-                            <button type="button" class="btn btn-dark btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                            <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                            <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
                         </div>                           
                     </div>               
                 </div>

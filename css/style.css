@@ -124,6 +124,9 @@ grid-template-rows: 1fr auto;
     .form-wrap {
         margin-top: 136px;
     }
+    .form-wrap-bilgi {
+        margin-top: 136px;
+    }
 }
 
  @media (max-width: 855px) {
@@ -319,10 +322,18 @@ grid-template-rows: 1fr auto;
     margin-top: 160px;
     margin-bottom: 50px;
 }
+.form-wrap-bilgi{
+    width: 550px;
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
 
 @media(max-width:375px){
     .form-wrap{
        width: 100%;
+    }
+    .form-wrap-bilgi {
+        width: 100%;
     }
 }
 
@@ -330,9 +341,15 @@ grid-template-rows: 1fr auto;
     .form-wrap{
         width: 300px;
     } 
+    .form-wrap-bilgi {
+        width: 300px;
+    }
 }
 @media(max-width:300px){
     .form-wrap{
+        width: 180px;
+    }
+    .form-wrap-bilgi {
         width: 180px;
     }
 }
@@ -428,7 +445,7 @@ grid-template-rows: 1fr auto;
 /* ----------------- BOLUM ARAMA KISMI BAŞLANGIÇ ------------------ */
 .bolum-content {
     width: 100%;
-    height: 270px;
+    height: 350px;
     padding: 25px 30px 25px 30px;
     margin-bottom: 10px;
     background-color: white;
@@ -436,9 +453,9 @@ grid-template-rows: 1fr auto;
 }
 .bolum-sec {
     width: 100%;
-    height: 220px;
+    height: 290px;
     overflow-y: scroll;
-    padding: 20px;
+    padding-left: 20px;
 }
 .md-checkbox {
     position: relative;
@@ -501,7 +518,6 @@ grid-template-rows: 1fr auto;
 /* ----------------- İLANLAR SAĞ BAŞLANGIÇ ------------------ */
 .container-ilanlar .visible {
     box-sizing: border-box;
-    overflow: hidden;
     width: 60%;
     float: left;
     padding-top: 30px;
@@ -884,16 +900,7 @@ a:hover{
     min-height: 300px;
     height: 100%;
 }
-.basvur-btn {
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-}
-.bsvr-btn {
-    min-width: 100px;
-    width: 50%;
-}
+
 
 /* ---------------İLAN SOL BİTİŞ ------------------ */
 
@@ -902,6 +909,25 @@ a:hover{
     .ilan-sag{
         width: 100%;
     }
+}
+
+.basvur-btn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.basvur-aktif-btn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    display: none;
+}
+.bsvr-btn {
+    min-width: 100px;
+    width: 50%;
 }
 .ilan-prf-card{
     width: 100%;
