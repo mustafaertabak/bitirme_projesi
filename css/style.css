@@ -713,12 +713,23 @@ a:hover{
 
 .f-pro-sag-active {
     background: #007bff ;
-    color: white;
+    color: white !important;
 }
 
 .card-baslik:hover{
     color:#007bff;
     
+}
+.ogr-profil-h1 {
+    text-align: center;
+}
+.content_c {
+    display: none;
+}
+.ogr-profil-h2 {
+    text-align: center; 
+    font-size: 14px; 
+    color: #6c757d;
 }
 .giris-btn{
     height: 40px;
@@ -777,7 +788,7 @@ a:hover{
 }
 .img-boy{
     margin:auto;
-    width: 200px;
+    width: 200px!important;
 }
 .form-kart{
     width: 100%;
@@ -944,3 +955,18 @@ a:hover{
 /* ---------------İLAN SAĞ BİTİŞ ------------------ */
 
 /*----------------- İLAN.html-BİTİŞ ------------------ */
+/* ----------------------Dı Ömer's çeyncıs*-------------------*/
+.bilgi_block {
+    width: 50%;
+    float: left;
+    height: 80px;
+}
+
+.bilgi_con {
+    padding: 25px;
+}
+
+.bilgi_val {
+    font-weight: 400;
+}
+/* ----------------------Dı Ömer's çeyncıs----------------------*/
