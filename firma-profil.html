@@ -95,29 +95,30 @@
                                 <div style="margin-bottom: 10px;">
                                     <button id="up-btn" type="button" class="btn btn-success w-75" style="display: none;">Logoyu Güncelle</button>
                                 </div>
+                            <button type="button" data-content="ilan_yukle" class="btn prf-btn w-75 mb-3 butons c_button">İlan Ekle</button>   
                             <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button f-pro-sag-active">Bilgileri Düzenle</button>
                             <button type="button" data-content="ilanlar" class="btn prf-btn w-75 mb-3 prf-btn-fcs c_button">İlanları Yönet</button>    
-                            <button type="button" data-content="sifre" class="btn prf-btn w-75 butons c_button">Şifre Değiştir</button>      
+                            <button type="button" data-content="sifre" class="btn prf-btn w-75 c_button">Şifre Değiştir</button>       
                         </div>
                     </div>
                 </div>
             </div>
             <div class="visible mx-auto content_c" id="bilgiler" style="display: block">
-                    <div class="card bg-light text-dark p-4 mx-auto form-kart">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">E-posta Adresi</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Telefon</label>
-                            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefon numarası...">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Bilgiler</label>
-                            <textarea class="form-control area" id="exampleFormControlTextarea1" rows="4" placeholder="Açıklama yazın..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Gönder</button>
-                    </div>               
+                <div class="card bg-light text-dark p-4 mx-auto form-kart">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-posta Adresi</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Telefon</label>
+                        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefon numarası...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Bilgiler</label>
+                        <textarea class="form-control area" id="exampleFormControlTextarea1" rows="4" placeholder="Açıklama yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Gönder</button>
+                </div>               
             </div>
             <div class="visible mx-auto content_c" id="sifre">
                 <div class="card bg-light text-dark p-4 mx-auto form-kart">
@@ -137,26 +138,91 @@
                 </div>               
             </div>
             <div class="visible mx-auto visible-margin content_c" id="ilanlar">               
-                    <div class="ilan-baslik">İlanlar</div>
-                    <div class="ilanlar-content">
-                        <h6 class="m-0 text-primary">İlan başlığı</h6>
-                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
-                        <p1 class="ilan-alt">İlan açıklama satırı..</p1>
-                        <div class="btns-kapsar w-100">
-                            <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
-                            <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
-                        </div> 
-                    </div>
-                    <div class="ilanlar-content">                   
-                        <h6 class="m-0 text-primary">İlan başlığı</h6>
-                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>                 
-                        <p1 class="ilan-alt">İlan açıklama satırı..</p1> 
-                        <div class="btns-kapsar w-100">
-                            <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
-                            <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
-                        </div>                           
-                    </div>               
+                <div class="ilan-baslik">İlanlar</div>
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                    <div class="btns-kapsar w-100">
+                        <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                        <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                    </div> 
                 </div>
+                <div class="ilanlar-content">                   
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>                 
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1> 
+                    <div class="btns-kapsar w-100">
+                        <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                        <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                    </div>                           
+                </div>               
+            </div>
+            <div class="visible mx-auto content_c" id="ilan_yukle" style="display: none">
+                <div class="card bg-light text-dark p-4 mx-auto form-kart">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">İlan Başlığı</label>
+                        <input type="text" class="form-control" id="exampleInputIlanbaslik1" placeholder="İlan Başlığı..">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">İlanın Gönderileceği E-mail Adresi:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="d-block">Geçerli Bölümler</label>
+                        <div class="btn-group bolumsec">
+                            <button type="button" class="btn bg-white border-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Bölümler
+                            </button>
+                            
+                            <div class="dropdown-menu pl-2 bolum-sec-pro">
+                                <div class="md-checkbox">
+                                    <input id="i1" type="checkbox" checked>
+                                    <label for="i1">Item 1</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i2" type="checkbox">
+                                    <label for="i2">Item 2</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i3" type="checkbox">
+                                    <label for="i3">Item 3</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i4" type="checkbox">
+                                    <label for="i4">Item 4</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i5" type="checkbox">
+                                    <label for="i5">Item 5</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i6" type="checkbox">
+                                    <label for="i6">Item 6</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i7" type="checkbox">
+                                    <label for="i7">Item 7</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i8" type="checkbox">
+                                    <label for="i8">Item 8</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i9" type="checkbox">
+                                    <label for="i9">Item 9</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">İlan İçerik Açıklaması</label>
+                        <textarea class="form-control area" id="exampleFormControlTextarea1" rows="5" placeholder="Açıklama yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Gönder</button>
+                </div>               
+            </div>
         </div>    
     </div>
         <footer>

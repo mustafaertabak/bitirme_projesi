@@ -13,12 +13,6 @@ grid-template-rows: 1fr auto;
     }
 }
 
-@media (max-width: 1030px){
-    .navbar-collapse{
-        margin-right: -20px!important;
-    }
-}
-
 .firmalar {
     margin-top: -150px;
     text-align: center;
@@ -164,6 +158,9 @@ grid-template-rows: 1fr auto;
 
     .firmalar {
         margin-top: -120px;
+    }
+    .btn-bsvr {
+        margin-left:0;
     }
 }
 
@@ -546,6 +543,7 @@ grid-template-rows: 1fr auto;
     -webkit-box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
+    
 }
 
 .ilanlar-content p {
@@ -711,25 +709,25 @@ a:hover{
     display: none;
 }
 
+.bolumsec {
+    width: 225px;
+}
+
+.bolum-sec-pro {
+    width: 100%;
+    height: 150px;
+    overflow-y: scroll;
+    padding-left: 20px;
+}
+
 .f-pro-sag-active {
     background: #007bff ;
-    color: white !important;
+    color: white;
 }
 
 .card-baslik:hover{
     color:#007bff;
     
-}
-.ogr-profil-h1 {
-    text-align: center;
-}
-.content_c {
-    display: none;
-}
-.ogr-profil-h2 {
-    text-align: center; 
-    font-size: 14px; 
-    color: #6c757d;
 }
 .giris-btn{
     height: 40px;
@@ -788,7 +786,7 @@ a:hover{
 }
 .img-boy{
     margin:auto;
-    width: 200px!important;
+    width: 200px;
 }
 .form-kart{
     width: 100%;
@@ -815,10 +813,16 @@ a:hover{
         height: 30px;
     }
 }
-@media (max-width:505px){
-    .btns{
-       width: 70px;    
+@media (max-width:380px){
+    .btns-kapsar{
+        margin-left: 15px;
     }
+    .ilanlar-content p{
+        font-size: 8pt;
+    }
+}
+
+@media (max-width:505px){
     .p-yonet{
         font-size: 9px;
            text-align: center; 
@@ -955,18 +959,3 @@ a:hover{
 /* ---------------İLAN SAĞ BİTİŞ ------------------ */
 
 /*----------------- İLAN.html-BİTİŞ ------------------ */
-/* ----------------------Dı Ömer's çeyncıs*-------------------*/
-.bilgi_block {
-    width: 50%;
-    float: left;
-    height: 80px;
-}
-
-.bilgi_con {
-    padding: 25px;
-}
-
-.bilgi_val {
-    font-weight: 400;
-}
-/* ----------------------Dı Ömer's çeyncıs----------------------*/
