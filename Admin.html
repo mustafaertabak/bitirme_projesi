@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<!-- Yazdığımız kelimelerin HTML dilinde birer kod satırı oluşturduğunu belirtmek için "HTML" tagi kullanıyoruz. -->
+<!-- lang="en" komutu yazım dilinin ingilizce olduğu anlamına gelmektedir. -->
+<html lang="en">
+    <!-- Head tagi içerisinde tanımlamalarımızı ve kullanıcağımız diğer dosyaların bağlantılarını yapmaktayız. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    
+</head>
+<!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
+<!-- somut olarak görüntülenebilir. -->
+<body>
+    <div class="uyari" ><!-- !!BİLGİLENDİRME!! css'e display: none; verildi geçici olarak -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Uyarı!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Değikilikler gönderilsin mi?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Çıkış</button>
+                    <button type="button" class="btn btn-primary">Gönder</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="all-content">
+        <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
+        <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
+            <div class="logo_wrap w-75">
+                <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
+                <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
+                <a class="navbar-brand offset-lg-1" href="index.html">
+                    <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
+                    <img width="200px" src="img/LOGO.png" alt="DeuStaj" class="logo-w">
+                </a>
+            </div>
+            <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
+            <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
+            <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
+            <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
+            <!-- sağa kaymasnı sağlamaktadır. -->    
+            <div class="collapse  navbar-collapse pr-5 offset-lg-4 buton-konum" id="navbarTogglerDemo02">
+                <div class="ilan">
+                    <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanları Yönet &nbsp;<i class="fas fa-cog fa-lg"></i></button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn  btn-light dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <h6 class="profil-baslik">Hoşgeldiniz Firma Adı</h6>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-user"></i>&nbsp;Profil</a>
+                        <a class="dropdown-item pb-2" href="#"><i class="fas fa-file-alt"></i> &nbsp;İlanlarım</a>     
+                        <a class="dropdown-item border border-bottom-0 border-left-0 border-right-0" href="#"><i class="fas fa-sign-out-alt"></i> &nbsp;Çıkış Yap</a>              
+                    </div>
+                </div>    
+            </div>         
+        </nav>
+        <div class="container-ilanlar">
+            <div class="sol mx-auto">
+                <div class="card-group profil-card">
+                    <div class="card w-100 p-2 p-3 alt-card">
+                        <img class="card-img-top img-boy" src="img/vestel-1.jpg" alt="Card image cap">  
+                        <hr>                                           
+                        <div class="card-body text-center card-profil">        
+                            <input id="img-input" type="file" style="display: none;">
+                            <label for="img-input" class="btn btn-info w-75" style="font-weight: bold;" id="img-btn">Yeni Logo Seç
+                                <i class="far fa-image"></i>
+                            </label>
+                            <div class="alert alert-info" id="img-w" style="display: none;">
+                                Sadece <strong>JPG, JPEG ve PNG</strong> dosya türlerini seçebilirsiniz.
+                            </div>                        
+                            <h6 id="img-name"></h6>       
+                            <div style="margin-bottom: 10px;">
+                                <button id="up-btn" type="button" class="btn btn-success w-75" style="display: none;">Logoyu Güncelle</button>
+                            </div>
+                            <button type="button" data-content="ilan_yukle" class="btn prf-btn w-75 mb-3 butons c_button">İlan Ekle</button>   
+                            <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button f-pro-sag-active">Bilgileri Düzenle</button>
+                            <button type="button" data-content="ilanlar" class="btn prf-btn w-75 mb-3 prf-btn-fcs c_button">İlanları Yönet</button>    
+                            <button type="button" data-content="sifre" class="btn prf-btn w-75 mb-3 c_button">Şifre Değiştir</button> 
+                            <div class="yonetici-active">
+                                <div class="yonetici-baslik">Yönetici Paneli</div>
+                                <button type="button" data-content="sirketler" class="btn prf-btn w-75 mb-3 c_button">Şirketleri Listele</button> 
+                                <button type="button" data-content="sirket-ilan" class="btn prf-btn w-75 mb-3 c_button">Şirket İlanlarını Görüntüle</button> 
+                                <button type="button" data-content="sirket-prfl" class="btn prf-btn w-75 mb-3 c_button">Şirket Profilini Görüntüle</button> 
+                                <button type="button" data-content="sirket-onay" class="btn prf-btn w-75 mb-1 c_button">Onay Bekleyen Şirketler</button> 
+                                <hr>
+                                <button type="button" data-content="ogrenci-prfl" class="btn prf-btn w-75 mb-3 mt-1 c_button">Öğrenci Profilleri</button> 
+                                <button type="button" data-content="basvurular" class="btn prf-btn w-75 mb-3 c_button">Öğrenci Başvuruları</button> 
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visible mx-auto content_c" id="bilgiler" style="display: block">
+                <div class="card bg-light text-dark p-4 mx-auto form-kart">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-posta Adresi</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Telefon</label>
+                        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefon numarası...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Bilgiler</label>
+                        <textarea class="form-control area" id="exampleFormControlTextarea1" rows="4" placeholder="Açıklama yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Gönder</button>
+                </div>               
+            </div>
+            <div class="visible mx-auto content_c" id="sifre">
+                <div class="card bg-light text-dark p-4 mx-auto form-kart">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Eski Şifreniz</label>
+                        <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Yeni Şifre</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Yeni Şifre Tekrar</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sifre">Gönder</button>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="ilanlar">               
+                <div class="ilan-baslik">İlanlar</div>
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                    <div class="btns-kapsar w-100">
+                        <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                        <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                    </div> 
+                </div>
+                <div class="ilanlar-content">                   
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>                 
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1> 
+                    <div class="btns-kapsar w-100">
+                        <button type="button" class="btn btn-info btns btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>    
+                        <button type="button" class="btn btn-danger btns btn-sm"><p class="p-yonet">İlanı Sil</p></button>    
+                    </div>                           
+                </div>               
+            </div>
+            <div class="visible mx-auto content_c" id="ilan_yukle" style="display: none">
+                <div class="card bg-light text-dark p-4 mx-auto form-kart">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">İlan Başlığı</label>
+                        <input type="text" class="form-control" id="exampleInputIlanbaslik1" placeholder="İlan Başlığı..">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">İlanın Gönderileceği E-mail Adresi:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="d-block">Geçerli Bölümler</label>
+                        <div class="btn-group bolumsec">
+                            <button type="button" class="btn bg-white border-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Bölümler
+                            </button>
+                            
+                            <div class="dropdown-menu pl-2 bolum-sec-pro">
+                                <div class="md-checkbox">
+                                    <input id="i1" type="checkbox" checked>
+                                    <label for="i1">Item 1</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i2" type="checkbox">
+                                    <label for="i2">Item 2</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i3" type="checkbox">
+                                    <label for="i3">Item 3</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i4" type="checkbox">
+                                    <label for="i4">Item 4</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i5" type="checkbox">
+                                    <label for="i5">Item 5</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i6" type="checkbox">
+                                    <label for="i6">Item 6</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i7" type="checkbox">
+                                    <label for="i7">Item 7</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i8" type="checkbox">
+                                    <label for="i8">Item 8</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="i9" type="checkbox">
+                                    <label for="i9">Item 9</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">İlan İçerik Açıklaması</label>
+                        <textarea class="form-control area" id="exampleFormControlTextarea1" rows="5" placeholder="Açıklama yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Gönder</button>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="sirketler">               
+                <div class="ilan-baslik">
+                        <div class="sirket-ara">
+                            <form class="form-inline srkt-ara">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Şirket" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
+                              Şirketler</div>
+                <div class="ilanlar-content">
+                        <a href="#"><h6 class="m-0 text-primary">Şirket Adı</h6></a>
+                        <p class="sirket-ad"><i class="far fa-building"></i> Bulunduğu il-ilçe</p>
+                        <p class="sirket-ad"><i class="fas fa-at"></i> e-mail</p>
+                        <div class="ilan-sag-img">
+                            <a href="#" >
+                                <div class="sirket-logosu">
+                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="btns-kapsar-sirket w-100">
+                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Şirket Profilini Görüntüle</p></button>  
+                        </div>
+                </div>
+                <div class="ilanlar-content">
+                        <a href="#"><h6 class="m-0 text-primary">Şirket Adı</h6></a>
+                        <p class="sirket-ad"><i class="far fa-building"></i> Bulunduğu il-ilçe</p>
+                        <p class="sirket-ad"><i class="fas fa-at"></i> e-mail</p>
+                        <div class="ilan-sag-img">
+                            <a href="#" >
+                                <div class="sirket-logosu">
+                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="btns-kapsar-sirket w-100">
+                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Şirket Profilini Görüntüle</p></button>  
+                        </div>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="sirket-ilan">
+                <div class="ilan-baslik-admin">
+                        <div class="form-group-admin">
+                                <div class="btn-group bolumsec">
+                                    <button type="button" class="btn bg-white border-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Şirketler
+                                    </button>
+                                    <div class="dropdown-menu pl-2 bolum-sec-pro">
+                                        <div class="md-checkbox">
+                                            <input id="s1" type="checkbox" checked>
+                                            <label for="s1">Item 1</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s2" type="checkbox">
+                                            <label for="s2">Item 2</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s3" type="checkbox">
+                                            <label for="s3">Item 3</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s4" type="checkbox">
+                                            <label for="s4">Item 4</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s5" type="checkbox">
+                                            <label for="s5">Item 5</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s6" type="checkbox">
+                                            <label for="s6">Item 6</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s7" type="checkbox">
+                                            <label for="s7">Item 7</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s8" type="checkbox">
+                                            <label for="s8">Item 8</label>
+                                        </div>
+                                        <div class="md-checkbox">
+                                            <input id="s9" type="checkbox">
+                                            <label for="s9">Item 9</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="admn-ilanbas">İlanlar</p></div>
+                <div class="ilanlar-content">
+                        <h6 class="m-0 text-primary">İlan başlığı</h6>
+                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                        <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                        <div class="ilan-sag-img">
+                            <a href="#" >
+                                <div class="sirket-logosu">
+                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="btns-kapsar-sirket w-100">
+                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
+                            <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
+                        </div>
+                </div>
+                <div class="ilanlar-content">
+                        <h6 class="m-0 text-primary">İlan başlığı</h6>
+                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                        <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                        <div class="ilan-sag-img">
+                            <a href="#" >
+                                <div class="sirket-logosu">
+                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="btns-kapsar-sirket w-100">
+                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
+                            <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
+                        </div>
+                </div>               
+            </div>
+        </div>    
+    </div>
+        <footer>
+            <div class="footer-div text-center mx-auto">
+                <img src="img/LOGO.png" class="logo-ft" >
+            </div>    
+        </footer> 
+            <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
+            <script src="js/bootstrap-native-v4.min.js"></script>
+            <script src="js/firmaprofil_scripts.js"></script>
+
+</body>
+</html>

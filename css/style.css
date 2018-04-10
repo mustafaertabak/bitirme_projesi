@@ -104,9 +104,6 @@ grid-template-rows: 1fr auto;
     width: 200px;
     margin-top: 20px;
 }
-.card-img-top{
-    height: 44px;
-}
 .card-1 {
     background-color: white;
 }
@@ -553,10 +550,7 @@ grid-template-rows: 1fr auto;
 .ilanlar-content .p1 {
     font-size: 10pt;
     color: #8c8c8c;
-    width: 400px;
-}
-.ilanlar-content a h6 {
-    width: 400px;
+   
 }
 .ilanlar-content a {
     text-decoration: none;
@@ -712,6 +706,9 @@ a:hover{
 .bolumsec {
     width: 225px;
 }
+.uyari{
+    display: none;
+}
 
 .bolum-sec-pro {
     width: 100%;
@@ -786,7 +783,7 @@ a:hover{
 }
 .img-boy{
     margin:auto;
-    width: 200px;
+    width: 200px!important;
 }
 .form-kart{
     width: 100%;
@@ -959,3 +956,189 @@ a:hover{
 /* ---------------İLAN SAĞ BİTİŞ ------------------ */
 
 /*----------------- İLAN.html-BİTİŞ ------------------ */
+/* -------------------YÖNETİCİ PANELİ-----------------------------*/
+.dropdown-admin{
+    left: 30px;
+}
+.yonetici-active {
+    margin-top: 10px;
+    border-top: 1px solid #c4c4c4;
+}
+.yonetici-baslik {
+    width: 100%;
+    height: 50px;
+    font-size: 16pt;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
+}
+.btns-kapsar-sirket {
+    text-align: center;
+}
+
+.sirket-logosu {
+    float: right;
+    margin-top: -65px;
+}
+.sirket-logosu img {
+    max-width: 190px;
+    max-height: 65px;  
+}
+.content_c{
+    display: none;
+}
+.ilan-baslik-admin {
+    width: 100%;
+    height: 50px;
+    font-size: 16pt;
+    padding: 10px;
+    margin-bottom: 2px;
+    background-color: white;
+    text-align: center;
+}
+.form-group-admin{
+    display: inline;
+    float: left;
+}
+.admn-ilanbas {
+    display: inline;
+    margin-left: 60px;
+    float: left;
+}
+.sirket-ara{
+    width: 25%;
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+}
+.srkt-ara input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgba(182, 182, 182, 0.867);
+    border-radius: 6px 0px 0px 6px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+/* -------------------------------------- ÖMERDEN CSSLER --------------------------------------*/
+.mandatory_field {
+    color: #f70e0e;
+    font-size: 12px;
+    font-weight: bold;
+}
+#bilgiler_show {
+    padding-top: 80px
+}
+
+@media (max-width: 650px) {
+    .bilgi_block {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    #bilgiler_show {
+        padding-top: 0px
+    }
+}
+.navbar-nav .dropdown-menu {
+    position: absolute;
+}
+
+.dropdown-toggle {
+    min-width: 160px;
+}
+
+.text_editor {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    border-radius: 5px;
+    height: 220px;
+    overflow-y: auto;
+    color:rgb(33, 37, 41); 
+    font-size: 20px;
+}
+
+.te_menu {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.te_menu div {
+    list-style: none;
+    float: left;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 3px 7px;
+    border: 1px solid #ced4da;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.te_menu div:hover {
+    background-color: #f4f4f4;
+}
+
+.m_modal {
+    position: fixed;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+}
+
+.m_modal_f {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.m_modal_c {
+    position: absolute;
+    width: 440px;
+    height: 110px;
+    background-color: #fff;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+
+.m_modal_h {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.m_modal_btns {
+    text-align: center;
+}
+
+.m_modal_btns button{
+    display: inline-block;
+}
+
+.m_modal_done {
+    color: green;
+    font-size: 30px;
+}
+
+.m_modal_load {
+    color: gray;
+    font-size: 30px;
+}
+
+@media (max-width: 580px) {
+    .m_modal_c {
+        width: 300px;
+        height: 140px;
+    }
+}
