@@ -525,11 +525,12 @@ grid-template-rows: 1fr auto;
     margin-bottom: 2px;
     background-color: white;
     text-align: center;
+    
 }
 
 .ilanlar-content {
     width: 100%;
-    height: 125px;
+    height: 135px;
     background-color: white;
     margin-bottom: 2px;
     padding: 25px;
@@ -704,7 +705,7 @@ a:hover{
 }
 
 .bolumsec {
-    width: 225px;
+    width: 100%;
 }
 .uyari{
     display: none;
@@ -991,7 +992,7 @@ a:hover{
 }
 .ilan-baslik-admin {
     width: 100%;
-    height: 50px;
+    height: 65px;
     font-size: 16pt;
     padding: 10px;
     margin-bottom: 2px;
@@ -999,20 +1000,19 @@ a:hover{
     text-align: center;
 }
 .form-group-admin{
+    width: 100%;
     display: inline;
     float: left;
 }
 .admn-ilanbas {
-    display: inline;
-    margin-left: 60px;
-    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    line-height: 50px;
 }
 .sirket-ara{
-    width: 25%;
+    width: 100%;
     background-color: white;
-    margin-bottom: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
 }
 .srkt-ara input[type=text] {
     padding: 10px;
@@ -1022,6 +1022,27 @@ a:hover{
     float: left;
     width: 80%;
     background: #f1f1f1;
+}
+.srkt-ara button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #3d3d3d;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 0px 6px 6px 0px;
+    border-left: none;
+    cursor: pointer;
+}
+.srkt-ara button:hover {
+    background: #262626;
+}
+
+.srkt-ara::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 /* -------------------------------------- ÖMERDEN CSSLER --------------------------------------*/
 .mandatory_field {

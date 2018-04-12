@@ -102,8 +102,7 @@
                             <div class="yonetici-active">
                                 <div class="yonetici-baslik">Yönetici Paneli</div>
                                 <button type="button" data-content="sirketler" class="btn prf-btn w-75 mb-3 c_button">Şirketleri Listele</button> 
-                                <button type="button" data-content="sirket-ilan" class="btn prf-btn w-75 mb-3 c_button">Şirket İlanlarını Görüntüle</button> 
-                                <button type="button" data-content="sirket-prfl" class="btn prf-btn w-75 mb-3 c_button">Şirket Profilini Görüntüle</button> 
+                                <button type="button" data-content="sirket-ilan" class="btn prf-btn w-75 mb-3 c_button">Şirket İlanlarını Görüntüle</button>
                                 <button type="button" data-content="sirket-onay" class="btn prf-btn w-75 mb-1 c_button">Onay Bekleyen Şirketler</button> 
                                 <hr>
                                 <button type="button" data-content="ogrenci-prfl" class="btn prf-btn w-75 mb-3 mt-1 c_button">Öğrenci Profilleri</button> 
@@ -234,14 +233,17 @@
                 </div>               
             </div>
             <div class="visible mx-auto visible-margin content_c" id="sirketler">               
-                <div class="ilan-baslik">
-                        <div class="sirket-ara">
-                            <form class="form-inline srkt-ara">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Şirket" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                        </div>
-                              Şirketler</div>
+                <div class="ilan-baslik-admin">
+                        <p class="admn-ilanbas">Şirketler</p>
+                </div>
+                <div class="ilan-baslik-admin" >
+                    <div class="sirket-ara">
+                        <form class="form-inline srkt-ara">
+                            <input  type="text" placeholder="Şirket" name="ara">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
                 <div class="ilanlar-content">
                         <a href="#"><h6 class="m-0 text-primary">Şirket Adı</h6></a>
                         <p class="sirket-ad"><i class="far fa-building"></i> Bulunduğu il-ilçe</p>
@@ -275,83 +277,127 @@
             </div>
             <div class="visible mx-auto visible-margin content_c" id="sirket-ilan">
                 <div class="ilan-baslik-admin">
-                        <div class="form-group-admin">
-                                <div class="btn-group bolumsec">
-                                    <button type="button" class="btn bg-white border-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Şirketler
-                                    </button>
-                                    <div class="dropdown-menu pl-2 bolum-sec-pro">
-                                        <div class="md-checkbox">
-                                            <input id="s1" type="checkbox" checked>
-                                            <label for="s1">Item 1</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s2" type="checkbox">
-                                            <label for="s2">Item 2</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s3" type="checkbox">
-                                            <label for="s3">Item 3</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s4" type="checkbox">
-                                            <label for="s4">Item 4</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s5" type="checkbox">
-                                            <label for="s5">Item 5</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s6" type="checkbox">
-                                            <label for="s6">Item 6</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s7" type="checkbox">
-                                            <label for="s7">Item 7</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s8" type="checkbox">
-                                            <label for="s8">Item 8</label>
-                                        </div>
-                                        <div class="md-checkbox">
-                                            <input id="s9" type="checkbox">
-                                            <label for="s9">Item 9</label>
-                                        </div>
-                                    </div>
+                    <p class="admn-ilanbas">İlanlar</p>
+                </div>
+                <div class="ilan-baslik-admin" style="height: 60px;">
+                    <div class="form-group-admin">
+                        <div class="btn-group bolumsec">
+                            <button type="button" class="btn bg-light border-1 dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Şirketler
+                            </button>
+                            <div class="dropdown-menu pl-2 bolum-sec-pro">
+                                <div class="md-checkbox">
+                                    <input id="s1" type="checkbox" checked>
+                                    <label for="s1">Item 1</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s2" type="checkbox">
+                                    <label for="s2">Item 2</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s3" type="checkbox">
+                                    <label for="s3">Item 3</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s4" type="checkbox">
+                                    <label for="s4">Item 4</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s5" type="checkbox">
+                                    <label for="s5">Item 5</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s6" type="checkbox">
+                                    <label for="s6">Item 6</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s7" type="checkbox">
+                                    <label for="s7">Item 7</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s8" type="checkbox">
+                                    <label for="s8">Item 8</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s9" type="checkbox">
+                                    <label for="s9">Item 9</label>
                                 </div>
                             </div>
-                            <p class="admn-ilanbas">İlanlar</p></div>
-                <div class="ilanlar-content">
-                        <h6 class="m-0 text-primary">İlan başlığı</h6>
-                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
-                        <p1 class="ilan-alt">İlan açıklama satırı..</p1>
-                        <div class="ilan-sag-img">
-                            <a href="#" >
-                                <div class="sirket-logosu">
-                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
-                                </div>
-                            </a>
-                        </div> 
-                        <div class="btns-kapsar-sirket w-100">
-                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
-                            <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
                         </div>
+                    </div>
+                </div>
+                        
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
+                    </div>
                 </div>
                 <div class="ilanlar-content">
-                        <h6 class="m-0 text-primary">İlan başlığı</h6>
-                        <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
-                        <p1 class="ilan-alt">İlan açıklama satırı..</p1>
-                        <div class="ilan-sag-img">
-                            <a href="#" >
-                                <div class="sirket-logosu">
-                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
-                                </div>
-                            </a>
-                        </div> 
-                        <div class="btns-kapsar-sirket w-100">
-                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
-                            <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
-                        </div>
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
+                    </div>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="sirket-onay">
+                <div class="ilan-baslik-admin">
+                    <p class="admn-ilanbas">Onay Bekleyen Şirketler</p>
+                </div>
+
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">Şirket Adı</h6>
+                    <p class="ilan-alt"><i class="far fa-building"></i> Bulunduğu İl-İlçe</p>
+                    <p1 class="ilan-alt"><i class="fas fa-at"></i> E-Mail</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Bilgileri Gör</p></button> 
+                        <button type="button" class="btn btn-success btns btns-sirket btn-sm"><p class="p-yonet">Kabul Et</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">Reddet</p></button>  
+                    </div>
+                </div>
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">Şirket Adı</h6>
+                    <p class="ilan-alt"><i class="far fa-building"></i> Bulunduğu İl-İlçe</p>
+                    <p1 class="ilan-alt"><i class="fas fa-at"></i> E-Mail</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Bilgileri Gör</p></button>  
+                        <button type="button" class="btn btn-success btns btns-sirket btn-sm"><p class="p-yonet">Kabul Et</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">Reddet</p></button>  
+                    </div>
                 </div>               
             </div>
         </div>    
