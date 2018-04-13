@@ -415,11 +415,10 @@ grid-template-rows: 1fr auto;
     float: left;
     width: 20%;
     padding: 10px;
-    background: #3d3d3d;
+    background: #3d3d3d;/* VE BURASI da SİLNEBİLİR!!!!!!!!!!!!!!! */
     color: white;
     font-size: 17px;
-    border: 1px solid grey;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0px 6px 6px 0px;/* İleride Bura silinebilir unutma! Ömer14/04/2018 de burayı silmişti şimdilik dokunmuyorum! */
     border-left: none;
     cursor: pointer;
 }
@@ -1045,6 +1044,26 @@ a:hover{
     display: table;
 }
 /* -------------------------------------- ÖMERDEN CSSLER --------------------------------------*/
+#img_cancel {
+    vertical-align: middle;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#img_del {
+    text-align: center; 
+    margin-top: 10px; 
+    margin-bottom: 0px; 
+    font-size: 14px; 
+    color: darkred;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#img_del:hover {
+    color: #4a0000;
+}
 .mandatory_field {
     color: #f70e0e;
     font-size: 12px;
