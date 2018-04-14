@@ -1044,31 +1044,32 @@ a:hover{
     display: table;
 }
 /* -------------------------------------- ÖMERDEN CSSLER --------------------------------------*/
-#img_cancel {
-    vertical-align: middle;
-    color: red;
-    cursor: pointer;
-    font-size: 18px;
+/** /////////////////////////////////////////////////////////////////////////// */
+
+.ogr-profil-h1 {
+    text-align: center;
 }
 
-#img_del {
+.ogr-profil-h2 {
     text-align: center; 
-    margin-top: 10px; 
-    margin-bottom: 0px; 
     font-size: 14px; 
-    color: darkred;
-    text-decoration: underline;
-    cursor: pointer;
+    color: #6c757d;
 }
 
-#img_del:hover {
-    color: #4a0000;
+.bilgi_block {
+    width: 50%;
+    float: left;
+    height: 80px;
 }
-.mandatory_field {
-    color: #f70e0e;
-    font-size: 12px;
-    font-weight: bold;
+
+.bilgi_con {
+    padding: 25px;
 }
+
+.bilgi_val {
+    font-weight: 400;
+}
+
 #bilgiler_show {
     padding-top: 80px
 }
@@ -1084,46 +1085,6 @@ a:hover{
     #bilgiler_show {
         padding-top: 0px
     }
-}
-.navbar-nav .dropdown-menu {
-    position: absolute;
-}
-
-.dropdown-toggle {
-    min-width: 160px;
-}
-
-.text_editor {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ced4da;
-    background-color: #fff;
-    border-radius: 5px;
-    height: 220px;
-    overflow-y: auto;
-    color:rgb(33, 37, 41); 
-    font-size: 20px;
-}
-
-.te_menu {
-    width: 100%;
-    float: left;
-    margin-bottom: 15px;
-}
-
-.te_menu div {
-    list-style: none;
-    float: left;
-    font-size: 12px;
-    background-color: #fff;
-    padding: 3px 7px;
-    border: 1px solid #ced4da;
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.te_menu div:hover {
-    background-color: #f4f4f4;
 }
 
 .m_modal {
@@ -1176,9 +1137,104 @@ a:hover{
     font-size: 30px;
 }
 
+.m_modal_error {
+    color: red;
+    font-size: 30px;
+}
+
 @media (max-width: 580px) {
     .m_modal_c {
         width: 300px;
         height: 140px;
     }
 }
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+}
+
+.dropdown-toggle {
+    min-width: 160px;
+}
+
+.text_editor {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    border-radius: 5px;
+    height: 220px;
+    overflow-y: auto;
+    color:rgb(33, 37, 41); 
+    font-size: 14px;
+}
+
+.te_menu {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.te_menu div {
+    list-style: none;
+    float: left;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 3px 7px;
+    border: 1px solid #ced4da;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.te_menu div:hover {
+    background-color: #f4f4f4;
+}
+
+.mandatory_field {
+    color: #f70e0e;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#img_cancel {
+    vertical-align: middle;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#img_del {
+    text-align: center; 
+    margin-top: 10px; 
+    margin-bottom: 0px; 
+    font-size: 14px; 
+    color: darkred;
+    text-decoration: underline;
+    cursor: pointer;
+ }
+
+ #img_del:hover {
+     color: #4a0000;
+ }
+
+ .firma_profil_logo {
+    max-height: 65px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#chk_bolumler {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#chk_bolumler span {
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+#ilanlar_text_h {
+    display: none;
+}
+/** /////////////////////////////////////////////////////////////////////////// */
