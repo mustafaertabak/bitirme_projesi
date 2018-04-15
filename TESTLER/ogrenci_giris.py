@@ -71,7 +71,7 @@ class ogrenci_giris:
                 time.sleep(0.5)
   
     
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome()
 ogrenci_giris = ogrenci_giris(driver, "http://localhost:8080/ogrenci-giris", {"username": "username", "pass": "pass", "deger": "logan", "submit_button": "submit_button"})
 
 ogrenci_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
