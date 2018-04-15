@@ -303,10 +303,6 @@ grid-template-rows: 1fr auto;
     .son-ilan-card{
         width: 100%;
     }
-    .firma-logo{
-        width: 60%;
-        float: right;
-    }
 }
 
 /* ------------------------------- İNDEX.HTML BİTİŞ ------------------------------- */
@@ -419,7 +415,7 @@ grid-template-rows: 1fr auto;
     background: #3d3d3d;/* VE BURASI da SİLNEBİLİR!!!!!!!!!!!!!!! */
     color: white;
     font-size: 17px;
-    border-radius: 0px 6px 6px 0px;/* İleride Bura silinebilir unutma! Ömer14/04/2018 de burayı silmişti şimdilik dokunmuyorum! */
+    border-radius: 0px 6px 6px 0px;
     border-left: none;
     cursor: pointer;
 }
@@ -719,7 +715,7 @@ a:hover{
 }
 
 .f-pro-sag-active {
-    background: #007bff ;
+    background-color: #007bff ;
     color: white;
 }
 
@@ -1000,7 +996,7 @@ a:hover{
     text-align: center;
 }
 .form-group-admin{
-    width: 100%;
+    display: inline;
 
 }
 .admn-ilanbas {
