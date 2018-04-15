@@ -1257,4 +1257,10 @@ a:hover{
     min-height: 135px; 
     height: auto;
 }
+.url_control {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 /** /////////////////////////////////////////////////////////////////////////// */
