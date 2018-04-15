@@ -785,6 +785,9 @@ a:hover{
 .form-kart{
     width: 100%;
     margin-top: 50px; 
+    background-color: #fff !important; 
+    border-radius: 0px; 
+    border: none;
 }
 .area{
     resize: none;
@@ -1220,17 +1223,38 @@ a:hover{
     margin: auto;
 }
 
-#chk_bolumler {
+#chk_bolumler, #chk_bolumler_u {
     width: 100%;
     margin-top: 5px;
 }
 
-#chk_bolumler span {
+#chk_bolumler span, #chk_bolumler_u span {
     font-size: 12px;
     text-decoration: underline;
 }
 
-#ilanlar_text_h {
+#ilanlar_text_h, #ilanlar_text_u_h {
     display: none;
+}
+
+#ilan-u {
+    margin-top: 0px;
+}
+
+#ilan-u-b {
+    font-size: 14px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#ilan-u-b:hover {
+    text-decoration: underline;
+}
+
+.ilan_list {
+    min-height: 135px; 
+    height: auto;
 }
 /** /////////////////////////////////////////////////////////////////////////// */
