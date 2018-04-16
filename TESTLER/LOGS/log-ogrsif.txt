@@ -1,0 +1,24 @@
+ 
+2018-04-16 22:00:31 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-16 22:00:32 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-16 22:45:47 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-16 22:45:49 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+

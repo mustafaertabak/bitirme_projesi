@@ -10,7 +10,7 @@ colorama.init()
 def cprint(color, text):
     print(color + text)
 
-    class kod_onay:
+    class code_correct:
         
         def __init__(self, driver, url, dizi):
             self.driver = driver 
@@ -18,8 +18,8 @@ def cprint(color, text):
 
             self.dizi = dizi 
             self.driver.get(self.url)
-            self.input = self.driver.find_element_by_id(self.dizi["exampleInputPassword1"])
-            self.btn = self.driver.get_attirbute(self.dizi["btn"])
+            self.input = self.driver.find_element_by_class_name(self.dizi["input"])
+            self.btn = self.driver.find_element_by_class_name(self.dizi["btn"])
 
         def basarisiz(self, input_b):
             for i in range(len(input_b)):
@@ -31,7 +31,7 @@ def cprint(color, text):
                 sonuc = None 
 
                 try:
-                    self.control = self.driver.get_attirbute("alert").is_displayed()
+                    self.control = self.driver.find_element_by_class_name("alert").is_displayed()
                     sonuc = True 
                 except:
                     sonuc = False 
@@ -42,8 +42,8 @@ def cprint(color, text):
                     cprint(Fore.RED, "Kod girişi başarılı")
                     time.sleep(0.5)
 
-river = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
-kod_onay = kod_onay(driver, "C:/Users/BERKE/Desktop/bitirme/kod-onay.html", {"input": "exampleInputPassword1"})
+code_correct = code_correct(driver, "C:\\Users\\BERKE\\Desktop\\bitirme\\kod_onay.html", {"input": "input_h", "btn": "giris-btn"})
 
-kod_onay.basarisiz(["156556565", "56532326", "54565656"])
+code_correct.basarisiz(["156556565", "56532326", "54565656"])
