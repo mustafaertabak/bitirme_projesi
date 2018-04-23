@@ -15,7 +15,7 @@ import time
 colorama.init()
 def cprint(color, text):
     print(color + text)
-
+    
 # Burada ogrenci_giris sayfasını test edeceğimiz için genel bir "ogrenci_giris" sınıfı açtık
 class ogrenci_giris:
    # Alttaki sınıfların miras alabilmeleri için init şeklinde def tanımladık ve bu defin içine ihtiyacımız olan değerleri aldık
@@ -51,7 +51,7 @@ class ogrenci_giris:
             # Kodların düzgün çalışması durumunda çalışacak komutlar 
             try:
                 # Burada way değişkenine degerler dizisinden gelen elemanının id'sini alıyoruz
-                self.way = driver.find_element_by_id(self.degerler["deger"])
+                self.way = driver.find_element_by_class_name(self.degerler["deger"]).is_displayed()
                 result = True    
                 # Normal olmayan koşullarda çalışacak kodlar                      
             except:
@@ -77,7 +77,7 @@ class ogrenci_giris:
                 time.sleep(0.5)
 
     # Sadece başarısız değeleri gönderdiğimiz test defini oluşturduk
-    def basarisiz(self,u_name,u_pass):
+    def basarisiz(self, u_name, u_pass):
         for i in range(len(u_name)): 
             # Birden fazla değer gönderdiğimizden dolayı sonraki değerler için inputları boşalttık              
             self.el_id.clear()
@@ -116,14 +116,15 @@ class ogrenci_giris:
                     file.write(" " + "\n\n")             
                 cprint(Fore.RED, "Giriş Başarısız")
                 time.sleep(0.5)
+
 # Driver değişkenine chromedriver yolunu atıyoruz 
 driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
 # Öğrenci giriş sınıfının parametre değerlerini atıyoruz 
-ogrenci_giris = ogrenci_giris(driver, "http://localhost:100/ogrenci-giris", {"username": "username", "pass": "pass", "deger": "baslik_id", "submit_button": "submit_button"})
+ogrenci_giris = ogrenci_giris(driver, "http://localhost:100/ogrenci-giris", {"username": "username", "pass": "pass", "deger": "a-ilan-img", "submit_button": "submit_button"})
 
 # Hangi testin çalıştırılacağını sorguluyoruz 
-print(Fore.BLUE + "Başarısız test için 1, başarılı test için 2") 
+print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())
 
 print(" ")
@@ -140,15 +141,4 @@ elif test == 2:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_giris, basarili_test")
     print("")
     # Öğrenci_giris sınıfının içindeki basarili define degerleri gönderiyoruz 
-    ogrenci_giris.basarili(["2016707005"],["123456"])
-   
-
-
-
-
-
-
- 
-        
-
-
+    ogrenci_giris.basarili(["2016707005"],["123458"])

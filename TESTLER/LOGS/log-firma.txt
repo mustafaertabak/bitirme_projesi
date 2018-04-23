@@ -17,3 +17,57 @@ Yapýlan test: Baþarýsýz þifre testi
 Beklenen sonuç: Baþarýsýz 
 Alýnan sonuç: Baþarýsýz 
 
+ 
+2018-04-19 12:43:02 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-19 12:43:03 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-19 12:43:03 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-19 12:43:23 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-19 12:51:23 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-19 21:28:09 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-19 21:28:10 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-19 21:28:11 
+Yapýlan test: Baþarýsýz þifre testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-19 21:28:34 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+

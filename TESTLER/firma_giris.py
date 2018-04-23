@@ -121,7 +121,7 @@ driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 firma_giris = firma_giris(driver, "http://localhost:100/firma-giris", {"username": "username", "pass": "pass", "deger": "dropdown-toggle", "submit_button": "submit_button"})
 
 # Hangi testin çalıştırılacağını sorguluyoruz 
-print(Fore.BLUE + "Başarısız test için 1, başarılı test için 2") 
+print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())
 print(" ")
 

@@ -1,0 +1,72 @@
+ 
+2018-04-17 00:09:28 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-17 21:52:35 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-17 21:57:47 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-17 21:58:55 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-19 12:54:43 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-19 22:08:13 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-22 22:20:25 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-23 13:10:46 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-23 13:14:00 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-23 13:14:03 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-23 13:15:52 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-23 13:15:53 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+

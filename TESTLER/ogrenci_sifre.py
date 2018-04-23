@@ -1,5 +1,8 @@
 # Gerekli importları bu kısımda yapıyoruz 
 from selenium import webdriver
+import MySQLdb
+import hashlib
+from hashlib import md5
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -20,7 +23,7 @@ def cprint(color, text):
 class ogrenci_sifre:
     
 
-    def __init__(self, driver, url, url2, dizi):
+    def __init__(self, driver, url, url2, dizi, k_ad, k_sif):
     
         self.driver = driver 
         self.url = url 
@@ -30,8 +33,8 @@ class ogrenci_sifre:
         self.k_pas = self.driver.find_element_by_id("pass")
         self.btn = self.driver.find_element_by_id("submit_button")
 
-        self.k_id.send_keys("2016707005")
-        self.k_pas.send_keys("123456")
+        self.k_id.send_keys(k_ad)
+        self.k_pas.send_keys(k_sif)
         self.btn.click()
         time.sleep(1.5)
         self.driver.get(self.url_2)
@@ -73,23 +76,29 @@ class ogrenci_sifre:
                     file.write(" " + "\n") 
                     file.write("Alınan sonuç: Başarısız")  
                     file.write(" " + "\n\n")           
-                cprint(Fore.RED, "Giriş Başarısız")
+                cprint(Fore.RED, "Başarısız")
                 time.sleep(0.5)
 
     def basarili(self, old, new, new_b):
+        db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj")
+        cursor = db.cursor()
         for i in range (len(new)):
             self.old.send_keys(old[i])
             self.new.send_keys(new[i])
-            self.new_b.send_keys(new_b[i])
+            self.new_b.send_keys(new_b[i])     
             self.button.click()
+            
             time.sleep(1)
-
+    
         self.btn_success = self.driver.find_element_by_class_name("btn-success")
         self.btn_success.click() 
         time.sleep(2)
-        self.show = self.driver.find_element_by_id("sifre").is_displayed()
-
-        if self.show == False:
+        
+        self.hash_object = hashlib.md5(new[i].encode())
+    
+        cursor.execute("SELECT * FROM ogr WHERE ogr_sifre = '%s'" % (self.hash_object.hexdigest()))
+        
+        if cursor.rowcount > 0:
             d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             with open("LOGS/log-ogrsif.txt", "a") as file:
                 file.write(" " + "\n")   
@@ -101,7 +110,7 @@ class ogrenci_sifre:
                 file.write(" " + "\n")
                 file.write("Alınan sonuç: Başarılı")
                 file.write(" " + "\n\n")
-            cprint(Fore.GREEN, "Giriş Başarılı")
+            cprint(Fore.GREEN, "Başarılı")
                                
             time.sleep(0.5)
         else:
@@ -111,10 +120,15 @@ class ogrenci_sifre:
 
 driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
-ogrenci_sifre = ogrenci_sifre(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"sif_old": "old_pass", "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sifre_btn": "sifre_btn"})
+print(Fore.CYAN + "Kullanıcı adı gir") 
+kullanici_adi = input()
+print(Fore.CYAN + "Sifre gir")
+sifre = input()
+
+ogrenci_sifre = ogrenci_sifre(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"sif_old": "old_pass", "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sifre_btn": "sifre_btn"}, kullanici_adi, sifre)
 
  
-print(Fore.BLUE + "Başarısız test için 1, başarılı test için 2") 
+print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())
 
 print(" ")
@@ -128,7 +142,7 @@ if test == 1:
 
 elif test == 2:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_sifre, basarili_test")
-    ogrenci_sifre.basarili(["123456"], ["123456"], ["123456"])
+    ogrenci_sifre.basarili(["123458"], ["123458"], ["123458"])
     print("")
     
     

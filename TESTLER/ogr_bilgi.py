@@ -1,5 +1,6 @@
 # Gerekli importları bu kısımda yapıyoruz 
 from selenium import webdriver
+import MySQLdb
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -18,8 +19,8 @@ def cprint(color, text):
 
 class ogrenci_bilgi:
 
-    def __init__(self, driver, url, url2, dizi):
-
+    def __init__(self, driver, url, url2, dizi, k_ad, k_sif):
+        
         self.driver = driver
         self.url = url
         self.url_2 = url2
@@ -29,8 +30,9 @@ class ogrenci_bilgi:
         self.k_pas = self.driver.find_element_by_id("pass")
         self.btn = self.driver.find_element_by_id("submit_button")
 
-        self.k_id.send_keys("2016707005")
-        self.k_pas.send_keys("123456")
+        
+        self.k_id.send_keys(k_ad)
+        self.k_pas.send_keys(k_sif)
         self.btn.click()
         time.sleep(1.5)
         self.driver.get(self.url_2)
@@ -55,12 +57,26 @@ class ogrenci_bilgi:
             self.show = self.driver.find_element_by_id(self.degerler["btn"]).is_displayed()
 
             if self.show == True:
+                d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                    file.write(" " + "\n")   
+                    file.write(str(d))
+                    file.write(" " + "\n")
+                    file.write("Yapılan test: Başarısız bilgi testi")
+                    file.write(" " + "\n")
+                    file.write("Beklenen sonuç: Başarısız")
+                    file.write(" " + "\n")
+                    file.write("Alınan sonuç: Başarısız")
+                    file.write(" " + "\n\n")
                 cprint(Fore.RED, "Basarisiz")
             
             else:
                 cprint(Fore.GREEN, "Basarili")
     
     def basarili(self, mail, tel):
+        db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj")
+        cursor = db.cursor()
+
         for i in range (len(mail)):      
             self.mail.clear()
             self.tel.clear()
@@ -70,36 +86,41 @@ class ogrenci_bilgi:
             self.g_btn.click()
             time.sleep(1)
 
-            self.acc_btn = self.driver.find_element_by_class_name("btn-success")
-            self.acc_btn.click()
+            self.acc_btn = self.driver.find_element_by_class_name("btn-success").click()
             time.sleep(2)
-            self.show = self.driver.find_element_by_id(self.degerler["btn"]).is_displayed()
-            
+            cursor.execute("SELECT * FROM ogr WHERE ogr_mail = '%s' and ogr_cep_no = '%s'" %  (mail[i], tel[i]))
 
-            if self.show == True:
-                    cprint(Fore.RED, "Basarisiz")
-                    time.sleep(0.5)
-
-            else:
+            if cursor.rowcount > 0:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 with open("LOGS/log-ogr-bilgi.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
-                    file.write("Yapılan test: Başarılı şifre testi")
+                    file.write("Yapılan test: Başarılı bilgi testi")
                     file.write(" " + "\n")
                     file.write("Beklenen sonuç: Başarılı")
                     file.write(" " + "\n")
                     file.write("Alınan sonuç: Başarılı")
                     file.write(" " + "\n\n")
                 cprint(Fore.GREEN, "Basarili")
+            
+            else:                
+                cprint(Fore.RED, "Basarisiz")
+                time.sleep(0.5)
+                
 
 
 driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
-ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn"})
+print(Fore.CYAN + "Kullanıcı adı gir") 
+kullanici_adi = input()
+print(Fore.CYAN + "Sifre gir")
+sifre = input()
 
-print(Fore.BLUE + "Başarısız test için 1, başarılı test için 2") 
+ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn",}, kullanici_adi, sifre)
+
+
+print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())
 
 print(" ")
