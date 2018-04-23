@@ -38,7 +38,6 @@ class ogrenci_bilgi:
         self.driver.get(self.url_2)
         self.driver.find_element_by_id("show_info").click()
         
-
         self.degerler = dizi 
 
         self.mail = self.driver.find_element_by_id(self.degerler["mail_bilgi"])
@@ -110,14 +109,14 @@ class ogrenci_bilgi:
                 
 
 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome()
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre gir")
 sifre = input()
 
-ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn",}, kullanici_adi, sifre)
+ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:80/ogrenci-giris", "http://localhost:80/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn"}, kullanici_adi, sifre)
 
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
