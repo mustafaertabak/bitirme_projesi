@@ -1,6 +1,5 @@
 # Bu kısımda gerekli importları yaptık
 from selenium import webdriver
-import sys 
 import MySQLdb
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -64,14 +63,15 @@ class firma_ilan:
             self.ilan_text.send_keys(ilan_text[i])
             self.buton.click()
             self.btn_scs = self.driver.find_element_by_class_name("btn-success").click()
-
             time.sleep(2)
-
+            
+           
             #self.query = cursor.execute("SELECT bolum_id FROM bolumler WHERE bolum_isim = '%s'" % (self.text_id))
 
             #cursor.execute("SELECT * FROM ilanlar WHERE ilan_baslik = '%s' AND ilan_aciklama = '%s' AND ilan_basvuru_mail = '%s' AND ilan_is_adres = '%s' AND ilan_bolumid = '%s'"  % (ilan_baslik[i], ilan_text[i], ilan_mail[i], ilan_adres[i], self.query))
 
             cursor.execute("SELECT * FROM bolumler INNER JOIN ilanlar ON bolumler.bolum_id = ilanlar.ilan_bolumid WHERE ilanlar.ilan_baslik = '%s' AND ilanlar.ilan_aciklama = '%s' AND ilanlar.ilan_basvuru_mail = '%s' AND ilanlar.ilan_is_adres = '%s' AND ilanlar.ilan_bolumid = bolumler.bolum_id"  %  (ilan_baslik[i], ilan_text[i], ilan_mail[i], ilan_adres[i]))
+            
 
             if cursor.rowcount > 0:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -86,6 +86,7 @@ class firma_ilan:
                     file.write("Alınan sonuç: Başarılı")
                     file.write(" " + "\n\n")
                 cprint(Fore.GREEN, "Basarili")
+                                
             
             else:
                 cprint(Fore.RED, "Basarisiz")
@@ -109,7 +110,7 @@ class firma_ilan:
                 cprint(Fore.GREEN, "Basarili")
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                with open("LOGS/firma-ilan-ekle.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
@@ -145,6 +146,4 @@ if test == 1:
 if test == 2:
     print(Fore.YELLOW + "Çalıştırılan test: " + "Firma ilan ekle, basarili_test") 
     # Firma_giris sınıfının içindeki basarili define degerleri gönderiyoruz 
-    firma_ilan.basarili(["makine"], ["berkeertan@gmail.com"], ["aciklama"], ["adres"])
-
-            
+    firma_ilan.basarili(["makine", "bilgisayar"], ["berkeertan@gmail.com","berke@gmail.com"], ["aciklama","aciklama2"], ["adres","adres2"])

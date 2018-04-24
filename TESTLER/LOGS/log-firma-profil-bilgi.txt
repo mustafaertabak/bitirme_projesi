@@ -1,0 +1,19 @@
+ 
+2018-04-24 00:42:48 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 01:03:46 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-04-24 01:03:49 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI!

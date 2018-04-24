@@ -38,17 +38,20 @@ class ogrenci_bilgi:
         self.driver.get(self.url_2)
         self.driver.find_element_by_id("show_info").click()
         
+
         self.degerler = dizi 
 
         self.mail = self.driver.find_element_by_id(self.degerler["mail_bilgi"])
         self.tel = self.driver.find_element_by_id(self.degerler["tel"])
+        self.bilgi_text = self.driver.find_element_by_id(self.degerler["bilgiler_text"])
         self.g_btn = self.driver.find_element_by_id(self.degerler["btn"])
 
-    def basarisiz(self, mail, tel):
+    def basarisiz(self, mail, tel, bilgiler_text):
         for i in range (len(mail)):      
             self.mail.clear()
             self.tel.clear()
 
+            self.bilgi_text.send_keys(bilgiler_text[i])
             self.mail.send_keys(mail[i])
             self.tel.send_keys(tel[i])
             self.g_btn.click()
@@ -72,22 +75,24 @@ class ogrenci_bilgi:
             else:
                 cprint(Fore.GREEN, "Basarili")
     
-    def basarili(self, mail, tel):
+    def basarili(self, mail, tel, bilgiler_text):
         db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj")
         cursor = db.cursor()
 
         for i in range (len(mail)):      
             self.mail.clear()
             self.tel.clear()
-
+            self.bilgi_text.clear()
+            
             self.mail.send_keys(mail[i])
             self.tel.send_keys(tel[i])
+            self.bilgi_text.send_keys(bilgiler_text[i])
             self.g_btn.click()
             time.sleep(1)
 
             self.acc_btn = self.driver.find_element_by_class_name("btn-success").click()
             time.sleep(2)
-            cursor.execute("SELECT * FROM ogr WHERE ogr_mail = '%s' and ogr_cep_no = '%s'" %  (mail[i], tel[i]))
+            cursor.execute("SELECT * FROM ogr WHERE ogr_mail = '%s' AND ogr_cep_no = '%s' AND ogr_aciklama = '%s'" %  (mail[i], tel[i], bilgiler_text[i]))
 
             if cursor.rowcount > 0:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -109,14 +114,14 @@ class ogrenci_bilgi:
                 
 
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre gir")
 sifre = input()
 
-ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:80/ogrenci-giris", "http://localhost:80/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn"}, kullanici_adi, sifre)
+ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
 
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
@@ -127,12 +132,12 @@ print(" ")
 
 if test == 1:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_bilgi, basarisiz_test", end="\n\n")  
-    ogrenci_bilgi.basarisiz(["denemedeneme.com","asdasdsa"], ["56562","454562"])
+    ogrenci_bilgi.basarisiz(["denemedeneme.com","asdasdsa"], ["56562","454562"],["Aciklama","aciklama_2"])
 
 
 elif test == 2:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_bilgi, basarili_test")
-    ogrenci_bilgi.basarili(["deneme@deneme.com"], ["05512020194"])
+    ogrenci_bilgi.basarili(["deneme@deneme.com"], ["05512020194"], ["aciklama"])
     print("")
     
     

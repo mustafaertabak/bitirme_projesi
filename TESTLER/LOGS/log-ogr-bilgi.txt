@@ -41,32 +41,10 @@ Beklenen sonuç: Baþarýlý
 Alýnan sonuç: Baþarýlý 
 
  
-2018-04-23 13:10:46 
-Yapýlan test: Baþarýsýz ilan ekleme testi 
-Beklenen sonuç: Baþarýsýz 
-Alýnan sonuç: Baþarýsýz 
 
  
-2018-04-23 13:14:00 
-Yapýlan test: Baþarýsýz ilan ekleme testi 
-Beklenen sonuç: Baþarýsýz 
-Alýnan sonuç: Baþarýsýz 
-
- 
-2018-04-23 13:14:03 
-Yapýlan test: Baþarýsýz ilan ekleme testi 
-Beklenen sonuç: Baþarýsýz 
-Alýnan sonuç: Baþarýsýz 
-
- 
-2018-04-23 13:15:52 
-Yapýlan test: Baþarýsýz ilan ekleme testi 
-Beklenen sonuç: Baþarýsýz 
-Alýnan sonuç: Baþarýsýz 
-
- 
-2018-04-23 13:15:53 
-Yapýlan test: Baþarýsýz ilan ekleme testi 
-Beklenen sonuç: Baþarýsýz 
-Alýnan sonuç: Baþarýsýz 
+2018-04-24 00:19:43 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
 

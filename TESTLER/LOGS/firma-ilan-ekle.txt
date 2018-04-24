@@ -4,3 +4,87 @@ Yapýlan test: Baþarýlý þifre testi
 Beklenen sonuç: Baþarýlý 
 Alýnan sonuç: Baþarýlý 
 
+ 
+2018-04-23 13:21:37 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-23 13:21:39 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-24 00:02:34 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:03:38 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:04:49 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:06:14 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:07:31 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:08:41 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:09:10 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:22:55 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:25:08 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 00:26:46 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-24 12:37:51 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-24 12:37:52 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+

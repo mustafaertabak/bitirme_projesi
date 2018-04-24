@@ -53,17 +53,44 @@ class ogrenci_sifre:
             self.old.clear()
             self.new.clear()
             self.new_b.clear()
-
+            
             self.old.send_keys(old[i])
             self.new.send_keys(new[i])
             self.new_b.send_keys(new_b[i])
             self.button.click()
-            time.sleep(1)
+            time.sleep(2)     
 
-            self.show = self.driver.find_element_by_id("sifre").is_displayed()
-             
-            if self.show == False:
-                cprint(Fore.GREEN, "Giriş Başarılı")
+            self.disp = self.driver.find_element_by_id("sifre_w").is_displayed()
+            result = None
+
+            if self.disp:
+                result = True
+            else:
+                result = False
+          
+            if result == False:
+                self.driver.find_element_by_class_name("btn-success").click()
+                time.sleep(1.5)
+                self.disp = self.driver.find_element_by_id("sifre_w").is_displayed()
+
+                if self.disp:
+                    d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    with open("LOGS/log-ogrsif.txt", "a") as file:
+                        file.write(" " + "\n")   
+                        file.write(str(d))
+                        file.write(" " + "\n")
+                        file.write("Yapılan test: Başarısız şifre testi")
+                        file.write(" " + "\n")
+                        file.write("Beklenen sonuç: Başarısız")
+                        file.write(" " + "\n") 
+                        file.write("Alınan sonuç: Başarısız")  
+                        file.write(" " + "\n\n")           
+                    cprint(Fore.RED, "Başarısız")
+                    time.sleep(0.5)
+                
+                else:
+                    cprint(Fore.GREEN, "Başarılı")
+                        
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 with open("LOGS/log-ogrsif.txt", "a") as file:
@@ -78,9 +105,12 @@ class ogrenci_sifre:
                     file.write(" " + "\n\n")           
                 cprint(Fore.RED, "Başarısız")
                 time.sleep(0.5)
+                
+                   
+
 
     def basarili(self, old, new, new_b):
-        db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj")
+        db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
         for i in range (len(new)):
             self.old.send_keys(old[i])
@@ -137,7 +167,7 @@ print(" ")
 if test == 1:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_sifre, basarisiz_test", end="\n\n")
     # Öğrenci_giris sınıfının içindeki basarisiz define degerleri gönderiyoruz 
-    ogrenci_sifre.basarisiz(["123452","123456"], ["123","213"], ["123","12364"])
+    ogrenci_sifre.basarisiz(["123452","1234518"], ["123456","232235"], ["123456","232235"])
 
 
 elif test == 2:
