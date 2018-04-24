@@ -88,3 +88,27 @@ Yapýlan test: Baþarýsýz ilan ekleme testi
 Beklenen sonuç: Baþarýsýz 
 Alýnan sonuç: Baþarýsýz 
 
+ 
+2018-04-25 00:52:44 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-25 00:52:45 
+Yapýlan test: Baþarýsýz ilan ekleme testi 
+Beklenen sonuç: Baþarýsýz 
+Alýnan sonuç: Baþarýsýz 
+
+ 
+2018-04-25 01:13:37 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-25 01:17:34 
+Yapýlan test: Baþarýlý þifre testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
