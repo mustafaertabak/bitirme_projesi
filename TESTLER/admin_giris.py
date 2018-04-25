@@ -52,7 +52,7 @@ class admin_giris:
 
             if result:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogrenci.txt", "a") as file:
+                with open("LOGS/log-admin.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
@@ -91,7 +91,7 @@ class admin_giris:
 
             if result:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogrenci.txt", "a") as file:
+                with open("LOGS/log-admin.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
