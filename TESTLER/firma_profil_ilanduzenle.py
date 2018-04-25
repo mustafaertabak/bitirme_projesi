@@ -132,17 +132,17 @@ print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2")
 test = int(input())
 print(" ")
 
-# 1'e basılırsa yapılacak işlemler 
+
 if test == 1:
-    print(Fore.YELLOW + "Çalıştırılan test: " + "Firma ilan ekle, basarisiz_test")
+    print(Fore.YELLOW + "Çalıştırılan test: " + "Firma ilan düzenle, basarisiz_test")
     print("")
-    # Firma_giris sınıfının içindeki basarisiz define degerleri gönderiyoruz 
+
     firma_ilan_duzenle.basarisiz(["bilgisayar", "makine"], ["5656", "6565"], ["ac", "ac2"], ["adress", "adress2"])
 
-# 2'ye basılırsa yapılacak işlemler 
+
 if test == 2:
-    print(Fore.YELLOW + "Çalıştırılan test: " + "Firma ilan ekle, basarili_test") 
-    # Firma_giris sınıfının içindeki basarili define degerleri gönderiyoruz 
+    print(Fore.YELLOW + "Çalıştırılan test: " + "Firma ilan düzenle, basarili_test") 
+    
     firma_ilan_duzenle.basarili(["Bilgisayar"], ["mustafa@hotmail.com"], ["aciklamaDENEME"], ["adresDENEME"])
 
 
