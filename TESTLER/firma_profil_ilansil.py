@@ -51,10 +51,22 @@ class ilan_sil:
         time.sleep(1.5)
 
         self.crsr = cursor.execute("SELECT ilan_id FROM ilanlar WHERE ilan_id='%s'" % (self.att_id))
-        if self.crsr == True:
-            cprint(Fore.RED, "TEST BAŞARISIZ!")
-        elif self.crsr == False:
-            cprint(Fore.GREEN, "TEST BAŞARILI!")
+        
+        if self.crsr == False:
+            d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            with open("LOGS/firma-profil-ilansil.txt", "a") as file:
+                file.write(" " + "\n")   
+                file.write(str(d))
+                file.write(" " + "\n")
+                file.write("Yapılan test: Başarılı şifre testi")
+                file.write(" " + "\n")
+                file.write("Beklenen sonuç: Başarılı")
+                file.write(" " + "\n")
+                file.write("Alınan sonuç: Başarılı")
+                file.write(" " + "\n\n")
+            cprint(Fore.GREEN, "Basarili")
+        else:
+            cprint(Fore.RED, "Basarisiz")
 
 driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
