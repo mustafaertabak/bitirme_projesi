@@ -76,3 +76,9 @@
 [0424/125251.528:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0424/125251.541:ERROR:exception_snapshot_win.cc(88)] thread ID 392 not found in process
 [0424/125251.541:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0430/214226.654:ERROR:process_reader_win.cc(123)] NtOpenThread: {Eriþim Yok} Bir iþlem bir nesneye eriþmek istedi, ancak istediði eriþimin haklarý kendisine verilmiþ deðil. (0xc0000022)
+[0430/214226.673:ERROR:exception_snapshot_win.cc(88)] thread ID 13948 not found in process
+[0430/214226.673:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0430/220923.421:ERROR:process_reader_win.cc(123)] NtOpenThread: {Eriþim Yok} Bir iþlem bir nesneye eriþmek istedi, ancak istediði eriþimin haklarý kendisine verilmiþ deðil. (0xc0000022)
+[0430/220923.422:ERROR:exception_snapshot_win.cc(88)] thread ID 1572 not found in process
+[0430/220923.422:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed

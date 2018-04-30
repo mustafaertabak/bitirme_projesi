@@ -21,7 +21,6 @@ class firma_basvuru:
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         self.cursor = db.cursor()
         self.cursor.execute("SELECT * FROM f_basvurular") 
-        print (self.cursor.rowcount)
 
         self.driver = driver
         self.url = url
@@ -53,11 +52,18 @@ class firma_basvuru:
                     file.write(" " + "\n") 
                     file.write("Alınan sonuç: Başarısız")  
                     file.write(" " + "\n\n")      
-                    file.write("TEST BAŞARILI")     
-                cprint(Fore.RED, "Başarısız")
+                    file.write("TEST BAŞARILI") 
+                cprint(Fore.LIGHTMAGENTA_EX, "GİRİŞ - " + str(i+1))
+                print("")     
+                cprint(Fore.LIGHTBLUE_EX, "Girilen E-Mail : " + mail[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = BAŞARISIZ")
+                print("")
+                cprint(Fore.GREEN, "Alınan Sonuç = Giriş BAŞARISIZ!")
+                print("\n") 
                 time.sleep(0.5)
             else:
-                cprint(Fore.GREEN, "Başarılı")
+                cprint(Fore.RED, "Başarılı")
     
     def basarili(self,mail):
         db2 = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
@@ -71,7 +77,6 @@ class firma_basvuru:
             time.sleep(3)
 
             cursor2.execute("SELECT * FROM f_basvurular")
-            print (cursor2.rowcount)
 
             if cursor2.rowcount > self.cursor.rowcount:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -85,15 +90,24 @@ class firma_basvuru:
                     file.write(" " + "\n")
                     file.write("Alınan sonuç: Başarılı")
                     file.write(" " + "\n\n")
-                cprint(Fore.GREEN, "Başarılı")                   
+                cprint(Fore.LIGHTBLUE_EX, "Girilen E-Mail : " + mail[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = BAŞARILI")
+                print("")
+                cprint(Fore.GREEN, "Alınan Sonuç = Giriş Başarılı")                    
                 time.sleep(0.5)
             else:
-                cprint(Fore.RED, "Başarısız")
+                cprint(Fore.LIGHTBLUE_EX, "Girilen E-Mail: " + mail[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = BAŞARILI")
+                print("")
+                cprint(Fore.RED, "Alınan Sonuç = Giriş BAŞARISIZ!")   
+                time.sleep(0.5)
 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 
-firma_basvuru = firma_basvuru(driver, "http://localhost:100/firma-basvuru", {"basvuru_mail": "f_basvuru_mail", "basvuru_btn": "f_basvuru_btn"})
+firma_basvuru = firma_basvuru(driver, "http://localhost/firma-basvuru", {"basvuru_mail": "f_basvuru_mail", "basvuru_btn": "f_basvuru_btn"})
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())

@@ -1,0 +1,66 @@
+ 
+2018-04-30 20:54:53 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 20:56:10 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 20:58:59 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 21:12:30 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 21:16:50 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 21:18:09 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 21:20:05 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 21:20:57 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 21:24:07 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 21:24:45 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-30 22:33:26 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
