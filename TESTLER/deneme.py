@@ -1,1 +1,0 @@
-u'BERKE İIIIIİIIİIİII'.encode('iso-8859-1')
