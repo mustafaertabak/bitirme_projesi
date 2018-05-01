@@ -64,3 +64,69 @@ Yapýlan test: Baþarýlý giriþ testi
 Beklenen sonuç: Baþarýlý 
 Alýnan sonuç: Baþarýlý 
 
+ 
+2018-05-01 01:03:01 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+ 
+2018-05-01 01:03:04 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+ 
+2018-05-01 01:03:07 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+ 
+2018-05-01 01:03:24 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+ 
+2018-05-01 01:08:40 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+ 
+2018-05-01 01:12:18 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+ 
+2018-05-01 16:58:30 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+ 
+2018-05-01 16:58:33 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+ 
+2018-05-01 16:58:37 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+ 
+2018-05-01 16:58:44 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+ 
+2018-05-01 17:04:20 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+

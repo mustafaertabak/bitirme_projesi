@@ -16,4 +16,136 @@ Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi!
 Beklenen Sonuç: Baþarýsýz! 
 Alýnan Sonuç: BAÞARISIZ! 
 
+TEST BAÞARILI! 
+2018-05-01 17:32:52 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-01 17:32:54 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-01 17:34:43 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-01 17:34:46 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-01 17:35:07 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 17:36:42 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 17:50:30 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 20:18:57 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 20:21:16 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 20:22:07 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 20:25:42 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 20:28:58 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 20:32:08 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 21:11:28 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 21:12:37 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 21:13:32 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-01 21:13:39 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-01 21:13:42 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-02 00:02:03 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-02 00:02:17 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-02 00:02:19 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-02 00:02:29 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
 TEST BAÞARILI!

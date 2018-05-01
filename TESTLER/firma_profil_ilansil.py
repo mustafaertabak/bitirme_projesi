@@ -41,7 +41,7 @@ class ilan_sil:
         db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
 
-        self.driver.find_element_by_id("ilanlarim").click()
+        self.driver.find_element_by_id("ilan_duzenle").click()
         self.id = self.driver.find_element_by_id("ilan_sil")
         self.att_id = self.id.get_attribute("data-delid")
         

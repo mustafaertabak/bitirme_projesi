@@ -62,15 +62,38 @@ class firma_giris:
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarılı giriş testi")
                     file.write(" " + "\n")
-                    file.write("Beklenen sonuç: Başarılı")
+                    file.write("Beklenen sonuç: Giriş Başarılı")
                     file.write(" " + "\n")
-                    file.write("Alınan sonuç: Başarılı")
+                    file.write("Alınan sonuç: Giriş Başarılı")
                     file.write(" " + "\n\n")
-                cprint(Fore.GREEN, "Giriş Başarılı")
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Şifresi : " + u_pass[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARILI!")
+                print("")
+                cprint(Fore.GREEN, "Alınan Sonuç = GİRİŞ BAŞARILI!") 
             else:
+                date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("LOGS/log-firma.txt", "a") as file:
+                    file.write(" " + "\n")   
+                    file.write(str(date_t))
+                    file.write(" " + "\n")
+                    file.write("Yapılan test: Başarılı giriş testi")
+                    file.write(" " + "\n")
+                    file.write("Beklenen sonuç: GİRİŞ BAŞARILI!")
+                    file.write(" " + "\n")
+                    file.write("Alınan sonuç: GİRİŞ BAŞARISIZ!")
+                    file.write(" " + "\n\n")
                 # Eğer elemanın idsi bulunamadıysa yapılacak işlemler
-                cprint(Fore.RED, "Giriş Başarısız")
-                time.sleep(0.5)
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Şifresi : " + u_pass[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARILI!")
+                print("")
+                cprint(Fore.RED, "Alınan Sonuç = GİRİŞ BAŞARISIZ!")   
+                time.sleep(1)
+                print("\n") 
+
     # Sadece başarısız değeleri gönderdiğimiz test defini oluşturduk            
     def basarisiz(self,u_name,u_pass):
         for i in range(len(u_name)):
@@ -96,7 +119,27 @@ class firma_giris:
             
             # Eğer elemanın idsi bulunduysa yapılacak işlemler      
             if result:
-                cprint(Fore.GREEN, "Giriş Başarılı")
+                # Logları yazdırıyoruz 
+                date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("LOGS/log-firma.txt", "a") as file:
+                    file.write(" " + "\n")   
+                    file.write(str(date_t))
+                    file.write(" " + "\n")
+                    file.write("Yapılan test: Başarısız şifre testi")
+                    file.write(" " + "\n")
+                    file.write("Beklenen sonuç: Giriş Başarısız")
+                    file.write(" " + "\n")
+                    file.write("Alınan sonuç: Giriş Başarılı")
+                    file.write(" " + "\n\n") 
+                cprint(Fore.LIGHTMAGENTA_EX, "GİRİŞ - " + str(i+1))   
+                print("")
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Şifresi : " + u_pass[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARISIZ!")
+                print("")
+                cprint(Fore.RED, "Alınan Sonuç = GİRİŞ BAŞARILI!")  
+                print("\n") 
             # Eğer elemanın idsi bulunamadıysa yapılacak işlemler  
             else:
                 # Logları yazdırıyoruz 
@@ -107,18 +150,33 @@ class firma_giris:
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarısız şifre testi")
                     file.write(" " + "\n")
-                    file.write("Beklenen sonuç: Başarısız")
+                    file.write("Beklenen sonuç: GİRİŞ BAŞARISIZ!")
                     file.write(" " + "\n")
-                    file.write("Alınan sonuç: Başarısız")
+                    file.write("Alınan sonuç: GİRİŞ BAŞARISIZ!")
                     file.write(" " + "\n\n") 
-                cprint(Fore.RED, "Giriş Başarısız")
-                time.sleep(0.5)
+                cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " +  str(i+1))
+                print("")         
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Şifresi : " + u_pass[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARISIZ!")
+                print("")
+                cprint(Fore.GREEN, "Alınan Sonuç = GİRİŞ BAŞARISIZ!")
+                print("\n") 
+                time.sleep(1)
+
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarılı test için 'b' tuşlayın")
+        a = input()
+        if a == 'e':
+            driver.close()
+        elif a == 'b':
+            firma_giris.basarili(["vestel"], ["123456"])
 
 # Driver değişkenine chromedriver yolunu atıyoruz 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 # Firma giriş sınıfının parametre değerlerini atıyoruz 
-firma_giris = firma_giris(driver, "http://localhost:100/firma-giris", {"username": "username", "pass": "pass", "deger": "dropdown-toggle", "submit_button": "submit_button"})
+firma_giris = firma_giris(driver, "http://localhost/firma-giris", {"username": "username", "pass": "pass", "deger": "dropdown-toggle", "submit_button": "submit_button"})
 
 # Hangi testin çalıştırılacağını sorguluyoruz 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
@@ -127,14 +185,14 @@ print(" ")
 
 # 1'e basılırsa yapılacak işlemler 
 if test == 1:
-    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_giris, basarisiz_test")
+    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_giris, basarisiz_test", end="\n\n")
     print("")
     # Firma_giris sınıfının içindeki basarisiz define degerleri gönderiyoruz 
     firma_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
 
 # 2'ye basılırsa yapılacak işlemler 
 if test == 2:
-    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_giris, basarili_test") 
+    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_giris, basarili_test", end="\n\n") 
     # Firma_giris sınıfının içindeki basarili define degerleri gönderiyoruz 
     firma_giris.basarili(["vestel"], ["123456"])
    

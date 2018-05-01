@@ -70,11 +70,38 @@ class firma_bilgi:
                     file.write("Alınan Sonuç: BAŞARISIZ!")
                     file.write(" " + "\n\n")
                     file.write("TEST BAŞARILI!")
-                cprint(Fore.RED, "BAŞARISIZ!")
+                cprint(Fore.LIGHTMAGENTA_EX, "GİRİŞ - " + str(i+1))   
+                print("")
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Adı : " + frm_adi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Kullanıcı Adı : " + frm_kadi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Açıklama Bilgisi : " + bilgi_text[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = İŞLEM BAŞARISIZ!")
+                print("")
+                cprint(Fore.GREEN, "Alınan Sonuç = İŞLEM BAŞARISIZ!")  
+                print("\n") 
+                time.sleep(1)
 
             else:
-                cprint(Fore.GREEN, "BAŞARILI!")
-        
+                cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " +  str(i+1))
+                print("")         
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Adı : " + frm_adi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Kullanıcı Adı : " + frm_kadi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Açıklama Bilgisi : " + bilgi_text[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = İŞLEM BAŞARISIZ!")
+                print("")
+                cprint(Fore.RED, "Alınan Sonuç = İŞLEM BAŞARILI!")
+                print("\n") 
+                time.sleep(1)
+    
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarılı test için 'b' tuşlayın")
+        a = input()
+        if a == 'e':
+            driver.close()
+        elif a == 'b':
+            firma_bilgi.basarili(["testdeneme"], ["denemekullanıcıadı"], ["aciklama"])
+
     def basarili(self, frm_adi, frm_kadi, bilgi_text):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
@@ -107,19 +134,46 @@ class firma_bilgi:
                     file.write("Alınan sonuç: Başarılı")
                     file.write(" " + "\n\n")
                     file.write("TEST BAŞARILI!")
-                cprint(Fore.GREEN, "Basarili")
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Adı : " + frm_adi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Kullanıcı Adı : " + frm_kadi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Açıklama Bilgisi : " + bilgi_text[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = İŞLEM BAŞARILI!")
+                print("")
+                cprint(Fore.GREEN, "Alınan Sonuç = İŞLEM BAŞARILI!")  
+                print("\n") 
+                time.sleep(1)
             else:                
-                cprint(Fore.RED, "Basarisiz")
-                time.sleep(0.5)
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Adı : " + frm_adi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Firmanın Kullanıcı Adı : " + frm_kadi[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Açıklama Bilgisi : " + bilgi_text[i])
+                print("")
+                cprint(Fore.YELLOW, "Beklenen Sonuç = İŞLEM BAŞARILI!")
+                print("")
+                cprint(Fore.RED, "Alınan Sonuç = İŞLEM BAŞARISIZ!")  
+                print("\n") 
+                time.sleep(1)
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
+        a = input()
+        if a == 'e':
+            driver.close()
+        elif a == 'b':
+            self.driver.find_element_by_id("show_info").click()
+            self.b_isim = self.driver.find_element_by_id(self.degerler["bilgiler_isim"])
+            self.b_gad = self.driver.find_element_by_id(self.degerler["bilgiler_giris_adi"])
+            self.b_gbtn = self.driver.find_element_by_id(self.degerler["bilgiler_btn"])
+            self.b_text = self.driver.find_element_by_id(self.degerler["bilgiler_text"])
+            time.sleep(2)
+            firma_bilgi.basarisiz(["", ""], ["", ""], ["", ""])
 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı girin")
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre Girin")
 sifre = input()
 
-firma_bilgi = firma_bilgi(driver, "http://localhost:100/firma-giris", "http://localhost:100/profil", {"bilgiler_isim": "bilgiler_isim", "bilgiler_giris_adi": "bilgiler_giris_adi", "bilgiler_btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
+firma_bilgi = firma_bilgi(driver, "http://localhost/firma-giris", "http://localhost/profil", {"bilgiler_isim": "bilgiler_isim", "bilgiler_giris_adi": "bilgiler_giris_adi", "bilgiler_btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
 
 print(Fore.YELLOW + "Başarısız test içi 1, başarılı test için 2")
 test = int(input())
@@ -132,8 +186,8 @@ if test == 1:
 
 
 elif test == 2:
-    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_bilgi, basarili_test")
-    firma_bilgi.basarili(["testdeneme"], ["denemekullanıcıadı"], ["aciklama"])
+    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_bilgi, basarili_test", end="\n\n")
+    firma_bilgi.basarili(["Vestel"], ["vestel_deneme"], ["Testaciklamadeneme"])
     print("")
     
 
