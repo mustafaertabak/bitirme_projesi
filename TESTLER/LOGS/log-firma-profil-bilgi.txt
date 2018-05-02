@@ -148,4 +148,22 @@ Yapýlan test: Baþarýlý bilgi testi
 Beklenen sonuç: Baþarýlý 
 Alýnan sonuç: Baþarýlý 
 
+TEST BAÞARILI! 
+2018-05-02 22:35:51 
+Yapýlan test: Baþarýlý bilgi testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+TEST BAÞARILI! 
+2018-05-02 22:36:16 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
+TEST BAÞARILI! 
+2018-05-02 22:36:18 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Beklenen Sonuç: Baþarýsýz! 
+Alýnan Sonuç: BAÞARISIZ! 
+
 TEST BAÞARILI!

@@ -41,7 +41,9 @@ class ilan_sil:
         db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
 
-        self.driver.find_element_by_id("ilan_duzenle").click()
+        print(Fore.YELLOW + "Çalıştırılan test: " + "Firma_profil_ilansil")
+
+        self.driver.find_element_by_id("ilanduzenle_btn").click()
         self.id = self.driver.find_element_by_id("ilan_sil")
         self.att_id = self.id.get_attribute("data-delid")
         
@@ -60,11 +62,16 @@ class ilan_sil:
                 file.write(" " + "\n")
                 file.write("Yapılan test: Başarılı şifre testi")
                 file.write(" " + "\n")
-                file.write("Beklenen sonuç: Başarılı")
+                file.write("Beklenen sonuç: İŞLEM BAŞARILI!")
                 file.write(" " + "\n")
-                file.write("Alınan sonuç: Başarılı")
+                file.write("Alınan sonuç: İŞLEM BAŞARILI!")
                 file.write(" " + "\n\n")
-            cprint(Fore.GREEN, "Basarili")
+            cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
+            print("")
+            cprint(Fore.LIGHTCYAN_EX, "İlan Sil butonuna Tıklandı")
+            cprint(Fore.LIGHTCYAN_EX, "İLAN SİLİNDİ!")
+            print("")
+            cprint(Fore.GREEN, "TEST BAŞARILI!")
         else:
             cprint(Fore.RED, "Basarisiz")
 
@@ -74,6 +81,7 @@ print(Fore.CYAN, "Kullanıcı Adı Giriniz")
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre gir")
 sifre = input()
+print("")
    
 firma_ilansil = ilan_sil(driver, "http://localhost/firma-giris", "http://localhost/profil", kullanici_adi, sifre)
 

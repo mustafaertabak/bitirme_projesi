@@ -110,6 +110,8 @@ class firma_ilan_duzenle:
                     file.write(" " + "\n")
                     file.write("Alınan sonuç: BAŞARISIZ!")
                     file.write(" " + "\n\n")
+                cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
+                print("")
                 cprint(Fore.LIGHTBLUE_EX, "Girilen İlan Başlığı : " + ilan_baslik[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Firma E-mail : " + ilan_mail[i])
                 cprint(Fore.LIGHTBLUE_EX, "Seçilen Bolum Adı : " + self.vlue)

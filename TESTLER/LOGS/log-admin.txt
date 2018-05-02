@@ -130,3 +130,21 @@ Yapýlan test: Baþarýlý giriþ testi
 Beklenen sonuç: GÝRÝÞ BAÞARILI! 
 Alýnan sonuç: GÝRÝÞ BAÞARALI! 
 
+ 
+2018-05-03 00:54:53 
+Yapýlan test: Baþarýlý giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+ 
+2018-05-03 00:55:06 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+ 
+2018-05-03 00:55:09 
+Yapýlan test: Baþarýsýz giriþ testi 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+

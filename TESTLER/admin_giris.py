@@ -88,6 +88,32 @@ class admin_giris:
                 print("")
                 cprint(Fore.RED, "Alınan Sonuç = GİRİŞ BAŞARISIZ!")   
                 time.sleep(1)
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
+        a = input()
+        if a == 'e':
+            driver.close()
+        elif a == 'b':
+            self.togg = self.driver.find_element_by_class_name("navbar-toggler").is_displayed()
+            if self.togg:
+                self.driver.find_element_by_class_name("navbar-toggler").click()
+                time.sleep(1.5)
+                self.driver.find_element_by_xpath( "//button[@data-toggle='dropdown']").click()
+                self.driver.find_element_by_class_name("dropdown-item").click()
+                time.sleep(1)
+                self.driver.get(self.url)
+                self.a_name = self.driver.find_element_by_id(self.dizi["username"])
+                self.a_pass = self.driver.find_element_by_id(self.dizi["pass"])
+                self.a_btn = self.driver.find_element_by_id(self.dizi["submit_button"])
+                admin_giris.basarisiz(["70400056", "adasfsa"],["123456", "2345486"])
+            else:
+                self.driver.find_element_by_xpath( "//button[@data-toggle='dropdown']").click()
+                self.driver.find_element_by_class_name("dropdown-item").click()
+                time.sleep(1)
+                self.driver.get(self.url)
+                self.a_name = self.driver.find_element_by_id(self.dizi["username"])
+                self.a_pass = self.driver.find_element_by_id(self.dizi["pass"])
+                self.a_btn = self.driver.find_element_by_id(self.dizi["submit_button"])
+                admin_giris.basarisiz(["70400056", "adasfsa"],["123456", "2345486"])
 
     def basarisiz(self, a_name, a_pass):
         for i in range(len(a_name)):
