@@ -244,14 +244,14 @@ class firma_bilgi:
             time.sleep(2)
             firma_bilgi.basarisiz(["", ""], ["", ""], ["", ""])
 
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı girin")
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre Girin")
 sifre = input()
 
-firma_bilgi = firma_bilgi(driver, "http://localhost/firma-giris", "http://localhost/profil", {"bilgiler_isim": "bilgiler_isim", "bilgiler_giris_adi": "bilgiler_giris_adi", "bilgiler_btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
+firma_bilgi = firma_bilgi(driver, "http://localhost:100/firma-giris", "http://localhost:100/profil", {"bilgiler_isim": "bilgiler_isim", "bilgiler_giris_adi": "bilgiler_giris_adi", "bilgiler_btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
 
 print(Fore.YELLOW + "Başarısız test içi 1, başarılı test için 2")
 test = int(input())

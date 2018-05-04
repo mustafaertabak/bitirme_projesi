@@ -284,14 +284,14 @@ class firma_sifre:
             time.sleep(2)
             firma_sifre.basarisiz(["123452","1234518"], ["123456","232235"], ["123456","232235"])
 
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre gir")
 sifre = input()
 
-firma_sifre = firma_sifre(driver, "http://localhost/firma-giris", "http://localhost/profil", {"sif_old": "old_pass", "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sif_btn": "sifre_btn"}, kullanici_adi, sifre)
+firma_sifre = firma_sifre(driver, "http://localhost:100/firma-giris", "http://localhost:100/profil", {"sif_old": "old_pass", "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sif_btn": "sifre_btn"}, kullanici_adi, sifre)
 
  
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 

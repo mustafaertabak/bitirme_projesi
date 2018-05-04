@@ -17,16 +17,24 @@ def cprint(color, text):
 
 class firma_basvuru:
 
-    def __init__(self, driver, url, dizi):
+    def __init__(self, driver, url, url2, dizi):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         self.cursor = db.cursor()
         self.cursor.execute("SELECT * FROM f_basvurular") 
-
-        self.driver = driver
-        self.url = url
-        self.driver.get(self.url)
+        
         self.degerler = dizi 
-        time.sleep(1)
+        self.driver = driver 
+        self.kayit_url = url2 
+        self.url = url 
+        self.driver.get(self.url)
+
+        self.k_id = self.driver.find_element_by_id("username")
+        self.k_p = self.driver.find_element_by_id("pass")
+        self.k_id.send_keys("7040000001")
+        self.k_p.send_keys("123456")
+        self.driver.find_element_by_id("submit_button").click()
+        time.sleep(2)
+        self.driver.get(self.kayit_url)
         
         self.b_mail = self.driver.find_element_by_id(self.degerler["basvuru_mail"])
         self.b_button = self.driver.find_element_by_id(self.degerler["basvuru_btn"])
@@ -181,10 +189,10 @@ class firma_basvuru:
             self.b_button = self.driver.find_element_by_id(self.degerler["basvuru_btn"])
             firma_basvuru.basarisiz(["berke.com","1234518"])
 
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
 
 
-firma_basvuru = firma_basvuru(driver, "http://localhost/firma-basvuru", {"basvuru_mail": "f_basvuru_mail", "basvuru_btn": "f_basvuru_btn"})
+firma_basvuru = firma_basvuru(driver, "http://localhost:100/admin", "http://localhost:100/firma-kayit-baglantisi-olustur", {"basvuru_mail": "f_basvuru_mail", "basvuru_btn": "f_basvuru_btn"})
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())

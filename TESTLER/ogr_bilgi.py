@@ -246,14 +246,14 @@ class ogrenci_bilgi:
             ogrenci_bilgi.basarisiz(["denemedeneme.com","asdasdsa"], ["56562","454562"],["Aciklama","aciklama_2"])
         
 
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre gir")
 sifre = input()
 
-ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost/ogrenci-giris", "http://localhost/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
+ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
 
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 

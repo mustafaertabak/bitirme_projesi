@@ -21,17 +21,24 @@ def cprint(color, text):
 
 class e_mail:
 
-    def __init__(self, driver, url, dizi):
+    def __init__(self, driver, url, url2, dizi):
         self.degerler = dizi 
         self.driver = driver 
+        self.kayit_url = url2 
         self.url = url 
         self.driver.get(self.url)
+        self.k_id = self.driver.find_element_by_id("username")
+        self.k_p = self.driver.find_element_by_id("pass")
+        self.k_id.send_keys("7040000001")
+        self.k_p.send_keys("123456")
+        self.driver.find_element_by_id("submit_button").click()
+        time.sleep(2)
+        self.driver.get(self.kayit_url)
         self.e_mail = self.driver.find_element_by_id(self.degerler["mail"])
 
     def basarili(self, mail, firma_isim, firma_giris_adi, firma_sifre_a, firma_sifre_b):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
-        cursor_2 = db.cursor()
         cursor_firma_kod = db.cursor()
         firma_before_insert = db.cursor()
         firma_after_insert = db.cursor()
@@ -42,13 +49,23 @@ class e_mail:
         self.app_btn.click()
         self.driver.find_element_by_class_name("btn-success").click()
         db.commit()
-        time.sleep(3)
+        time.sleep(5)
+        self.togg = self.driver.find_element_by_class_name("navbar-toggler").is_displayed()
+        if self.togg:
+            self.driver.find_element_by_class_name("navbar-toggler").click()
+            time.sleep(1.5)
+            self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
+            self.driver.find_element_by_class_name("border-bottom-0").click()
+        else:
+            self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
+            self.driver.find_element_by_class_name("border-bottom-0").click()
 
-        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE id = (SELECT MAX(id) FROM f_basvurular)")
+
+        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE f_basvuru_id = (SELECT MAX(f_basvuru_id) FROM f_basvurular)")
         time.sleep(2)
         result = cursor.fetchall()
         for i in result:
-            self.driver.get("http://localhost/firma-kayit$url=" + i[0])
+            self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
             time.sleep(2)
 
         cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
@@ -98,7 +115,7 @@ class e_mail:
     def basarisiz(self, mail_2, firma_isim, firma_giris_adi, firma_sifre_a, firma_sifre_b):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
-        cursor_update = db.cursor()
+        
         cursor_firma_kod = db.cursor()
         cursor_record = db.cursor()
         
@@ -107,7 +124,7 @@ class e_mail:
         for i in range(len(mail_2)):
             self.e_mail.clear()
             self.e_mail.send_keys(mail_2[i])
-            time.sleep(2)
+            time.sleep(1.5)
             self.app_btn.click()
             self.disp_ul = self.driver.find_element_by_id("f_basvuru_w").is_displayed()
                 
@@ -125,17 +142,25 @@ class e_mail:
                     file.write(" " + "\n\n")
                 cprint(Fore.RED, "Basarisiz")
             else:
-                    self.driver.find_element_by_class_name("btn-success").click()
-                    db.commit()
-            time.sleep(5)
-            
-
-        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE id = (SELECT MAX(id) FROM f_basvurular)")
+                self.driver.find_element_by_class_name("btn-success").click()
+                db.commit()
+                time.sleep(5)
+                self.togg = self.driver.find_element_by_class_name("navbar-toggler").is_displayed()
+                if self.togg:
+                    self.driver.find_element_by_class_name("navbar-toggler").click()
+                    time.sleep(1.5)
+                    self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
+                    self.driver.find_element_by_class_name("border-bottom-0").click()
+                else:
+                    self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
+                    self.driver.find_element_by_class_name("border-bottom-0").click()
+        
+        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE f_basvuru_id = (SELECT MAX(f_basvuru_id) FROM f_basvurular)")
         time.sleep(2)
         result = cursor.fetchall()
 
         for i in result:
-            self.driver.get("http://localhost/firma-kayit$url=" + i[0])
+            self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
             time.sleep(2)
 
         cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
@@ -187,8 +212,8 @@ class e_mail:
                 cprint(Fore.RED, "Basarisiz")
             
         
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
-e_mail = e_mail(driver, "http://localhost/firma-basvuru",{"mail": "f_basvuru_mail"})
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+e_mail = e_mail(driver, "http://localhost:100/admin" , "http://localhost:100/firma-kayit-baglantisi-olustur",{"mail": "f_basvuru_mail"})
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())

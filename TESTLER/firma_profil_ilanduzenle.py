@@ -35,10 +35,11 @@ class firma_ilan_duzenle:
         self.g_btn.click()
         time.sleep(1)
         self.driver.get(self.url2)
+        time.sleep(1)
         self.driver.find_element_by_id("ilanduzenle_btn").click()
         time.sleep(0.5)
 
-        self.driver.find_element_by_id("ilan_duzenle").click()
+        self.driver.find_element_by_xpath("//button[@data-upid='15']").click()
         time.sleep(0.5)
 
         self.ilan_baslik = self.driver.find_element_by_id(self.degerler["ilan_baslik"])
@@ -46,8 +47,9 @@ class firma_ilan_duzenle:
         self.ilan_text = self.driver.find_element_by_id(self.degerler["ilanlar_text"])
         self.ilan_adres = self.driver.find_element_by_id(self.degerler["ilanlar_adres"])
         self.buton = self.driver.find_element_by_id(self.degerler["ilan_gonder"])
+        self.kont = self.driver.find_element_by_id(self.degerler["ilanlar_kisi"])
     
-    def basarili(self, ilan_baslik, ilan_mail, ilan_text,ilan_adres):
+    def basarili(self, ilan_baslik, ilan_mail, ilan_text, ilan_adres, ilan_kont):
         db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
 
@@ -60,12 +62,17 @@ class firma_ilan_duzenle:
             self.ilan_baslik.send_keys(ilan_baslik[i])
             self.ilan_mail.send_keys(ilan_mail[i])
             self.ilan_adres.send_keys(ilan_adres[i])
-            self.drop = self.driver.find_element_by_id("drop_id2").click()
+            self.kont.send_keys(ilan_kont[i])
+            self.drop = self.driver.find_element_by_id("bolum_btn_u").click()
             time.sleep(1.5)
 
             self.driver.find_element_by_xpath("//label[@for='r_id_c_b_u_1']").click()
             time.sleep(1)  
-            self.vlue = self.driver.find_element_by_id("chk_bolumler_u").text    
+            self.driver.find_element_by_id("donem_btn_u").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath("//label[@for='r_id_c_d_u_1']").click()
+            self.vlue = self.driver.find_element_by_id("bolum_btn_u").text 
+            self.donem_txt = self.driver.find_element_by_id("donem_btn_u").text
 
             self.ilan_text.send_keys(ilan_text[i])
             self.buton.click()
@@ -122,25 +129,27 @@ class firma_ilan_duzenle:
                 print("")
                 cprint(Fore.RED, "Alınan Sonuç = İŞLEM BAŞARISIZ!")  
                 print("\n") 
-                time.sleep(1)
+                time.sleep(3)
+                
         cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
         a = input()
         if a == 'e':
             driver.close()
+
         elif a == 'b':
             self.driver.find_element_by_id("ilanduzenle_btn").click()
-            time.sleep(1.5)
-            self.driver.find_element_by_id("ilan_duzenli")
+            self.driver.find_element_by_xpath("//button[@data-upid='15']").click()
             time.sleep(2)
             self.ilan_baslik = self.driver.find_element_by_id(self.degerler["ilan_baslik"])
             self.ilan_mail = self.driver.find_element_by_id(self.degerler["ilan_mail"])
             self.ilan_text = self.driver.find_element_by_id(self.degerler["ilanlar_text"])
             self.ilan_adres = self.driver.find_element_by_id(self.degerler["ilanlar_adres"])
             self.buton = self.driver.find_element_by_id(self.degerler["ilan_gonder"])
+            self.kont = self.driver.find_element_by_id(self.degerler["ilanlar_kisi"])
             time.sleep(2)
-            firma_ilan_duzenle.basarisiz(["bilgisayar", "makine"], ["5656", "6565"], ["ac", "ac2"], ["adress", "adress2"])
+            firma_ilan_duzenle.basarisiz(["bilgisayar", "makine"], ["5656", "6565"], ["ac", "ac2"], ["adress", "adress2"], ["asd", "2"])
     
-    def basarisiz(self, ilan_baslik, ilan_mail, ilan_text, ilan_adres):
+    def basarisiz(self, ilan_baslik, ilan_mail, ilan_text, ilan_adres, ilan_kont):
         db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
 
@@ -153,11 +162,26 @@ class firma_ilan_duzenle:
             self.ilan_baslik.send_keys(ilan_baslik[i])
             self.ilan_mail.send_keys(ilan_mail[i])
             self.ilan_adres.send_keys(ilan_adres[i])
+            self.kont.send_keys(ilan_kont[i])
+            self.drop = self.driver.find_element_by_id("bolum_btn_u").click()
+            time.sleep(1.5)
+
+            self.driver.find_element_by_xpath("//label[@for='r_id_c_b_u_1']").click()
+            time.sleep(1)  
+            self.driver.find_element_by_id("donem_btn_u").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath("//label[@for='r_id_c_d_u_1']").click()
+            self.vlue = self.driver.find_element_by_id("bolum_btn_u").text 
+            self.donem_txt = self.driver.find_element_by_id("donem_btn_u").text
+
             self.ilan_text.send_keys(ilan_text[i])
             self.buton.click()
             time.sleep(1)
 
             self.btn_scs = self.driver.find_element_by_class_name("btn-success").is_displayed()
+            time.sleep(2)
+            db.commit()
+            time.sleep(2)
 
             cursor.execute("SELECT * FROM bolumler INNER JOIN ilanlar ON bolumler.bolum_id = ilanlar.ilan_bolumid WHERE ilanlar.ilan_baslik = '%s' AND ilanlar.ilan_aciklama = '%s' AND ilanlar.ilan_basvuru_mail = '%s' AND ilanlar.ilan_is_adres = '%s' AND ilanlar.ilan_bolumid = bolumler.bolum_id"  %  (ilan_baslik[i], ilan_text[i], ilan_mail[i], ilan_adres[i]))
 
@@ -215,27 +239,28 @@ class firma_ilan_duzenle:
         a = input()
         if a == 'e':
             driver.close()
+        
         elif a == 'b':
-            self.driver.find_element_by_id("ilanduzenle_btn").click()
-            time.sleep(1.5)
-            self.driver.find_element_by_id("ilan_duzenle")
+            self.driver.find_element_by_id("ilan-u-b").click()
+            self.driver.find_element_by_xpath("//button[@data-upid='15']").click()
             time.sleep(2)
             self.ilan_baslik = self.driver.find_element_by_id(self.degerler["ilan_baslik"])
             self.ilan_mail = self.driver.find_element_by_id(self.degerler["ilan_mail"])
             self.ilan_text = self.driver.find_element_by_id(self.degerler["ilanlar_text"])
             self.ilan_adres = self.driver.find_element_by_id(self.degerler["ilanlar_adres"])
             self.buton = self.driver.find_element_by_id(self.degerler["ilan_gonder"])
+            self.kont = self.driver.find_element_by_id(self.degerler["ilanlar_kisi"])
             time.sleep(2)
-            firma_ilan_duzenle.basarili(["Bilgisayar"], ["mustafa@hotmail.com"], ["aciklamaDENEME"], ["adresDENEME"])
+            firma_ilan_duzenle.basarili(["Bilgisayar"], ["mustafa@hotmail.com"], ["aciklamaDENEME"], ["adresDENEME"], ["5"])
 
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()
 print(Fore.CYAN + "Sifre gir")
 sifre = input()
 
-firma_ilan_duzenle = firma_ilan_duzenle(driver, "http://localhost/firma-giris", "http://localhost/profil", {"ilan_baslik": "ilan_baslik_u", "ilan_mail": "ilan_mail_u", "ilanlar_text": "ilanlar_text_u", "ilanlar_adres": "ilanlar_adres_u", "ilan_gonder": "ilan_gonder_u"}, kullanici_adi, sifre) 
+firma_ilan_duzenle = firma_ilan_duzenle(driver, "http://localhost:100/firma-giris", "http://localhost:100/profil", {"ilan_baslik": "ilan_baslik_u", "ilan_mail": "ilan_mail_u", "ilanlar_text": "ilanlar_text_u", "ilanlar_adres": "ilanlar_adres_u", "ilan_gonder": "ilan_gonder_u", "ilanlar_kisi": "ilanlar_kisi_u"}, kullanici_adi, sifre) 
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())
@@ -246,13 +271,13 @@ if test == 1:
     print(Fore.YELLOW + "Çalıştırılan test: " + "Firma ilan düzenle, basarisiz_test", end="\n\n")
     print("")
 
-    firma_ilan_duzenle.basarisiz(["bilgisayar", "makine"], ["5656", "6565"], ["ac", "ac2"], ["adress", "adress2"])
+    firma_ilan_duzenle.basarisiz(["bilgisayar", "makine"], ["5656", "6565"], ["ac", "ac2"], ["adress", "adress2"], ["asd", "10"])
 
 
 if test == 2:
     print(Fore.YELLOW + "Çalıştırılan test: " + "Firma ilan düzenle, basarili_test", end="\n\n") 
     
-    firma_ilan_duzenle.basarili(["Bilgisayar"], ["mustafa@hotmail.com"], ["aciklamaDENEME"], ["adresDENEME"])
+    firma_ilan_duzenle.basarili(["Bilgisayar"], ["mustafa@hotmail.com"], ["aciklamaDENEME"], ["adresDENEME"], ["5"])
 
 
 
