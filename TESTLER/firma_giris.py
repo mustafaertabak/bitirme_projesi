@@ -56,43 +56,73 @@ class firma_giris:
             if result:
                 # Logların yazdırıldığı blok 
                 date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-firma.txt", "a") as file:
+                with open("LOGS/firma-giris.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(date_t))
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarılı giriş testi")
                     file.write(" " + "\n")
+                    file.write("Girilen Kullanıcı Adı : " + u_name[i])
+                    file.write(" " + "\n")
+                    file.write("Girilen Kullanıcı Şifresi : " + u_pass[i])
+                    file.write(" " + "\n")
                     file.write("Beklenen sonuç: Giriş Başarılı")
                     file.write(" " + "\n")
                     file.write("Alınan sonuç: Giriş Başarılı")
                     file.write(" " + "\n\n")
+                    file.write("TEST BAŞARILI!")
+                    file.write(" " + "\n\n")
+                cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(date_t))
+                print("")
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Şifresi : " + u_pass[i])
                 print("")
                 cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARILI!")
                 print("")
                 cprint(Fore.GREEN, "Alınan Sonuç = GİRİŞ BAŞARILI!") 
+                print("")
+                cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARILI!")
             else:
                 date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-firma.txt", "a") as file:
+                with open("LOGS/firma-giris.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(date_t))
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarılı giriş testi")
                     file.write(" " + "\n")
+                    file.write("Girilen Kullanıcı Adı : " + u_name[i])
+                    file.write(" " + "\n")
+                    file.write("Girilen Kullanıcı Şifresi : " + u_pass[i])
+                    file.write(" " + "\n")
                     file.write("Beklenen sonuç: GİRİŞ BAŞARILI!")
                     file.write(" " + "\n")
                     file.write("Alınan sonuç: GİRİŞ BAŞARISIZ!")
                     file.write(" " + "\n\n")
+                    file.write("TEST BAŞARISIZ!")
+                    file.write(" " + "\n\n")
                 # Eğer elemanın idsi bulunamadıysa yapılacak işlemler
+                cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saat'i : " + str(date_t))
+                print("")
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Şifresi : " + u_pass[i])
                 print("")
                 cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARILI!")
                 print("")
-                cprint(Fore.RED, "Alınan Sonuç = GİRİŞ BAŞARISIZ!")   
-                time.sleep(1)
+                cprint(Fore.RED, "Alınan Sonuç = GİRİŞ BAŞARISIZ!") 
+                print("")
+                cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARISIZ!")    
                 print("\n") 
+                time.sleep(1)
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
+        a = input()
+        if a == 'e':
+            driver.close()
+        elif a == 'b':
+            self.el_id = self.driver.find_element_by_id(self.degerler["username"])
+            self.el_pas = self.driver.find_element_by_id(self.degerler["pass"])
+            self.sb_btn = self.driver.find_element_by_id(self.degerler["submit_button"])
+            time.sleep(0.5)
+            firma_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
 
     # Sadece başarısız değeleri gönderdiğimiz test defini oluşturduk            
     def basarisiz(self,u_name,u_pass):
@@ -121,16 +151,24 @@ class firma_giris:
             if result:
                 # Logları yazdırıyoruz 
                 date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-firma.txt", "a") as file:
+                with open("LOGS/firma-giris.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(date_t))
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarısız şifre testi")
                     file.write(" " + "\n")
-                    file.write("Beklenen sonuç: Giriş Başarısız")
+                    file.write("Girilen Kullanıcı Adı : " + u_name[i])
                     file.write(" " + "\n")
-                    file.write("Alınan sonuç: Giriş Başarılı")
+                    file.write("Girilen Kullanıcı Şifresi : " + u_pass[i])
+                    file.write(" " + "\n")
+                    file.write("Beklenen sonuç: Giriş BAŞARISIZ!")
+                    file.write(" " + "\n")
+                    file.write("Alınan sonuç: Giriş BAŞARILI!")
+                    file.write(" " + "\n\n")
+                    file.write("TEST BAŞARISIZ!")
                     file.write(" " + "\n\n") 
+                cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(date_t))
+                print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "GİRİŞ - " + str(i+1))   
                 print("")
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
@@ -138,22 +176,32 @@ class firma_giris:
                 print("")
                 cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARISIZ!")
                 print("")
-                cprint(Fore.RED, "Alınan Sonuç = GİRİŞ BAŞARILI!")  
+                cprint(Fore.RED, "Alınan Sonuç = GİRİŞ BAŞARILI!")
+                print("")
+                cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARILI!")    
                 print("\n") 
             # Eğer elemanın idsi bulunamadıysa yapılacak işlemler  
             else:
                 # Logları yazdırıyoruz 
                 date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-firma.txt", "a") as file:
+                with open("LOGS/firma-giris.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(date_t))
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarısız şifre testi")
                     file.write(" " + "\n")
+                    file.write("Girilen Kullanıcı Adı : " + u_name[i])
+                    file.write(" " + "\n")
+                    file.write("Girilen Kullanıcı Şifresi : " + u_pass[i])
+                    file.write(" " + "\n")
                     file.write("Beklenen sonuç: GİRİŞ BAŞARISIZ!")
                     file.write(" " + "\n")
                     file.write("Alınan sonuç: GİRİŞ BAŞARISIZ!")
+                    file.write(" " + "\n\n")
+                    file.write("TEST BAŞARILI!")
                     file.write(" " + "\n\n") 
+                cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(date_t))
+                print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " +  str(i+1))
                 print("")         
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Kullanıcı Adı : " + u_name[i])
@@ -162,6 +210,8 @@ class firma_giris:
                 cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARISIZ!")
                 print("")
                 cprint(Fore.GREEN, "Alınan Sonuç = GİRİŞ BAŞARISIZ!")
+                print("")
+                cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARILI!")
                 print("\n") 
                 time.sleep(1)
 
@@ -170,6 +220,10 @@ class firma_giris:
         if a == 'e':
             driver.close()
         elif a == 'b':
+            self.el_id = self.driver.find_element_by_id(self.degerler["username"])
+            self.el_pas = self.driver.find_element_by_id(self.degerler["pass"])
+            self.sb_btn = self.driver.find_element_by_id(self.degerler["submit_button"])
+            time.sleep(0.5)
             firma_giris.basarili(["vestel"], ["123456"])
 
 # Driver değişkenine chromedriver yolunu atıyoruz 

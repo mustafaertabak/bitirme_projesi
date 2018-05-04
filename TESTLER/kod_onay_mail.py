@@ -48,7 +48,7 @@ class e_mail:
         time.sleep(2)
         result = cursor.fetchall()
         for i in result:
-            self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
+            self.driver.get("http://localhost/firma-kayit$url=" + i[0])
             time.sleep(2)
 
         cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
@@ -135,7 +135,7 @@ class e_mail:
         result = cursor.fetchall()
 
         for i in result:
-            self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
+            self.driver.get("http://localhost/firma-kayit$url=" + i[0])
             time.sleep(2)
 
         cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
@@ -187,8 +187,8 @@ class e_mail:
                 cprint(Fore.RED, "Basarisiz")
             
         
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
-e_mail = e_mail(driver, "http://localhost:100/firma-basvuru",{"mail": "f_basvuru_mail"})
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+e_mail = e_mail(driver, "http://localhost/firma-basvuru",{"mail": "f_basvuru_mail"})
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())
