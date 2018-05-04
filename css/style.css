@@ -17,6 +17,12 @@ grid-template-rows: 1fr auto;
     margin-top: -150px;
     text-align: center;
 }
+@media(width:768px){
+    .jumbotron{
+        height: 225px!important;
+    }
+    
+}
 @media (min-width: 992px){
     .en-son-cards {
         max-width: 960px;
@@ -42,9 +48,14 @@ grid-template-rows: 1fr auto;
     box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
 }
 .a-ilan-img {
-    max-height: 40px;
+    max-height: 35px;
     max-width: 100%;
     width: auto;
+}
+@media (max-width:1080px) {
+    .a-ilan-img {
+        max-height: 30px!important;
+    }
 }
 
 .k-button {
@@ -180,7 +191,7 @@ grid-template-rows: 1fr auto;
 
     }
     .text-p1 {
-        font-size: 10pt;
+        font-size: 12pt;
         font-weight: bold;
     }
     
@@ -203,10 +214,6 @@ grid-template-rows: 1fr auto;
 }
 /* small ekran için geçerli */
 @media (min-width: 576px) and (max-width: 900px) {
-    .jumbotron {
-        height: 175px;
-        padding-left: 20px;
-    }
     .kart {
         visibility: hidden;
     }
@@ -217,13 +224,10 @@ grid-template-rows: 1fr auto;
         width: 140px;
     }
     .text-p1 {
-        font-size: 8pt;
+        font-size: 9pt;
         font-weight: bold;
     }
 
-    .firmalar {
-        margin-top: -80px;
-    }
 }
 
 @media (max-width: 575px) {
@@ -1225,7 +1229,7 @@ a:hover{
 }
 
 #chk_bolumler span,#chk_bolumler_u span {
-    font-size: 12px;
+    font-size: 16px;
     text-decoration: underline;
 }
 
@@ -1293,5 +1297,18 @@ a:hover{
 
 .radio {
     margin-bottom: 10px;
+}
+
+.sde_d {
+    border: 1px solid #ced4da; 
+    border-radius: 5px; 
+    padding: 6px 10px; 
+    width: 200px;
+}
+
+.sde_y {
+    max-width: 120px; 
+    float: left; 
+    background-color: #fff;
 }
 /** /////////////////////////////////////////////////////////////////////////// */
