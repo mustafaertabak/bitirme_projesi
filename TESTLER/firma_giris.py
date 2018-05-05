@@ -118,11 +118,34 @@ class firma_giris:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.el_id = self.driver.find_element_by_id(self.degerler["username"])
-            self.el_pas = self.driver.find_element_by_id(self.degerler["pass"])
-            self.sb_btn = self.driver.find_element_by_id(self.degerler["submit_button"])
-            time.sleep(0.5)
-            firma_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
+            self.togg = self.driver.find_element_by_class_name("navbar-toggler").is_displayed()
+            
+            if self.togg:
+                self.driver.find_element_by_class_name("navbar-toggler").click()
+                time.sleep(1.5)
+                self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
+                time.sleep(2)
+                self.driver.find_element_by_id("cik").click()
+                self.driver.get("http://localhost:100/firma-giris")
+                time.sleep(2)
+                self.el_id = self.driver.find_element_by_id(self.degerler["username"])
+                self.el_pas = self.driver.find_element_by_id(self.degerler["pass"])
+                self.sb_btn = self.driver.find_element_by_id(self.degerler["submit_button"])
+                time.sleep(0.5)
+                firma_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
+            
+            else:
+                self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
+                time.sleep(2)
+                self.driver.find_element_by_id("cik").click()
+                self.driver.get("http://localhost:100/firma-giris")
+                time.sleep(2)
+                self.el_id = self.driver.find_element_by_id(self.degerler["username"])
+                self.el_pas = self.driver.find_element_by_id(self.degerler["pass"])
+                self.sb_btn = self.driver.find_element_by_id(self.degerler["submit_button"])
+                time.sleep(0.5)
+                firma_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
+                
 
     # Sadece başarısız değeleri gönderdiğimiz test defini oluşturduk            
     def basarisiz(self,u_name,u_pass):

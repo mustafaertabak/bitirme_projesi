@@ -115,7 +115,7 @@ class e_mail:
     def basarisiz(self, mail_2, firma_isim, firma_giris_adi, firma_sifre_a, firma_sifre_b):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
-        
+        count = 1
         cursor_firma_kod = db.cursor()
         cursor_record = db.cursor()
         
@@ -127,6 +127,7 @@ class e_mail:
             time.sleep(1.5)
             self.app_btn.click()
             self.disp_ul = self.driver.find_element_by_id("f_basvuru_w").is_displayed()
+            
                 
             if self.disp_ul:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -151,65 +152,83 @@ class e_mail:
                     time.sleep(1.5)
                     self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
                     self.driver.find_element_by_class_name("border-bottom-0").click()
+                    time.sleep(4)
                 else:
                     self.driver.find_element_by_xpath("//button[@data-toggle='dropdown']").click()
                     self.driver.find_element_by_class_name("border-bottom-0").click()
+                    time.sleep(1.5)
         
-        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE f_basvuru_id = (SELECT MAX(f_basvuru_id) FROM f_basvurular)")
-        time.sleep(2)
-        result = cursor.fetchall()
+                cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE f_basvuru_id = (SELECT MAX(f_basvuru_id) FROM f_basvurular)")
+                time.sleep(2)
+                result = cursor.fetchall()
 
-        for i in result:
-            self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
-            time.sleep(2)
+                for i in result:
+                    self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
+                    time.sleep(2)
 
-        cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
-        result_kod = cursor_firma_kod.fetchall()
-        db.commit()
+                cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
+                result_kod = cursor_firma_kod.fetchall()
+                db.commit()
 
-        for y in result_kod:
-            self.kod_input = self.driver.find_element_by_id("f_basvuru_onay")
-            self.kod_input.send_keys(y[0])
-            self.driver.find_element_by_id("f_basvuru_kod_btn").click()
-            time.sleep(2)
+                for y in result_kod:
+                    self.kod_input = self.driver.find_element_by_id("f_basvuru_onay")
+                    self.kod_input.send_keys(y[0])
+                    self.driver.find_element_by_id("f_basvuru_kod_btn").click()
+                    time.sleep(2)
 
-        self.dizi = {"firma_isim_2": "firma_isim", "firma_giris_adi_2": "firma_giris_adi", "firma_sifre_a_2": "firma_sifre_a", "firma_sifre_b_2": "firma_sifre_b", "f_basvuru_tamamla_btn": "f_basvuru_tamamla_btn"}
-        self.f_ad = self.driver.find_element_by_id(self.dizi["firma_isim_2"])
-        self.k_ad = self.driver.find_element_by_id(self.dizi["firma_giris_adi_2"])
-        self.pw = self.driver.find_element_by_id(self.dizi["firma_sifre_a_2"])
-        self.pw_con = self.driver.find_element_by_id(self.dizi["firma_sifre_b_2"])
-        self.submit_btn = self.driver.find_element_by_id(self.dizi["f_basvuru_tamamla_btn"])
+                self.dizi = {"firma_isim_2": "firma_isim", "firma_giris_adi_2": "firma_giris_adi", "firma_sifre_a_2": "firma_sifre_a", "firma_sifre_b_2": "firma_sifre_b", "f_basvuru_tamamla_btn": "f_basvuru_tamamla_btn"}
+                self.f_ad = self.driver.find_element_by_id(self.dizi["firma_isim_2"])
+                self.k_ad = self.driver.find_element_by_id(self.dizi["firma_giris_adi_2"])
+                self.pw = self.driver.find_element_by_id(self.dizi["firma_sifre_a_2"])
+                self.pw_con = self.driver.find_element_by_id(self.dizi["firma_sifre_b_2"])
+                self.submit_btn = self.driver.find_element_by_id(self.dizi["f_basvuru_tamamla_btn"])
 
-        for i in range(len(firma_isim)):
-            self.k_ad.clear()
-            self.f_ad.clear()
-            self.pw_con.clear()
-            self.pw.clear()
-            self.f_ad.send_keys(firma_isim[i])
-            self.k_ad.send_keys(firma_giris_adi[i])
-            self.pw.send_keys(firma_sifre_a[i])
-            self.pw_con.send_keys(firma_sifre_b[i])
-            self.submit_btn.click()
-            time.sleep(2)
+                for i in range(len(firma_isim)):
+                    self.k_ad.clear()
+                    self.f_ad.clear()
+                    self.pw_con.clear()
+                    self.pw.clear()
+                    self.f_ad.send_keys(firma_isim[i])
+                    self.k_ad.send_keys(firma_giris_adi[i])
+                    self.pw.send_keys(firma_sifre_a[i])
+                    self.pw_con.send_keys(firma_sifre_b[i])
+                    self.submit_btn.click()
+                    time.sleep(2)
 
-            cursor_record.execute("SELECT f_basvuru_kod_onay FROM f_basvurular WHERE f_basvuru_kod_onay = 1")
+                    cursor_record.execute("SELECT f_basvuru_kod_onay FROM f_basvurular WHERE f_basvuru_kod_onay = 1")
+                
+                    if cursor_record == False:           
+                        cprint(Fore.GREEN, "Basarili")
+                                        
+                    else:
+                        d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                        with open("LOGS/firma-email-hesap", "a") as file:
+                            file.write(" " + "\n")   
+                            file.write(str(d))
+                            file.write(" " + "\n")
+                            file.write("Yapılan test: Başarısız firma kayıt testi")
+                            file.write(" " + "\n")
+                            file.write("Beklenen sonuç: Başarısız")
+                            file.write(" " + "\n")
+                            file.write("Alınan sonuç: Başarısız")
+                            file.write(" " + "\n\n")   
+                        cprint(Fore.RED, "Basarisiz")
+
+            while (count < len(mail_2)):
+                self.driver.get(self.url)
+                time.sleep(2)
+                self.k_id = self.driver.find_element_by_id("username")
+                self.k_p = self.driver.find_element_by_id("pass")
+                self.k_id.send_keys("7040000001")
+                self.k_p.send_keys("123456")
+                self.driver.find_element_by_id("submit_button").click()
+                time.sleep(2)
+                self.driver.get("http://localhost:100/firma-kayit-baglantisi-olustur")
+                time.sleep(2)
+                self.e_mail = self.driver.find_element_by_id(self.degerler["mail"])
+                self.app_btn = self.driver.find_element_by_id("f_basvuru_btn")
+                count +=1
         
-            if cursor_record == False:           
-                cprint(Fore.GREEN, "Basarili")
-                                   
-            else:
-                d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/firma-email-hesap", "a") as file:
-                    file.write(" " + "\n")   
-                    file.write(str(d))
-                    file.write(" " + "\n")
-                    file.write("Yapılan test: Başarısız firma kayıt testi")
-                    file.write(" " + "\n")
-                    file.write("Beklenen sonuç: Başarısız")
-                    file.write(" " + "\n")
-                    file.write("Alınan sonuç: Başarısız")
-                    file.write(" " + "\n\n")
-                cprint(Fore.RED, "Basarisiz")
             
         
 driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
@@ -224,7 +243,7 @@ if test == 1:
     print(Fore.YELLOW + "Çalıştırılan test: " + "Firma kayıt, basarisiz_test")
     print("")
     # Firma_giris sınıfının içindeki basarisiz define degerleri gönderiyoruz 
-    e_mail.basarisiz(["berke", "berke@gmail.com"], ["berke","ertan"], ["ertan", ""], ["123456", "12345"], ["5662", "1235"])
+    e_mail.basarisiz(["berke@gmail.com", "berke@gmail.com"], ["berke","ertan"], ["ertan", " "], ["123456", "12345"], ["5662", "1235"])
 
 # 2'ye basılırsa yapılacak işlemler 
 if test == 2:

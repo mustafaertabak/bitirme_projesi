@@ -7,10 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-
 import colorama 
 from colorama import Fore, Back, Style
-
 import datetime 
 import time
 
@@ -19,39 +17,44 @@ colorama.init()
 def cprint(color, text):
     print(color + text)
 
-class firma_sifre:
-    
-    def __init__(self, driver, url, url2, dizi, k_ad, k_sif):
+class admin_firma_sifre:
+
+    def __init__(self, driver, url, url2, dizi):
+        db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
+        self.cursor = db.cursor()
+        self.cursor.execute("SELECT * FROM f_basvurular") 
         
-        self.driver = driver 
-        self.url = url 
-        self.url_2 = url2 
-        self.driver.get(self.url)
-        self.k_ad = self.driver.find_element_by_id("username")
-        self.k_sif = self.driver.find_element_by_id("pass")
-        self.btn = self.driver.find_element_by_id("submit_button")
-
-        self.k_ad.send_keys(k_ad)
-        self.k_sif.send_keys(k_sif)
-        self.btn.click()
-        time.sleep(1.5)
-        self.driver.get(self.url_2)
-        self.driver.find_element_by_id("sifre_degis").click()
-
         self.degerler = dizi 
+        self.driver = driver 
+        self.url2 = url2 
+        self.url = url 
+        self.driver.get(self.url)
 
-        self.old = self.driver.find_element_by_id(self.degerler["sif_old"])
+        self.u_name = self.driver.find_element_by_id("username")
+        self.u_pass = self.driver.find_element_by_id("pass")
+        self.u_name.send_keys("7040000001")
+        self.u_pass.send_keys("123456")
+        self.driver.find_element_by_id("submit_button").click()
+        time.sleep(2)
+        
+        self.driver.get(self.url2)
+        time.sleep(2)
+
+        self.driver.find_element_by_id("firma_kart").click()
+        time.sleep(1.5)
+
+        self.driver.find_element_by_id("ilan_sifre").click()
+        time.sleep(0.5)
+
         self.new = self.driver.find_element_by_id(self.degerler["sif_new"])
         self.new_b = self.driver.find_element_by_id(self.degerler["sif_new_b"])
         self.button = self.driver.find_element_by_id(self.degerler["sif_btn"])
 
-    def basarisiz(self, old, new, new_b):
+    def basarisiz(self, new, new_b):
         for i in range (len(new)):
-            self.old.clear()
             self.new.clear()
             self.new_b.clear()
 
-            self.old.send_keys(old[i])
             self.new.send_keys(new[i])
             self.new_b.send_keys(new_b[i])
             self.button.click()
@@ -72,8 +75,6 @@ class firma_sifre:
                         file.write(" " + "\n")
                         file.write("Yapılan test: Başarısız şifre testi")
                         file.write(" " + "\n")
-                        file.write("Girilen Eski Şifre Değeri : " + old[i])
-                        file.write(" " + "\n")
                         file.write("Girilen Yeni Şifre Değeri : " + new[i])
                         file.write(" " + "\n")
                         file.write("Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
@@ -88,7 +89,6 @@ class firma_sifre:
                     print("")
                     cprint(Fore.LIGHTMAGENTA_EX, "GİRİŞ - " + str(i+1))   
                     print("")
-                    cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     print("")
@@ -107,8 +107,6 @@ class firma_sifre:
                         file.write(" " + "\n")
                         file.write("Yapılan test: Başarısız şifre testi")
                         file.write(" " + "\n")
-                        file.write("Girilen Eski Şifre Değeri : " + old[i])
-                        file.write(" " + "\n")
                         file.write("Girilen Yeni Şifre Değeri : " + new[i])
                         file.write(" " + "\n")
                         file.write("Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
@@ -123,7 +121,6 @@ class firma_sifre:
                     print("")
                     cprint(Fore.LIGHTMAGENTA_EX, "GİRİŞ - " + str(i+1))   
                     print("")
-                    cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     print("")
@@ -143,8 +140,6 @@ class firma_sifre:
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarısız şifre testi")
                     file.write(" " + "\n")
-                    file.write("Girilen Eski Şifre Değeri : " + old[i])
-                    file.write(" " + "\n")
                     file.write("Girilen Yeni Şifre Değeri : " + new[i])
                     file.write(" " + "\n")
                     file.write("Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
@@ -159,7 +154,6 @@ class firma_sifre:
                 print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "GİRİŞ - " + str(i+1))   
                 print("")
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                 print("")
@@ -169,35 +163,29 @@ class firma_sifre:
                 print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARILI!")
                 time.sleep(0.5)
-        cprint(Fore.YELLOW, "Çıkmak için 'e' başarılı test için 'b' tuşlayın")
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
         a = input()
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("sifre_degis").click()
+            self.driver.find_element_by_id("ilan_sifre").click()
             time.sleep(1)
-            self.old.clear()
             self.new.clear()
             self.new_b.clear()
 
-            self.old = self.driver.find_element_by_id(self.degerler["sif_old"])
             self.new = self.driver.find_element_by_id(self.degerler["sif_new"])
             self.new_b = self.driver.find_element_by_id(self.degerler["sif_new_b"])
             self.button = self.driver.find_element_by_id(self.degerler["sif_btn"])
             time.sleep(2)
-            firma_sifre.basarili([sifre])
-
+            admin_firma_sifre.basarili(["123456"], ["123456"])
     
-    def basarili(self, old):
+    def basarili(self, new, new_b):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
         
-        for i in range (len(old)):
-            print("Yeni şifre gir")
-            self.sifre = input()
-            self.old.send_keys(old[i])
-            self.new.send_keys(self.sifre)
-            self.new_b.send_keys(self.sifre)     
+        for i in range (len(new)):
+            self.new.send_keys(new[i])
+            self.new_b.send_keys(new_b[i])     
             self.button.click()
 
             time.sleep(1)
@@ -206,7 +194,7 @@ class firma_sifre:
             self.btn_success.click() 
             time.sleep(2)
             
-            self.hash_object = hashlib.md5(self.sifre.encode())
+            self.hash_object = hashlib.md5(new[i].encode())
 
             cursor.execute("SELECT * FROM firmalar WHERE firma_sifre = '%s'" % (self.hash_object.hexdigest()))
 
@@ -218,11 +206,10 @@ class firma_sifre:
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarılı şifre testi")
                     file.write(" " + "\n")
-                    file.write("Girilen Eski Şifre Değeri : " + old[i])
                     file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri : " + self.sifre)
+                    file.write("Girilen Yeni Şifre Değeri : " + new[i])
                     file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     file.write(" " + "\n")
                     file.write("Beklenen sonuç: İŞLEM BAŞARILI!")
                     file.write(" " + "\n")
@@ -232,9 +219,8 @@ class firma_sifre:
                     file.write(" " + "\n\n")
                 cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
                 print("")
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + self.sifre)
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : "+ new_b[i])
                 print("")
                 cprint(Fore.YELLOW, "Beklenen Sonuç = İŞLEM BAŞARILI!")
                 print("")
@@ -252,11 +238,9 @@ class firma_sifre:
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarılı şifre testi")
                     file.write(" " + "\n")
-                    file.write("Girilen Eski Şifre Değeri : " + old[i])
+                    file.write("Girilen Yeni Şifre Değeri : " + new[i])
                     file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri : " + self.sifre)
-                    file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     file.write(" " + "\n")
                     file.write("Beklenen sonuç: İŞLEM BAŞARILI!")
                     file.write(" " + "\n")
@@ -266,9 +250,8 @@ class firma_sifre:
                     file.write(" " + "\n\n")
                 cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
                 print("")
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + self.sifre)
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                 print("")
                 cprint(Fore.YELLOW, "Beklenen Sonuç = İŞLEM BAŞARILI!")
                 print("")
@@ -281,40 +264,38 @@ class firma_sifre:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("sifre_degis").click()
+            self.driver.find_element_by_id("ilan_sifre").click()
             time.sleep(1)
-            self.old = self.driver.find_element_by_id(self.degerler["sif_old"])
             self.new = self.driver.find_element_by_id(self.degerler["sif_new"])
             self.new_b = self.driver.find_element_by_id(self.degerler["sif_new_b"])
             self.button = self.driver.find_element_by_id(self.degerler["sif_btn"])
             time.sleep(2)
-            firma_sifre.basarisiz([sifre,"1234518"], ["123456","232235"], ["123456","232235"])
+            admin_firma_sifre.basarisiz(["1254986","1234518"], ["12345","23235"])
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+admin_firma_sifre = admin_firma_sifre(driver, "http://localhost/admin", "http://localhost/firmalar", { "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sif_btn": "sifre_btn"}) 
 
-print(Fore.CYAN + "Kullanıcı adı gir") 
-kullanici_adi = input()
-print(Fore.CYAN + "Sifre gir")
-sifre = input()
-
-firma_sifre = firma_sifre(driver, "http://localhost:100/firma-giris", "http://localhost:100/profil", {"sif_old": "old_pass", "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sif_btn": "sifre_btn"}, kullanici_adi, sifre)
-
- 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())
 
 print(" ")
 
-
 if test == 1:
-    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_sifre, basarisiz_test", end="\n\n")
+    print(Fore.YELLOW + "Çalıştırılan test: " + "Admin firma_sifre, basarisiz_test", end="\n\n")
     # Öğrenci_giris sınıfının içindeki basarisiz define degerleri gönderiyoruz 
-    firma_sifre.basarisiz([sifre,"1234518"], ["12345","23235"], ["123456","232235"])
+    admin_firma_sifre.basarisiz(["1254986","1234518"], ["12345","23235"])
 
 
 elif test == 2:
-    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_sifre, basarili_test")
-    firma_sifre.basarili([sifre])
-    print("")               
-            
+    print(Fore.YELLOW + "Çalıştırılan test: " + "Admin firma_sifre, basarili_test")
+    admin_firma_sifre.basarili(["123456"], ["123456"])
+    print("")   
+
+
+
+
+
+
+
+
 
