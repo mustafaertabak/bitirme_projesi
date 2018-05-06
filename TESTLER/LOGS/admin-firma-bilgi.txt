@@ -1,0 +1,33 @@
+ 
+2018-05-06 23:31:19 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Firmanýn Adý :  
+Firmanýn Kullanýcý Adý :  
+Girilen Açýklama Bilgisi :  
+Beklenen Sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan Sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:31:21 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARISIZ testi! 
+Firmanýn Adý :  
+Firmanýn Kullanýcý Adý :  
+Girilen Açýklama Bilgisi :  
+Beklenen Sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan Sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:31:37 
+Yapýlan test: Firma Profil sayfasýnýn Bilgi Düzenle alanýnýn BAÞARILI testi! 
+Firmann Adý : testdeneme 
+Firmamom Kullanýcý Adý : denemekullanýcýadý 
+Girilen Açýklama Bilgisi : aciklama 
+Beklenen sonuç: ÝÞLEM BAÞARILI! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARILI! 
+

@@ -250,7 +250,8 @@ class firma_giris:
             firma_giris.basarili(["vestel"], ["123456"])
 
 # Driver değişkenine chromedriver yolunu atıyoruz 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 # Firma giriş sınıfının parametre değerlerini atıyoruz 
 firma_giris = firma_giris(driver, "http://localhost:100/firma-giris", {"username": "username", "pass": "pass", "deger": "dropdown-toggle", "submit_button": "submit_button"})

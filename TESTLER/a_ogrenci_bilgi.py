@@ -19,7 +19,7 @@ def cprint(color, text):
 
 class ogrenci_bilgi:
 
-    def __init__(self, driver, url, url2, dizi, k_ad, k_sif):
+    def __init__(self, driver, url, url2, dizi):
         
         self.driver = driver
         self.url = url
@@ -31,12 +31,15 @@ class ogrenci_bilgi:
         self.btn = self.driver.find_element_by_id("submit_button")
 
         
-        self.k_id.send_keys(k_ad)
-        self.k_pas.send_keys(k_sif)
+        self.k_id.send_keys("7040000001")
+        self.k_pas.send_keys("123456")
         self.btn.click()
         time.sleep(1.5)
         self.driver.get(self.url_2)
-        self.driver.find_element_by_id("show_info").click()
+        self.driver.find_element_by_id("ogr_ad").click()
+        time.sleep(1.5)
+        self.driver.find_element_by_xpath("//button[@data-content='bilgiler']").click()
+        time.sleep(1.5)
         
 
         self.degerler = dizi 
@@ -50,17 +53,19 @@ class ogrenci_bilgi:
         for i in range (len(mail)):      
             self.mail.clear()
             self.tel.clear()
+            self.bilgi_text.clear()
 
             self.bilgi_text.send_keys(bilgiler_text[i])
             self.mail.send_keys(mail[i])
             self.tel.send_keys(tel[i])
             self.g_btn.click()
-            time.sleep(1)
+            time.sleep(1.5)
             self.show = self.driver.find_element_by_id(self.degerler["btn"]).is_displayed()
+            
 
             if self.show == True:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                with open("LOGS/log-a-ogr-bilgi.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
@@ -95,7 +100,7 @@ class ogrenci_bilgi:
             
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                with open("LOGS/log-a-ogr-bilgi.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
@@ -133,8 +138,8 @@ class ogrenci_bilgi:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("show_info").click()
-            time.sleep(1)
+        
+            time.sleep(1.5)
             self.mail = self.driver.find_element_by_id(self.degerler["mail_bilgi"])
             self.tel = self.driver.find_element_by_id(self.degerler["tel"])
             self.bilgi_text = self.driver.find_element_by_id(self.degerler["bilgiler_text"])
@@ -163,7 +168,7 @@ class ogrenci_bilgi:
 
             if cursor.rowcount > 0:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                with open("LOGS/log-a-ogr-bilgi.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
@@ -198,7 +203,7 @@ class ogrenci_bilgi:
                 time.sleep(1)
             else:                
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                with open("LOGS/log-a-ogr-bilgi.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
@@ -236,24 +241,20 @@ class ogrenci_bilgi:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("show_info").click()
+            
             time.sleep(1)
             self.mail = self.driver.find_element_by_id(self.degerler["mail_bilgi"])
             self.tel = self.driver.find_element_by_id(self.degerler["tel"])
             self.bilgi_text = self.driver.find_element_by_id(self.degerler["bilgiler_text"])
             self.g_btn = self.driver.find_element_by_id(self.degerler["btn"])
             time.sleep(1)
-            ogrenci_bilgi.basarisiz(["denemedeneme.com","asdasdsa"], ["56562","454562"],["Aciklama","aciklama_2"])
+            ogrenci_bilgi.basarisiz(["denemedeneme.com","asdasdsa"], ["56562","454562"],["aciklama","aciklama_2"])
         
 
 driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
-print(Fore.CYAN + "Kullanıcı adı gir") 
-kullanici_adi = input()
-print(Fore.CYAN + "Sifre gir")
-sifre = input()
 
-ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"}, kullanici_adi, sifre)
+ogrenci_bilgi = ogrenci_bilgi(driver, "http://localhost:100/admin", "http://localhost:100/ogrenciler", {"mail_bilgi": "bilgiler_mail", "tel": "bilgiler_tel", "btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"})
 
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
@@ -264,7 +265,7 @@ print(" ")
 
 if test == 1:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_bilgi, basarisiz_test", end="\n\n")  
-    ogrenci_bilgi.basarisiz(["denemedeneme.com","asdasdsa"], ["56562","454562"],["Aciklama","aciklama_2"])
+    ogrenci_bilgi.basarisiz(["denemedeneme.com","asdasdsa"], ["56562","454562"],["serefsiz","aciklama_2"])
 
 
 elif test == 2:

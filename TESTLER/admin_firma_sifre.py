@@ -271,9 +271,10 @@ class admin_firma_sifre:
             self.button = self.driver.find_element_by_id(self.degerler["sif_btn"])
             time.sleep(2)
             admin_firma_sifre.basarisiz(["1254986","1234518"], ["12345","23235"])
+            
 driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
-admin_firma_sifre = admin_firma_sifre(driver, "http://localhost/admin", "http://localhost/firmalar", { "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sif_btn": "sifre_btn"}) 
+admin_firma_sifre = admin_firma_sifre(driver, "http://localhost:100/admin", "http://localhost:100/firmalar", { "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sif_btn": "sifre_btn"}) 
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())

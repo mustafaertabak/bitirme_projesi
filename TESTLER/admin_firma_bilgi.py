@@ -38,10 +38,10 @@ class admin_firma_bilgi:
         self.driver.get(self.url2)
         time.sleep(3)
 
-        self.driver.find_element_by_id("firma_kart").click()
+        self.driver.find_element_by_id("firma_adi").click()
         time.sleep(1.5)
 
-        self.driver.find_element_by_id("show_info").click()
+        self.driver.find_element_by_xpath("//button[@data-content='bilgiler']").click()
         time.sleep(1.5)
         self.b_isim = self.driver.find_element_by_id(self.degerler["bilgiler_isim"])
         self.b_gad = self.driver.find_element_by_id(self.degerler["bilgiler_giris_adi"])
@@ -139,7 +139,7 @@ class admin_firma_bilgi:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("show_info").click()
+
             time.sleep(1)
             self.b_isim = self.driver.find_element_by_id(self.degerler["bilgiler_isim"])
             self.b_gad = self.driver.find_element_by_id(self.degerler["bilgiler_giris_adi"])
@@ -240,7 +240,6 @@ class admin_firma_bilgi:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("show_info").click()
             time.sleep(1)
             self.b_isim = self.driver.find_element_by_id(self.degerler["bilgiler_isim"])
             self.b_gad = self.driver.find_element_by_id(self.degerler["bilgiler_giris_adi"])
@@ -251,7 +250,7 @@ class admin_firma_bilgi:
 
 driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
-admin_firma_bilgi = admin_firma_bilgi(driver, "http://localhost/admin", "http://localhost/firmalar", {"bilgiler_isim": "bilgiler_isim", "bilgiler_giris_adi": "bilgiler_giris_adi", "bilgiler_btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"})
+admin_firma_bilgi = admin_firma_bilgi(driver, "http://localhost:100/admin", "http://localhost:100/firmalar", {"bilgiler_isim": "bilgiler_isim", "bilgiler_giris_adi": "bilgiler_giris_adi", "bilgiler_btn": "bilgiler_btn", "bilgiler_text": "bilgiler_text"})
 
 print(Fore.YELLOW + "Başarısız test içi 1, başarılı test için 2")
 test = int(input())
@@ -260,7 +259,7 @@ print(" ")
 
 if test == 1:
     print(Fore.YELLOW + "Çalıştırılan test: " + "admin_firma_bilgi, basarisiz_test", end="\n\n")  
-    admin_firma_bilgi.basarisiz(["", ""], ["", ""], ["", ""])
+    admin_firma_bilgi.basarisiz(["Vestel", " "], ["", "vestel"], ["", "aciklama"])
 
 
 elif test == 2:

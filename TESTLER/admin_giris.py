@@ -233,7 +233,7 @@ class admin_giris:
             admin_giris.basarili(["7040000001"],["123456"])
 
 # Driver değişkenine chromedriver yolunu atıyoruz 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 admin_giris = admin_giris(driver, "http://localhost:100/admin", {"username": "username", "pass": "pass", "deger": "a-ilan-img", "submit_button": "submit_button"})
 

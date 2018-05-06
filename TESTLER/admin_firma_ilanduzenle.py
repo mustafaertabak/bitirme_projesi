@@ -324,7 +324,7 @@ class admin_firma_ilanduzenle:
 
 driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
-admin_firma_ilanduzenle = admin_firma_ilanduzenle(driver, "http://localhost/admin", "http://localhost/firmalar", {"ilan_baslik": "ilan_baslik_u", "ilan_mail": "ilan_mail_u", "ilanlar_text": "ilanlar_text_u", "ilanlar_adres": "ilanlar_adres_u", "ilan_gonder": "ilan_gonder_u", "ilanlar_kisi": "ilanlar_kisi_u"}) 
+admin_firma_ilanduzenle = admin_firma_ilanduzenle(driver, "http://localhost:100/admin", "http://localhost:100/firmalar", {"ilan_baslik": "ilan_baslik_u", "ilan_mail": "ilan_mail_u", "ilanlar_text": "ilanlar_text_u", "ilanlar_adres": "ilanlar_adres_u", "ilan_gonder": "ilan_gonder_u", "ilanlar_kisi": "ilanlar_kisi_u"}) 
 
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
 test = int(input())

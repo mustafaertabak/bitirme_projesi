@@ -245,7 +245,7 @@ class ogrenci_giris:
             ogrenci_giris.basarili(["2013707021"],["123456"])
 
 # Driver değişkenine chromedriver yolunu atıyoruz 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 # Öğrenci giriş sınıfının parametre değerlerini atıyoruz 
 ogrenci_giris = ogrenci_giris(driver, "http://localhost:100/ogrenci-giris", {"username": "username", "pass": "pass", "deger": "a-ilan-img", "submit_button": "submit_button"})

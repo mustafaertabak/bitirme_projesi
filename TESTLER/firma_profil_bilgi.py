@@ -244,7 +244,8 @@ class firma_bilgi:
             time.sleep(2)
             firma_bilgi.basarisiz(["", ""], ["", ""], ["", ""])
 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı girin")
 kullanici_adi = input()

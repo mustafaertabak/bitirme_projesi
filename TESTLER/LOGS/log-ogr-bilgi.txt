@@ -1,0 +1,110 @@
+ 
+2018-05-07 02:05:04 
+Yapýlan test: Staj Dönemi Düzenleme Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 10-09-11 
+Girilen Staj Bitiþ Tarihi : 10-09-11 
+Girilen Baþvuru Baþlangýç Tarihi : 01-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 01-10 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:05:07 
+Yapýlan test: Staj Dönemi Düzenleme Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 11-10-11 
+Girilen Staj Bitiþ Tarihi : 11-10-11 
+Girilen Baþvuru Baþlangýç Tarihi : 26-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 10-11 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:07:00 
+Yapýlan test: Staj Dönemi Düzenleme Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 10-09-11 
+Girilen Staj Bitiþ Tarihi : 10-09-11 
+Girilen Baþvuru Baþlangýç Tarihi : 01-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 01-10 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:07:03 
+Yapýlan test: Staj Dönemi Düzenleme Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 11-10-11 
+Girilen Staj Bitiþ Tarihi : 11-10-11 
+Girilen Baþvuru Baþlangýç Tarihi : 26-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 10-11 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:08:14 
+Yapýlan test: Staj Dönemi Düzenleme Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 10-09-11 
+Girilen Staj Bitiþ Tarihi : 10-09-11 
+Girilen Baþvuru Baþlangýç Tarihi : 01-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 01-10 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:08:17 
+Yapýlan test: Staj Dönemi Düzenleme Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 11-10-11 
+Girilen Staj Bitiþ Tarihi : 11-10-11 
+Girilen Baþvuru Baþlangýç Tarihi : 26-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 10-11 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:09:26 
+Yapýlan test: Staj Dönemi Düzenleme Baþarýlý Testi 
+Girilen Staj Baþlangç Tarihi : 01-09-2019 
+Girilen Staj Bitiþ Tarihi : 30-09-2019 
+Girilen Baþvuru Baþlangýç Tarihi : 01-07-2019 
+Girilen Baþvuru Bitiþ Tarihi : 29-07-2019 
+Beklenen sonuç: ÝÞLEM BAÞARILI! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:15:34 
+Yapýlan test: Staj Dönemi Ekle Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 10-09-11 
+Girilen Staj Bitiþ Tarihi : 10-09-11 
+Girilen Baþvuru Baþlangýç Tarihi : 01-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 01-10 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:15:36 
+Yapýlan test: Staj Dönemi Ekle Baþarýsýz Testi 
+Girilen Staj Baþlangç Tarihi : 11-10-11 
+Girilen Staj Bitiþ Tarihi : 11-10-11 
+Girilen Baþvuru Baþlangýç Tarihi : 26-10-1998 
+Girilen Baþvuru Bitiþ Tarihi : 10-11 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+TEST BAÞARILI! 
+
+ 
+2018-05-07 02:23:55 
+Yapýlan test: Staj Dönemi Ekle Baþarýlý Testi 
+Girilen Staj Baþlangç Tarihi : 10-09-2018 
+Girilen Staj Bitiþ Tarihi : 30-09-2018 
+Girilen Baþvuru Baþlangýç Tarihi : 01-08-2018 
+Girilen Baþvuru Bitiþ Tarihi : 29-08-2018 
+Beklenen sonuç: ÝÞLEM BAÞARILI! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+TEST BAÞARILI! 
+

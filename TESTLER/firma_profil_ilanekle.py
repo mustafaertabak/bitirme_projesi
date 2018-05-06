@@ -117,9 +117,9 @@ class firma_ilan:
                     file.write(" " + "\n")
                     file.write("Girilen Açıklama Bilgisi : " + ilan_text[i])
                     file.write(" " + "\n")
-                    file.write("Beklenen Sonuç = İŞLEM BAŞARILI!")
+                    file.write("Beklenen sonuç: Başarılı")
                     file.write(" " + "\n")
-                    file.write("Alınan Sonuç = İŞLEM BAŞARILI!")
+                    file.write("Alınan sonuç: Başarılı")
                     file.write(" " + "\n\n")
                     file.write("TEST BAŞARILI!")
                     file.write(" " + "\n\n")
@@ -155,8 +155,6 @@ class firma_ilan:
                     file.write(" " + "\n")
                     file.write("Seçilen Bölüm Adı : " + self.vlue)
                     file.write(" " + "\n")
-                    file.write("Seçilen Staj Dönemi : " + self.value_donem)
-                    file.write(" " + "\n")
                     file.write("Girilen ilan Adresi : " + ilan_adres[i])
                     file.write(" " + "\n")
                     file.write("Girilen Açıklama Bilgisi : " + ilan_text[i])
@@ -170,9 +168,6 @@ class firma_ilan:
                 cprint(Fore.LIGHTBLUE_EX, "Girilen İlan Başlığı : " + ilan_baslik[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Firma E-mail : " + ilan_mail[i])
                 cprint(Fore.LIGHTBLUE_EX, "Seçilen Bolum Adı : " + self.vlue)
-                cprint(Fore.LIGHTBLUE_EX, "Seçilen Staj Dönemi : " + self.value_donem)
-                print("")
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Kontenjan Sayısı : " + ilan_kisi[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen İlan Adresi : " + ilan_adres[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Açıklama Bilgisi : " + ilan_text[i])
                 print("")
@@ -183,7 +178,6 @@ class firma_ilan:
                 cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARISIZ!") 
                 print("\n") 
                 time.sleep(2)
-
         cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
         a = input()
         if a == 'e':
@@ -334,7 +328,6 @@ class firma_ilan:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("ilani_ekle").click()
             time.sleep(2)
 
             self.ilan_baslik.clear()
@@ -352,7 +345,8 @@ class firma_ilan:
             time.sleep(2)
             firma_ilan.basarili(["makine"], ["berkeertan@gmail.com"], ["adres"], ["aciklama"], ["2"])
                   
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()

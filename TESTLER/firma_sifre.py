@@ -169,7 +169,7 @@ class firma_sifre:
                 print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARILI!")
                 time.sleep(0.5)
-        cprint(Fore.YELLOW, "Çıkmak için 'e' başarılı test için 'b' tuşlayın")
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
         a = input()
         if a == 'e':
             driver.close()
@@ -290,7 +290,8 @@ class firma_sifre:
             time.sleep(2)
             firma_sifre.basarisiz([sifre,"1234518"], ["123456","232235"], ["123456","232235"])
 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()

@@ -23,7 +23,7 @@ def cprint(color, text):
 class ogrenci_sifre:
     
 
-    def __init__(self, driver, url, url2, dizi, k_ad, k_sif):
+    def __init__(self, driver, url, url2, dizi):
     
         self.driver = driver 
         self.url = url 
@@ -33,30 +33,31 @@ class ogrenci_sifre:
         self.k_pas = self.driver.find_element_by_id("pass")
         self.btn = self.driver.find_element_by_id("submit_button")
 
-        self.k_id.send_keys(k_ad)
-        self.k_pas.send_keys(k_sif)
+        self.k_id.send_keys("7040000001")
+        self.k_pas.send_keys("123456")
         self.btn.click()
         time.sleep(1.5)
         self.driver.get(self.url_2)
-        self.driver.find_element_by_id("sifre_degis").click()
+
+        self.driver.find_element_by_id("ogr_ad").click()
+        
         time.sleep(1.5)
-        self.ogr_no = self.driver.find_element_by_id("ogr_numara").text
+        self.ogr_no = self.driver.find_element_by_id("ogr_num").text
+        self.driver.find_element_by_xpath("//button[@data-content='sifre']").click()
+         
         
         self.degerler = dizi 
 
-        self.old = self.driver.find_element_by_id(self.degerler["sif_old"])
         self.new = self.driver.find_element_by_id(self.degerler["sif_new"])
         self.new_b = self.driver.find_element_by_id(self.degerler["sif_new_b"])
         self.button = self.driver.find_element_by_id(self.degerler["sifre_btn"])
-
-    def basarisiz(self, old, new, new_b):    
+       
+    def basarisiz(self, new, new_b):    
         for i in range (len(new)):
-
-            self.old.clear()
             self.new.clear()
             self.new_b.clear()
             
-            self.old.send_keys(old[i])
+
             self.new.send_keys(new[i])
             self.new_b.send_keys(new_b[i])
             self.button.click()
@@ -77,13 +78,11 @@ class ogrenci_sifre:
 
                 if self.disp:
                     d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    with open("LOGS/log-a-ogrsif.txt", "a") as file:
+                    with open("LOGS/log-ogrsif.txt", "a") as file:
                         file.write(" " + "\n")   
                         file.write(str(d))
                         file.write(" " + "\n")
                         file.write("Yapılan test: Başarısız şifre testi")
-                        file.write(" " + "\n")
-                        file.write("Girilen Eski Şifre Değeri : " + old[i])
                         file.write(" " + "\n")
                         file.write("Girilen Yeni Şifre Değeri : " + new[i])
                         file.write(" " + "\n")
@@ -99,7 +98,6 @@ class ogrenci_sifre:
                     print("")
                     cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " + str(i+1))    
                     print("")
-                    cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     print("")
@@ -113,13 +111,11 @@ class ogrenci_sifre:
                 
                 else:
                     d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    with open("LOGS/log-a-ogrsif.txt", "a") as file:
+                    with open("LOGS/log-ogrsif.txt", "a") as file:
                         file.write(" " + "\n")   
                         file.write(str(d))
                         file.write(" " + "\n")
                         file.write("Yapılan test: Başarısız şifre testi")
-                        file.write(" " + "\n")
-                        file.write("Girilen Eski Şifre Değeri : " + old[i])
                         file.write(" " + "\n")
                         file.write("Girilen Yeni Şifre Değeri : " + new[i])
                         file.write(" " + "\n")
@@ -134,8 +130,6 @@ class ogrenci_sifre:
                     cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
                     print("")
                     cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " + str(i+1))    
-                    print("")
-                    cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
                     cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     print("")
@@ -149,13 +143,11 @@ class ogrenci_sifre:
                         
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-a-ogrsif.txt", "a") as file:
+                with open("LOGS/log-ogrsif.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarısız şifre testi")
-                    file.write(" " + "\n")
-                    file.write("Girilen Eski Şifre Değeri : " + old[i])
                     file.write(" " + "\n")
                     file.write("Girilen Yeni Şifre Değeri : " + new[i])
                     file.write(" " + "\n")
@@ -170,8 +162,6 @@ class ogrenci_sifre:
                 cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
                 print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " + str(i+1))    
-                print("")
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
                 cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                 print("")
@@ -187,29 +177,26 @@ class ogrenci_sifre:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("sifre_degis").click()
             time.sleep(1)
-            self.old = self.driver.find_element_by_id(self.degerler["sif_old"])
+
             self.new = self.driver.find_element_by_id(self.degerler["sif_new"])
             self.new_b = self.driver.find_element_by_id(self.degerler["sif_new_b"])
             self.button = self.driver.find_element_by_id(self.degerler["sifre_btn"])
             time.sleep(2)
-            ogrenci_sifre.basarili([sifre])
+            ogrenci_sifre.basarili(["123456"], ["123456"])
                 
                 
-    def basarili(self, old):
+    def basarili(self, new, new_b):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
-        for i in range (len(old)):
-            print("Yeni şifre gir")
-            self.sifre = input()
-            self.old.clear()
+        for i in range (len(new)):
+
+ 
             self.new.clear()
             self.new_b.clear()
 
-            self.old.send_keys(old[i])
-            self.new.send_keys(self.sifre)
-            self.new_b.send_keys(self.sifre)     
+            self.new.send_keys(new[i])
+            self.new_b.send_keys(new_b[i])     
             self.button.click()
             time.sleep(1)
     
@@ -217,23 +204,21 @@ class ogrenci_sifre:
             self.btn_success.click() 
             time.sleep(2)
             
-            self.hash_object = hashlib.md5(self.sifre.encode())
-        
+            self.hash_object = hashlib.md5(new[i].encode())
+            print(self.ogr_no)
             cursor.execute("SELECT * FROM ogr WHERE ogr_sifre = '%s' AND ogr_no = '%s'" % (self.hash_object.hexdigest(), self.ogr_no))
             
             if cursor.rowcount > 0:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-a-ogrsif.txt", "a") as file:
+                with open("LOGS/log-ogrsif.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarılı şifre testi")
                     file.write(" " + "\n")
-                    file.write("Girilen Eski Şifre Değeri : " + old[i])
+                    file.write("Girilen Yeni Şifre Değeri : " + new[i])
                     file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri : " + self.sifre)
-                    file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     file.write(" " + "\n")
                     file.write("Beklenen sonuç: GİRİŞ BAŞARILI!")
                     file.write(" " + "\n")
@@ -244,10 +229,8 @@ class ogrenci_sifre:
                 cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
                 print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " + str(i+1))    
-                print("")
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + self.sifre)
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                 print("")
                 cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARILI!")
                 print("")
@@ -259,17 +242,15 @@ class ogrenci_sifre:
                                 
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-a-ogrsif.txt", "a") as file:
+                with open("LOGS/log-ogrsif.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
                     file.write("Yapılan test: Başarılı şifre testi")
                     file.write(" " + "\n")
-                    file.write("Girilen Eski Şifre Değeri : " + old[i])
+                    file.write("Girilen Yeni Şifre Değeri : " + new[i])
                     file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri : " + self.sifre)
-                    file.write(" " + "\n")
-                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                    file.write("Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                     file.write(" " + "\n")
                     file.write("Beklenen sonuç: GİRİŞ BAŞARILI!")
                     file.write(" " + "\n")
@@ -280,10 +261,8 @@ class ogrenci_sifre:
                 cprint(Fore.LIGHTBLUE_EX, "Test Çalıştırılma Tarih/Saati : " + str(d))
                 print("")
                 cprint(Fore.LIGHTMAGENTA_EX, "Giriş - " + str(i+1))    
-                print("")
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Eski Şifre Değeri : " + old[i])
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + self.sifre)
-                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + self.sifre)
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri : " + new[i])
+                cprint(Fore.LIGHTBLUE_EX, "Girilen Yeni Şifre Değeri Tekrarı : " + new_b[i])
                 print("")
                 cprint(Fore.YELLOW, "Beklenen Sonuç = GİRİŞ BAŞARILI!")
                 print("")
@@ -297,24 +276,16 @@ class ogrenci_sifre:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("sifre_degis").click()
             time.sleep(1)
-            self.old = self.driver.find_element_by_id(self.degerler["sif_old"])
             self.new = self.driver.find_element_by_id(self.degerler["sif_new"])
             self.new_b = self.driver.find_element_by_id(self.degerler["sif_new_b"])
             self.button = self.driver.find_element_by_id(self.degerler["sifre_btn"])
             time.sleep(2)
-            ogrenci_sifre.basarisiz([sifre,"1234518"], ["123456","232235"], ["123456","232235"])
-                
+            ogrenci_sifre.basarisiz(["123452","1234518"], ["123456","232235"])
                 
 driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
 
-print(Fore.CYAN + "Kullanıcı adı gir") 
-kullanici_adi = input()
-print(Fore.CYAN + "Sifre gir")
-sifre = input()
-
-ogrenci_sifre = ogrenci_sifre(driver, "http://localhost:100/ogrenci-giris", "http://localhost:100/profil", {"sif_old": "old_pass", "sif_new": "new_pass_a", "sif_new_b": "new_pass_b","sifre_btn": "sifre_btn"}, kullanici_adi, sifre)
+ogrenci_sifre = ogrenci_sifre(driver, "http://localhost:100/admin", "http://localhost:100/ogrenciler", {"sif_new": "new_pass_a", "sif_new_b": "new_pass_b", "sifre_btn": "sifre_btn"})
 
  
 print(Fore.YELLOW + "Başarısız test için 1, başarılı test için 2") 
@@ -326,12 +297,12 @@ print(" ")
 if test == 1:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_sifre, basarisiz_test", end="\n\n")
     # Öğrenci_giris sınıfının içindeki basarisiz define degerleri gönderiyoruz 
-    ogrenci_sifre.basarisiz([sifre,"1234518"], ["123456","232235"], ["123456","232235"])
+    ogrenci_sifre.basarisiz(["123452","1234518"], ["123456","232235"])
 
 
 elif test == 2:
     print(Fore.YELLOW + "Çalıştırılan test: " + "ogrenci_sifre, basarili_test")
-    ogrenci_sifre.basarili([sifre])
+    ogrenci_sifre.basarili(["123456"], ["123456"])
     print("")
     
     

@@ -189,7 +189,8 @@ class firma_basvuru:
             self.b_button = self.driver.find_element_by_id(self.degerler["basvuru_btn"])
             firma_basvuru.basarisiz(["berke.com","1234518"])
 
-driver = webdriver.Chrome("C:\\Users\\BERKE\\Desktop\\bitirme\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+
 
 
 firma_basvuru = firma_basvuru(driver, "http://localhost:100/admin", "http://localhost:100/firma-kayit-baglantisi-olustur", {"basvuru_mail": "f_basvuru_mail", "basvuru_btn": "f_basvuru_btn"})
