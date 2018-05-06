@@ -88,7 +88,7 @@ class staj_donemi_edit:
         
         if cursor_2:
             d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+            with open("LOGS/staj_donemi_duzenle.txt", "a") as file:
                 file.write(" " + "\n")   
                 file.write(str(d))
                 file.write(" " + "\n")
@@ -125,7 +125,7 @@ class staj_donemi_edit:
         
         else:
             d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+            with open("LOGS/staj_donemi_duzenle.txt", "a") as file:
                 file.write(" " + "\n")   
                 file.write(str(d))
                 file.write(" " + "\n")
@@ -177,7 +177,7 @@ class staj_donemi_edit:
 
             if self.ul:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                with open("LOGS/staj_donemi_duzenle.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
@@ -216,7 +216,7 @@ class staj_donemi_edit:
             
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/log-ogr-bilgi.txt", "a") as file:
+                with open("LOGS/staj_donemi_duzenle.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
