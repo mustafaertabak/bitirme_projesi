@@ -1,0 +1,47 @@
+ 
+2018-05-06 14:19:24 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : berke 
+Oluþturulan firmanýn þifresi : 123456788 
+Firma bilgileri alýndý. Yeni firma oluþturma iþlemi tamamlandý! 
+Beklenen sonuç: ÝÞLEM BAÞARILI! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:11:53 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : berke 
+Oluþturulan firmanýn þifresi : 123456788 
+Oluþturulan firmanýn þifresi(TEKRAR) : 123456788 
+Firma bilgileri alýndý. Yeni firma oluþturma iþlemi tamamlandý! 
+Beklenen sonuç: ÝÞLEM BAÞARILI! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:13:32 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý : berke@gmail.com 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : berke 
+Oluþturulan firmanýn þifresi : 123456788 
+Oluþturulan firmanýn þifresi(TEKRAR) : 123456788 
+Firma bilgileri alýndý. Yeni firma oluþturma iþlemi tamamlandý! 
+Beklenen sonuç: ÝÞLEM BAÞARILI! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARILI! 
+

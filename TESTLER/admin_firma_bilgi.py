@@ -36,7 +36,7 @@ class admin_firma_bilgi:
         time.sleep(2)
         
         self.driver.get(self.url2)
-        time.sleep(2)
+        time.sleep(3)
 
         self.driver.find_element_by_id("firma_kart").click()
         time.sleep(1.5)

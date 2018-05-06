@@ -1,0 +1,254 @@
+ 
+2018-05-06 14:51:25 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 14:51:28 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 15:00:24 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Oluþturulan firmanýn þifresi(TEKRAR) : 5662 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 15:00:27 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Oluþturulan firmanýn þifresi(TEKRAR) : 1235 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 21:34:18 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Oluþturulan firmanýn þifresi(TEKRAR) : 5662 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 21:34:20 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Oluþturulan firmanýn þifresi(TEKRAR) : 1235 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 21:34:46 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Oluþturulan firmanýn þifresi(TEKRAR) : 5662 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 21:34:49 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Oluþturulan firmanýn þifresi(TEKRAR) : 1235 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARILI! 
+
+TEST BAÞARISIZ! 
+
+ 
+2018-05-06 21:43:03 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Oluþturulan firmanýn þifresi(TEKRAR) : 5662 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 21:43:06 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Oluþturulan firmanýn þifresi(TEKRAR) : 1235 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 21:43:31 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Oluþturulan firmanýn þifresi(TEKRAR) : 5662 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 21:43:34 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Firma baþvuru mail adresi alýndý. 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Oluþturulan firmanýn þifresi(TEKRAR) : 1235 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:07:53 
+Yapýlan test: Baþarýsýz firma kayýt testi 
+Firma baþvuru mail adresi alýndý : berke@gmail.com 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Oluþturulan firmanýn þifresi(TEKRAR) : 5662 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:07:55 
+Yapýlan test: Baþarýsýz firma kayýt testi 
+Firma baþvuru mail adresi alýndý : berke@gmail.com 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Oluþturulan firmanýn þifresi(TEKRAR) : 1235 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:08:21 
+Yapýlan test: Baþarýsýz firma kayýt testi 
+Firma baþvuru mail adresi alýndý : berke@gmail.com 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : berke 
+Oluþturulan firmanýn kullanýcý adý : ertan 
+Oluþturulan firmanýn þifresi : 123456 
+Oluþturulan firmanýn þifresi(TEKRAR) : 5662 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-06 23:08:24 
+Yapýlan test: Baþarýsýz firma kayýt testi 
+Firma baþvuru mail adresi alýndý : berke@gmail.com 
+Mail adresine kod gönderildi. 
+Kod giriþi test edildi ve firma kayýt iþlemi tamamlandý. 
+Oluþturulan firmanýn adý : ertan 
+Oluþturulan firmanýn kullanýcý adý :   
+Oluþturulan firmanýn þifresi : 12345 
+Oluþturulan firmanýn þifresi(TEKRAR) : 1235 
+Firma Bilgilerini Kýsmýnda Zorunlu Alanlarý Doldurunuz! 
+Beklenen sonuç: ÝÞLEM BAÞARISIZ! 
+Alýnan sonuç: ÝÞLEM BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
